@@ -1,0 +1,565 @@
+\documentclass{article}
+% a4paper
+
+%\usepackage[dvips]{epsfig}
+%\usepackage{cours11, cours}
+%\usepackage{fancyheadings}
+%\usepackage{calc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsfig}
+\usepackage{enumerate}
+%\usepackage{supertabular}
+%\usepackage{wrapfig}
+%\usepackage{blackbrd}
+%\usepackage{epic,eepic}
+\usepackage{rotating}
+\usepackage{multicol}
+%\usepackage{multirow}
+\usepackage{makeidx} % additional command see
+\usepackage{rotating}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{longtable}
+\usepackage{anyfontsize}
+\usepackage{t1enc}
+%\usepackage{amsmath,amsfonts}
+
+
+%\usepackage[mtbold,mtplusscr]{mathtime}
+% lucidacal,lucidascr,
+
+%\usepackage{mathtimy}
+%\usepackage{bm}
+%\usepackage{avant}
+%\usepackage{basker}
+%\usepackage{bembo}
+%\usepackage{bookman}
+%\usepackage{chancery}
+%\usepackage{garamond}
+%\usepackage{helvet}
+%\usepackage{newcent}
+%\usepackage{palatino}
+%\usepackage{times}
+%\usepackage{pifont}
+\usepackage{fullpage}
+\usepackage[top=1in,bottom=1in,right=1in,left=1in]{geometry}
+
+
+
+%\parindent=0pt
+
+
+%\topmargin=0pt
+%\headsep=18pt
+%\footskip=45pt
+%\mathsurround=1pt
+%\evensidemargin=0pt
+%\oddsidemargin=15pt
+
+%\setlength{\textheight}{\baselineskip*41+\topskip}
+
+\newcommand{\sectionline}{
+   \nointerlineskip \vspace{\baselineskip}
+   \hspace{\fill}\rule{0.9\linewidth}{1.7pt}\hspace{\fill}
+   \par\nointerlineskip \vspace{\baselineskip}
+   }
+\newcommand\setTBstruts{\def\T{\rule{0pt}{2.6ex}}%
+\def\B{\rule[-1.2ex]{0pt}{0pt}}}
+\newcommand{\ans}[1]{\\{\bf ANSWER}: {#1}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\sFix}{{\cal Fix}}
+\newcommand{\sOrbits}{{\cal Orbits}}
+\newcommand{\Stab}{{\rm Stab}}
+\newcommand{\Fix}{{\rm Fix}}
+\newcommand{\fix}{{\rm fix}}
+\newcommand{\Orbits}{{\rm Orbits}}
+\newcommand{\PG}{{\rm PG}}
+\newcommand{\AG}{{\rm AG}}
+\newcommand{\SQS}{{\rm SQS}}
+\newcommand{\STS}{{\rm STS}}
+\newcommand{\PSL}{{\rm PSL}}
+\newcommand{\PGL}{{\rm PGL}}
+\newcommand{\PSSL}{{\rm P\Sigma L}}
+\newcommand{\PGGL}{{\rm P\Gamma L}}
+\newcommand{\SL}{{\rm SL}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\SSL}{{\rm \Sigma L}}
+\newcommand{\GGL}{{\rm \Gamma L}}
+\newcommand{\ASL}{{\rm ASL}}
+\newcommand{\AGL}{{\rm AGL}}
+\newcommand{\ASSL}{{\rm A\Sigma L}}
+\newcommand{\AGGL}{{\rm A\Gamma L}}
+\newcommand{\PSU}{{\rm PSU}}
+\newcommand{\HS}{{\rm HS}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\SO}{{\rm SO}}
+\newcommand{\ASO}{{\rm ASO}}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\cA}{{\cal A}}
+\newcommand{\cB}{{\cal B}}
+\newcommand{\cC}{{\cal C}}
+\newcommand{\cD}{{\cal D}}
+\newcommand{\cE}{{\cal E}}
+\newcommand{\cF}{{\cal F}}
+\newcommand{\cG}{{\cal G}}
+\newcommand{\cH}{{\cal H}}
+\newcommand{\cI}{{\cal I}}
+\newcommand{\cJ}{{\cal J}}
+\newcommand{\cK}{{\cal K}}
+\newcommand{\cL}{{\cal L}}
+\newcommand{\cM}{{\cal M}}
+\newcommand{\cN}{{\cal N}}
+\newcommand{\cO}{{\cal O}}
+\newcommand{\cP}{{\cal P}}
+\newcommand{\cQ}{{\cal Q}}
+\newcommand{\cR}{{\cal R}}
+\newcommand{\cS}{{\cal S}}
+\newcommand{\cT}{{\cal T}}
+\newcommand{\cU}{{\cal U}}
+\newcommand{\cV}{{\cal V}}
+\newcommand{\cW}{{\cal W}}
+\newcommand{\cX}{{\cal X}}
+\newcommand{\cY}{{\cal Y}}
+\newcommand{\cZ}{{\cal Z}}
+\newcommand{\rmA}{{\rm A}}
+\newcommand{\rmB}{{\rm B}}
+\newcommand{\rmC}{{\rm C}}
+\newcommand{\rmD}{{\rm D}}
+\newcommand{\rmE}{{\rm E}}
+\newcommand{\rmF}{{\rm F}}
+\newcommand{\rmG}{{\rm G}}
+\newcommand{\rmH}{{\rm H}}
+\newcommand{\rmI}{{\rm I}}
+\newcommand{\rmJ}{{\rm J}}
+\newcommand{\rmK}{{\rm K}}
+\newcommand{\rmL}{{\rm L}}
+\newcommand{\rmM}{{\rm M}}
+\newcommand{\rmN}{{\rm N}}
+\newcommand{\rmO}{{\rm O}}
+\newcommand{\rmP}{{\rm P}}
+\newcommand{\rmQ}{{\rm Q}}
+\newcommand{\rmR}{{\rm R}}
+\newcommand{\rmS}{{\rm S}}
+\newcommand{\rmT}{{\rm T}}
+\newcommand{\rmU}{{\rm U}}
+\newcommand{\rmV}{{\rm V}}
+\newcommand{\rmW}{{\rm W}}
+\newcommand{\rmX}{{\rm X}}
+\newcommand{\rmY}{{\rm Y}}
+\newcommand{\rmZ}{{\rm Z}}
+\newcommand{\bA}{{\bf A}}
+\newcommand{\bB}{{\bf B}}
+\newcommand{\bC}{{\bf C}}
+\newcommand{\bD}{{\bf D}}
+\newcommand{\bE}{{\bf E}}
+\newcommand{\bF}{{\bf F}}
+\newcommand{\bG}{{\bf G}}
+\newcommand{\bH}{{\bf H}}
+\newcommand{\bI}{{\bf I}}
+\newcommand{\bJ}{{\bf J}}
+\newcommand{\bK}{{\bf K}}
+\newcommand{\bL}{{\bf L}}
+\newcommand{\bM}{{\bf M}}
+\newcommand{\bN}{{\bf N}}
+\newcommand{\bO}{{\bf O}}
+\newcommand{\bP}{{\bf P}}
+\newcommand{\bQ}{{\bf Q}}
+\newcommand{\bR}{{\bf R}}
+\newcommand{\bS}{{\bf S}}
+\newcommand{\bT}{{\bf T}}
+\newcommand{\bU}{{\bf U}}
+\newcommand{\bV}{{\bf V}}
+\newcommand{\bW}{{\bf W}}
+\newcommand{\bX}{{\bf X}}
+\newcommand{\bY}{{\bf Y}}
+\newcommand{\bZ}{{\bf Z}}
+\newcommand{\sA}{{\cal A}}
+\newcommand{\sB}{{\cal B}}
+\newcommand{\sC}{{\cal C}}
+\newcommand{\sD}{{\cal D}}
+\newcommand{\sE}{{\cal E}}
+\newcommand{\sF}{{\cal F}}
+\newcommand{\sG}{{\cal G}}
+\newcommand{\sH}{{\cal H}}
+\newcommand{\sI}{{\cal I}}
+\newcommand{\sJ}{{\cal J}}
+\newcommand{\sK}{{\cal K}}
+\newcommand{\sL}{{\cal L}}
+\newcommand{\sM}{{\cal M}}
+\newcommand{\sN}{{\cal N}}
+\newcommand{\sO}{{\cal O}}
+\newcommand{\sP}{{\cal P}}
+\newcommand{\sQ}{{\cal Q}}
+\newcommand{\sR}{{\cal R}}
+\newcommand{\sS}{{\cal S}}
+\newcommand{\sT}{{\cal T}}
+\newcommand{\sU}{{\cal U}}
+\newcommand{\sV}{{\cal V}}
+\newcommand{\sW}{{\cal W}}
+\newcommand{\sX}{{\cal X}}
+\newcommand{\sY}{{\cal Y}}
+\newcommand{\sZ}{{\cal Z}}
+\newcommand{\frakA}{{\mathfrak A}}
+\newcommand{\frakB}{{\mathfrak B}}
+\newcommand{\frakC}{{\mathfrak C}}
+\newcommand{\frakD}{{\mathfrak D}}
+\newcommand{\frakE}{{\mathfrak E}}
+\newcommand{\frakF}{{\mathfrak F}}
+\newcommand{\frakG}{{\mathfrak G}}
+\newcommand{\frakH}{{\mathfrak H}}
+\newcommand{\frakI}{{\mathfrak I}}
+\newcommand{\frakJ}{{\mathfrak J}}
+\newcommand{\frakK}{{\mathfrak K}}
+\newcommand{\frakL}{{\mathfrak L}}
+\newcommand{\frakM}{{\mathfrak M}}
+\newcommand{\frakN}{{\mathfrak N}}
+\newcommand{\frakO}{{\mathfrak O}}
+\newcommand{\frakP}{{\mathfrak P}}
+\newcommand{\frakQ}{{\mathfrak Q}}
+\newcommand{\frakR}{{\mathfrak R}}
+\newcommand{\frakS}{{\mathfrak S}}
+\newcommand{\frakT}{{\mathfrak T}}
+\newcommand{\frakU}{{\mathfrak U}}
+\newcommand{\frakV}{{\mathfrak V}}
+\newcommand{\frakW}{{\mathfrak W}}
+\newcommand{\frakX}{{\mathfrak X}}
+\newcommand{\frakY}{{\mathfrak Y}}
+\newcommand{\frakZ}{{\mathfrak Z}}
+\newcommand{\fraka}{{\mathfrak a}}
+\newcommand{\frakb}{{\mathfrak b}}
+\newcommand{\frakc}{{\mathfrak c}}
+\newcommand{\frakd}{{\mathfrak d}}
+\newcommand{\frake}{{\mathfrak e}}
+\newcommand{\frakf}{{\mathfrak f}}
+\newcommand{\frakg}{{\mathfrak g}}
+\newcommand{\frakh}{{\mathfrak h}}
+\newcommand{\fraki}{{\mathfrak i}}
+\newcommand{\frakj}{{\mathfrak j}}
+\newcommand{\frakk}{{\mathfrak k}}
+\newcommand{\frakl}{{\mathfrak l}}
+\newcommand{\frakm}{{\mathfrak m}}
+\newcommand{\frakn}{{\mathfrak n}}
+\newcommand{\frako}{{\mathfrak o}}
+\newcommand{\frakp}{{\mathfrak p}}
+\newcommand{\frakq}{{\mathfrak q}}
+\newcommand{\frakr}{{\mathfrak r}}
+\newcommand{\fraks}{{\mathfrak s}}
+\newcommand{\frakt}{{\mathfrak t}}
+\newcommand{\fraku}{{\mathfrak u}}
+\newcommand{\frakv}{{\mathfrak v}}
+\newcommand{\frakw}{{\mathfrak w}}
+\newcommand{\frakx}{{\mathfrak x}}
+\newcommand{\fraky}{{\mathfrak y}}
+\newcommand{\frakz}{{\mathfrak z}}
+\newcommand{\Tetra}{{\mathfrak Tetra}}
+\newcommand{\Cube}{{\mathfrak Cube}}
+\newcommand{\Octa}{{\mathfrak Octa}}
+\newcommand{\Dode}{{\mathfrak Dode}}
+\newcommand{\Ico}{{\mathfrak Ico}}
+\newcommand{\bbF}{{\mathbb F}}
+\newcommand{\bbQ}{{\mathbb Q}}
+\newcommand{\bbC}{{\mathbb C}}
+\newcommand{\bbR}{{\mathbb R}}
+
+
+
+%\makeindex
+
+\begin{document} 
+\setTBstruts
+
+\bibliographystyle{plain}
+%\large
+
+{\allowdisplaybreaks%
+
+
+
+
+%\makeindex
+
+%\renewcommand{\labelenumi}{(\roman{enumi})}
+
+\title{Rank-65554 over GF(8)}
+\author{}%end author
+%\date{}
+\maketitle%
+\pagenumbering{roman}
+%\thispagestyle{empty}
+%\input et.tex%
+%\thispagestyle{empty}%\phantom{page2}%\clearpage%
+%\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}%
+%\tableofcontents
+%\listofsymbols
+\pagenumbering{arabic}
+%\pagenumbering{roman}
+
+
+
+\subsection*{General information}
+Points on lines:
+$$
+9$$
+Lines on points:
+$$
+1^9,\,0^{64}$$
+\subsubsection*{Singular Points}
+The surface has 1 singular points:\\
+\begin{align*}
+S_{0} &= P_{20}=\bP(1, 1, 1, 0) = \bP(1, 1, 1, 0)\\
+\end{align*}
+\subsection*{The 1 Lines}
+$$
+\ell_{0} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & 0\\
+0 & 1 & 1 & 0\\
+\end{array}
+\right]
+_{74}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 0\\
+0  & 1  & 1  & 0\\
+\end{array}
+\right]_{74}
+={\rm\bf Pl}(1,0,1,0,0,1 )_{665}$$
+Rank of lines: ( 74 )\\
+Rank of points on Klein quadric: ( 665 )\\
+\subsubsection*{Eckardt Points}
+The surface has 0 Eckardt points:\\
+\subsubsection*{Double Points}
+The surface has 0 Double points:\\
+The double points on the surface are:\\
+\begin{multicols}{2}
+\noindent
+\end{multicols}
+\subsubsection*{Single Points}
+The surface has 9 single points:\\
+The single points on the surface are:\\
+\begin{multicols}{2}
+\noindent
+0 : $P_{5}=( 1, 1, 0, 0 )$ lies on line $\ell_{0}$\\
+1 : $P_{12}=( 1, 0, 1, 0 )$ lies on line $\ell_{0}$\\
+2 : $P_{19}=( 0, 1, 1, 0 )$ lies on line $\ell_{0}$\\
+3 : $P_{30}=( 3, 2, 1, 0 )$ lies on line $\ell_{0}$\\
+4 : $P_{37}=( 2, 3, 1, 0 )$ lies on line $\ell_{0}$\\
+5 : $P_{48}=( 5, 4, 1, 0 )$ lies on line $\ell_{0}$\\
+6 : $P_{55}=( 4, 5, 1, 0 )$ lies on line $\ell_{0}$\\
+7 : $P_{66}=( 7, 6, 1, 0 )$ lies on line $\ell_{0}$\\
+8 : $P_{73}=( 6, 7, 1, 0 )$ lies on line $\ell_{0}$\\
+\end{multicols}
+The single points on the surface are:\\
+\subsubsection*{Points on surface but on no line}
+The surface has 64 points not on any line:\\
+$$
+\begin{array}{r|*{10}{r}}
+ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9\\
+\hline
+0 & 20 & 75 & 82 & 95 & 105 & 112 & 116 & 126 & 133 & 138\\
+1 & 148 & 150 & 151 & 162 & 178 & 186 & 206 & 221 & 232 & 235\\
+2 & 238 & 240 & 241 & 245 & 260 & 261 & 264 & 272 & 274 & 288\\
+3 & 321 & 323 & 335 & 347 & 350 & 352 & 368 & 371 & 377 & 384\\
+4 & 387 & 389 & 391 & 395 & 402 & 409 & 413 & 427 & 461 & 466\\
+5 & 489 & 496 & 517 & 524 & 540 & 541 & 544 & 545 & 547 & 555\\
+6 & 557 & 559 & 573 & 579 & 0 & 0 & 0 & 0 & 0 & 0\\
+\end{array}
+$$
+The points on the surface but not on lines are:\\
+\begin{multicols}{2}
+\noindent
+0 : $P_{20}=( 1, 1, 1, 0 )$\\
+1 : $P_{75}=( 1, 0, 0, 1 )$\\
+2 : $P_{82}=( 0, 1, 0, 1 )$\\
+3 : $P_{95}=( 5, 2, 0, 1 )$\\
+4 : $P_{105}=( 7, 3, 0, 1 )$\\
+5 : $P_{112}=( 6, 4, 0, 1 )$\\
+6 : $P_{116}=( 2, 5, 0, 1 )$\\
+7 : $P_{126}=( 4, 6, 0, 1 )$\\
+8 : $P_{133}=( 3, 7, 0, 1 )$\\
+9 : $P_{138}=( 0, 0, 1, 1 )$\\
+10 : $P_{148}=( 3, 1, 1, 1 )$\\
+11 : $P_{150}=( 5, 1, 1, 1 )$\\
+12 : $P_{151}=( 6, 1, 1, 1 )$\\
+13 : $P_{162}=( 1, 3, 1, 1 )$\\
+14 : $P_{178}=( 1, 5, 1, 1 )$\\
+15 : $P_{186}=( 1, 6, 1, 1 )$\\
+16 : $P_{206}=( 5, 0, 2, 1 )$\\
+17 : $P_{221}=( 4, 2, 2, 1 )$\\
+18 : $P_{232}=( 7, 3, 2, 1 )$\\
+19 : $P_{235}=( 2, 4, 2, 1 )$\\
+20 : $P_{238}=( 5, 4, 2, 1 )$\\
+21 : $P_{240}=( 7, 4, 2, 1 )$\\
+22 : $P_{241}=( 0, 5, 2, 1 )$\\
+23 : $P_{245}=( 4, 5, 2, 1 )$\\
+24 : $P_{260}=( 3, 7, 2, 1 )$\\
+25 : $P_{261}=( 4, 7, 2, 1 )$\\
+26 : $P_{264}=( 7, 7, 2, 1 )$\\
+27 : $P_{272}=( 7, 0, 3, 1 )$\\
+28 : $P_{274}=( 1, 1, 3, 1 )$\\
+29 : $P_{288}=( 7, 2, 3, 1 )$\\
+30 : $P_{321}=( 0, 7, 3, 1 )$\\
+31 : $P_{323}=( 2, 7, 3, 1 )$\\
+32 : $P_{335}=( 6, 0, 4, 1 )$\\
+33 : $P_{347}=( 2, 2, 4, 1 )$\\
+34 : $P_{350}=( 5, 2, 4, 1 )$\\
+35 : $P_{352}=( 7, 2, 4, 1 )$\\
+36 : $P_{368}=( 7, 4, 4, 1 )$\\
+37 : $P_{371}=( 2, 5, 4, 1 )$\\
+38 : $P_{377}=( 0, 6, 4, 1 )$\\
+39 : $P_{384}=( 7, 6, 4, 1 )$\\
+40 : $P_{387}=( 2, 7, 4, 1 )$\\
+41 : $P_{389}=( 4, 7, 4, 1 )$\\
+42 : $P_{391}=( 6, 7, 4, 1 )$\\
+43 : $P_{395}=( 2, 0, 5, 1 )$\\
+44 : $P_{402}=( 1, 1, 5, 1 )$\\
+45 : $P_{409}=( 0, 2, 5, 1 )$\\
+46 : $P_{413}=( 4, 2, 5, 1 )$\\
+47 : $P_{427}=( 2, 4, 5, 1 )$\\
+48 : $P_{461}=( 4, 0, 6, 1 )$\\
+49 : $P_{466}=( 1, 1, 6, 1 )$\\
+50 : $P_{489}=( 0, 4, 6, 1 )$\\
+51 : $P_{496}=( 7, 4, 6, 1 )$\\
+52 : $P_{517}=( 4, 7, 6, 1 )$\\
+53 : $P_{524}=( 3, 0, 7, 1 )$\\
+54 : $P_{540}=( 3, 2, 7, 1 )$\\
+55 : $P_{541}=( 4, 2, 7, 1 )$\\
+56 : $P_{544}=( 7, 2, 7, 1 )$\\
+57 : $P_{545}=( 0, 3, 7, 1 )$\\
+58 : $P_{547}=( 2, 3, 7, 1 )$\\
+59 : $P_{555}=( 2, 4, 7, 1 )$\\
+60 : $P_{557}=( 4, 4, 7, 1 )$\\
+61 : $P_{559}=( 6, 4, 7, 1 )$\\
+62 : $P_{573}=( 4, 6, 7, 1 )$\\
+63 : $P_{579}=( 2, 7, 7, 1 )$\\
+\end{multicols}
+\subsection*{Line Intersection Graph}
+{\arraycolsep=1pt
+$$
+\begin{array}{rr|*{1}r}
+ &  & 0\\
+\hline
+0 &  & 0\\
+\end{array}
+$$
+}%%
+Neighbor sets in the line intersection graph:\\
+Line 0 intersects 
+$$
+\begin{array}{|r*{0}{|c}|}
+\hline
+\mbox{Line} \\
+\hline
+\mbox{in point} \\
+\hline
+\end{array}
+$$
+The surface has 73 points:\\
+The points on the surface are:\\
+\begin{multicols}{3}
+\noindent
+0 : $P_{5}=( 1, 1, 0, 0 )$\\
+1 : $P_{12}=( 1, 0, 1, 0 )$\\
+2 : $P_{19}=( 0, 1, 1, 0 )$\\
+3 : $P_{20}=( 1, 1, 1, 0 )$\\
+4 : $P_{30}=( 3, 2, 1, 0 )$\\
+5 : $P_{37}=( 2, 3, 1, 0 )$\\
+6 : $P_{48}=( 5, 4, 1, 0 )$\\
+7 : $P_{55}=( 4, 5, 1, 0 )$\\
+8 : $P_{66}=( 7, 6, 1, 0 )$\\
+9 : $P_{73}=( 6, 7, 1, 0 )$\\
+10 : $P_{75}=( 1, 0, 0, 1 )$\\
+11 : $P_{82}=( 0, 1, 0, 1 )$\\
+12 : $P_{95}=( 5, 2, 0, 1 )$\\
+13 : $P_{105}=( 7, 3, 0, 1 )$\\
+14 : $P_{112}=( 6, 4, 0, 1 )$\\
+15 : $P_{116}=( 2, 5, 0, 1 )$\\
+16 : $P_{126}=( 4, 6, 0, 1 )$\\
+17 : $P_{133}=( 3, 7, 0, 1 )$\\
+18 : $P_{138}=( 0, 0, 1, 1 )$\\
+19 : $P_{148}=( 3, 1, 1, 1 )$\\
+20 : $P_{150}=( 5, 1, 1, 1 )$\\
+21 : $P_{151}=( 6, 1, 1, 1 )$\\
+22 : $P_{162}=( 1, 3, 1, 1 )$\\
+23 : $P_{178}=( 1, 5, 1, 1 )$\\
+24 : $P_{186}=( 1, 6, 1, 1 )$\\
+25 : $P_{206}=( 5, 0, 2, 1 )$\\
+26 : $P_{221}=( 4, 2, 2, 1 )$\\
+27 : $P_{232}=( 7, 3, 2, 1 )$\\
+28 : $P_{235}=( 2, 4, 2, 1 )$\\
+29 : $P_{238}=( 5, 4, 2, 1 )$\\
+30 : $P_{240}=( 7, 4, 2, 1 )$\\
+31 : $P_{241}=( 0, 5, 2, 1 )$\\
+32 : $P_{245}=( 4, 5, 2, 1 )$\\
+33 : $P_{260}=( 3, 7, 2, 1 )$\\
+34 : $P_{261}=( 4, 7, 2, 1 )$\\
+35 : $P_{264}=( 7, 7, 2, 1 )$\\
+36 : $P_{272}=( 7, 0, 3, 1 )$\\
+37 : $P_{274}=( 1, 1, 3, 1 )$\\
+38 : $P_{288}=( 7, 2, 3, 1 )$\\
+39 : $P_{321}=( 0, 7, 3, 1 )$\\
+40 : $P_{323}=( 2, 7, 3, 1 )$\\
+41 : $P_{335}=( 6, 0, 4, 1 )$\\
+42 : $P_{347}=( 2, 2, 4, 1 )$\\
+43 : $P_{350}=( 5, 2, 4, 1 )$\\
+44 : $P_{352}=( 7, 2, 4, 1 )$\\
+45 : $P_{368}=( 7, 4, 4, 1 )$\\
+46 : $P_{371}=( 2, 5, 4, 1 )$\\
+47 : $P_{377}=( 0, 6, 4, 1 )$\\
+48 : $P_{384}=( 7, 6, 4, 1 )$\\
+49 : $P_{387}=( 2, 7, 4, 1 )$\\
+50 : $P_{389}=( 4, 7, 4, 1 )$\\
+51 : $P_{391}=( 6, 7, 4, 1 )$\\
+52 : $P_{395}=( 2, 0, 5, 1 )$\\
+53 : $P_{402}=( 1, 1, 5, 1 )$\\
+54 : $P_{409}=( 0, 2, 5, 1 )$\\
+55 : $P_{413}=( 4, 2, 5, 1 )$\\
+56 : $P_{427}=( 2, 4, 5, 1 )$\\
+57 : $P_{461}=( 4, 0, 6, 1 )$\\
+58 : $P_{466}=( 1, 1, 6, 1 )$\\
+59 : $P_{489}=( 0, 4, 6, 1 )$\\
+60 : $P_{496}=( 7, 4, 6, 1 )$\\
+61 : $P_{517}=( 4, 7, 6, 1 )$\\
+62 : $P_{524}=( 3, 0, 7, 1 )$\\
+63 : $P_{540}=( 3, 2, 7, 1 )$\\
+64 : $P_{541}=( 4, 2, 7, 1 )$\\
+65 : $P_{544}=( 7, 2, 7, 1 )$\\
+66 : $P_{545}=( 0, 3, 7, 1 )$\\
+67 : $P_{547}=( 2, 3, 7, 1 )$\\
+68 : $P_{555}=( 2, 4, 7, 1 )$\\
+69 : $P_{557}=( 4, 4, 7, 1 )$\\
+70 : $P_{559}=( 6, 4, 7, 1 )$\\
+71 : $P_{573}=( 4, 6, 7, 1 )$\\
+72 : $P_{579}=( 2, 7, 7, 1 )$\\
+\end{multicols}
+
+
+%\bibliographystyle{gerplain}% wird oben eingestellt
+%\addcontentsline{toc}{section}{References}
+%\bibliography{../MY_BIBLIOGRAPHY/anton}
+% ACHTUNG: nicht vergessen:
+% die Zeile
+%\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+% muss per Hand in d.bbl eingefuegt werden !
+% nach \begin{thebibliography}{100}
+
+%\begin{theindex}
+
+%\clearpage
+%\addcontentsline{toc}{chapter}{Index}
+%\input{apd.ind}
+
+%\printindex
+%\end{theindex}
+
+}% allowdisplaybreaks
+
+\end{document}
+
+

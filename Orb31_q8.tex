@@ -1,0 +1,2553 @@
+\documentclass{article}
+% a4paper
+
+%\usepackage[dvips]{epsfig}
+%\usepackage{cours11, cours}
+%\usepackage{fancyheadings}
+%\usepackage{calc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsfig}
+\usepackage{enumerate}
+%\usepackage{supertabular}
+%\usepackage{wrapfig}
+%\usepackage{blackbrd}
+%\usepackage{epic,eepic}
+\usepackage{rotating}
+\usepackage{multicol}
+%\usepackage{multirow}
+\usepackage{makeidx} % additional command see
+\usepackage{rotating}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{longtable}
+\usepackage{anyfontsize}
+\usepackage{t1enc}
+%\usepackage{amsmath,amsfonts}
+
+
+%\usepackage[mtbold,mtplusscr]{mathtime}
+% lucidacal,lucidascr,
+
+%\usepackage{mathtimy}
+%\usepackage{bm}
+%\usepackage{avant}
+%\usepackage{basker}
+%\usepackage{bembo}
+%\usepackage{bookman}
+%\usepackage{chancery}
+%\usepackage{garamond}
+%\usepackage{helvet}
+%\usepackage{newcent}
+%\usepackage{palatino}
+%\usepackage{times}
+%\usepackage{pifont}
+\usepackage{fullpage}
+\usepackage[top=1in,bottom=1in,right=1in,left=1in]{geometry}
+
+
+
+%\parindent=0pt
+
+
+%\topmargin=0pt
+%\headsep=18pt
+%\footskip=45pt
+%\mathsurround=1pt
+%\evensidemargin=0pt
+%\oddsidemargin=15pt
+
+%\setlength{\textheight}{\baselineskip*41+\topskip}
+
+\newcommand{\sectionline}{
+   \nointerlineskip \vspace{\baselineskip}
+   \hspace{\fill}\rule{0.9\linewidth}{1.7pt}\hspace{\fill}
+   \par\nointerlineskip \vspace{\baselineskip}
+   }
+\newcommand\setTBstruts{\def\T{\rule{0pt}{2.6ex}}%
+\def\B{\rule[-1.2ex]{0pt}{0pt}}}
+\newcommand{\ans}[1]{\\{\bf ANSWER}: {#1}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\sFix}{{\cal Fix}}
+\newcommand{\sOrbits}{{\cal Orbits}}
+\newcommand{\Stab}{{\rm Stab}}
+\newcommand{\Fix}{{\rm Fix}}
+\newcommand{\fix}{{\rm fix}}
+\newcommand{\Orbits}{{\rm Orbits}}
+\newcommand{\PG}{{\rm PG}}
+\newcommand{\AG}{{\rm AG}}
+\newcommand{\SQS}{{\rm SQS}}
+\newcommand{\STS}{{\rm STS}}
+\newcommand{\PSL}{{\rm PSL}}
+\newcommand{\PGL}{{\rm PGL}}
+\newcommand{\PSSL}{{\rm P\Sigma L}}
+\newcommand{\PGGL}{{\rm P\Gamma L}}
+\newcommand{\SL}{{\rm SL}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\SSL}{{\rm \Sigma L}}
+\newcommand{\GGL}{{\rm \Gamma L}}
+\newcommand{\ASL}{{\rm ASL}}
+\newcommand{\AGL}{{\rm AGL}}
+\newcommand{\ASSL}{{\rm A\Sigma L}}
+\newcommand{\AGGL}{{\rm A\Gamma L}}
+\newcommand{\PSU}{{\rm PSU}}
+\newcommand{\HS}{{\rm HS}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\SO}{{\rm SO}}
+\newcommand{\ASO}{{\rm ASO}}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\cA}{{\cal A}}
+\newcommand{\cB}{{\cal B}}
+\newcommand{\cC}{{\cal C}}
+\newcommand{\cD}{{\cal D}}
+\newcommand{\cE}{{\cal E}}
+\newcommand{\cF}{{\cal F}}
+\newcommand{\cG}{{\cal G}}
+\newcommand{\cH}{{\cal H}}
+\newcommand{\cI}{{\cal I}}
+\newcommand{\cJ}{{\cal J}}
+\newcommand{\cK}{{\cal K}}
+\newcommand{\cL}{{\cal L}}
+\newcommand{\cM}{{\cal M}}
+\newcommand{\cN}{{\cal N}}
+\newcommand{\cO}{{\cal O}}
+\newcommand{\cP}{{\cal P}}
+\newcommand{\cQ}{{\cal Q}}
+\newcommand{\cR}{{\cal R}}
+\newcommand{\cS}{{\cal S}}
+\newcommand{\cT}{{\cal T}}
+\newcommand{\cU}{{\cal U}}
+\newcommand{\cV}{{\cal V}}
+\newcommand{\cW}{{\cal W}}
+\newcommand{\cX}{{\cal X}}
+\newcommand{\cY}{{\cal Y}}
+\newcommand{\cZ}{{\cal Z}}
+\newcommand{\rmA}{{\rm A}}
+\newcommand{\rmB}{{\rm B}}
+\newcommand{\rmC}{{\rm C}}
+\newcommand{\rmD}{{\rm D}}
+\newcommand{\rmE}{{\rm E}}
+\newcommand{\rmF}{{\rm F}}
+\newcommand{\rmG}{{\rm G}}
+\newcommand{\rmH}{{\rm H}}
+\newcommand{\rmI}{{\rm I}}
+\newcommand{\rmJ}{{\rm J}}
+\newcommand{\rmK}{{\rm K}}
+\newcommand{\rmL}{{\rm L}}
+\newcommand{\rmM}{{\rm M}}
+\newcommand{\rmN}{{\rm N}}
+\newcommand{\rmO}{{\rm O}}
+\newcommand{\rmP}{{\rm P}}
+\newcommand{\rmQ}{{\rm Q}}
+\newcommand{\rmR}{{\rm R}}
+\newcommand{\rmS}{{\rm S}}
+\newcommand{\rmT}{{\rm T}}
+\newcommand{\rmU}{{\rm U}}
+\newcommand{\rmV}{{\rm V}}
+\newcommand{\rmW}{{\rm W}}
+\newcommand{\rmX}{{\rm X}}
+\newcommand{\rmY}{{\rm Y}}
+\newcommand{\rmZ}{{\rm Z}}
+\newcommand{\bA}{{\bf A}}
+\newcommand{\bB}{{\bf B}}
+\newcommand{\bC}{{\bf C}}
+\newcommand{\bD}{{\bf D}}
+\newcommand{\bE}{{\bf E}}
+\newcommand{\bF}{{\bf F}}
+\newcommand{\bG}{{\bf G}}
+\newcommand{\bH}{{\bf H}}
+\newcommand{\bI}{{\bf I}}
+\newcommand{\bJ}{{\bf J}}
+\newcommand{\bK}{{\bf K}}
+\newcommand{\bL}{{\bf L}}
+\newcommand{\bM}{{\bf M}}
+\newcommand{\bN}{{\bf N}}
+\newcommand{\bO}{{\bf O}}
+\newcommand{\bP}{{\bf P}}
+\newcommand{\bQ}{{\bf Q}}
+\newcommand{\bR}{{\bf R}}
+\newcommand{\bS}{{\bf S}}
+\newcommand{\bT}{{\bf T}}
+\newcommand{\bU}{{\bf U}}
+\newcommand{\bV}{{\bf V}}
+\newcommand{\bW}{{\bf W}}
+\newcommand{\bX}{{\bf X}}
+\newcommand{\bY}{{\bf Y}}
+\newcommand{\bZ}{{\bf Z}}
+\newcommand{\sA}{{\cal A}}
+\newcommand{\sB}{{\cal B}}
+\newcommand{\sC}{{\cal C}}
+\newcommand{\sD}{{\cal D}}
+\newcommand{\sE}{{\cal E}}
+\newcommand{\sF}{{\cal F}}
+\newcommand{\sG}{{\cal G}}
+\newcommand{\sH}{{\cal H}}
+\newcommand{\sI}{{\cal I}}
+\newcommand{\sJ}{{\cal J}}
+\newcommand{\sK}{{\cal K}}
+\newcommand{\sL}{{\cal L}}
+\newcommand{\sM}{{\cal M}}
+\newcommand{\sN}{{\cal N}}
+\newcommand{\sO}{{\cal O}}
+\newcommand{\sP}{{\cal P}}
+\newcommand{\sQ}{{\cal Q}}
+\newcommand{\sR}{{\cal R}}
+\newcommand{\sS}{{\cal S}}
+\newcommand{\sT}{{\cal T}}
+\newcommand{\sU}{{\cal U}}
+\newcommand{\sV}{{\cal V}}
+\newcommand{\sW}{{\cal W}}
+\newcommand{\sX}{{\cal X}}
+\newcommand{\sY}{{\cal Y}}
+\newcommand{\sZ}{{\cal Z}}
+\newcommand{\frakA}{{\mathfrak A}}
+\newcommand{\frakB}{{\mathfrak B}}
+\newcommand{\frakC}{{\mathfrak C}}
+\newcommand{\frakD}{{\mathfrak D}}
+\newcommand{\frakE}{{\mathfrak E}}
+\newcommand{\frakF}{{\mathfrak F}}
+\newcommand{\frakG}{{\mathfrak G}}
+\newcommand{\frakH}{{\mathfrak H}}
+\newcommand{\frakI}{{\mathfrak I}}
+\newcommand{\frakJ}{{\mathfrak J}}
+\newcommand{\frakK}{{\mathfrak K}}
+\newcommand{\frakL}{{\mathfrak L}}
+\newcommand{\frakM}{{\mathfrak M}}
+\newcommand{\frakN}{{\mathfrak N}}
+\newcommand{\frakO}{{\mathfrak O}}
+\newcommand{\frakP}{{\mathfrak P}}
+\newcommand{\frakQ}{{\mathfrak Q}}
+\newcommand{\frakR}{{\mathfrak R}}
+\newcommand{\frakS}{{\mathfrak S}}
+\newcommand{\frakT}{{\mathfrak T}}
+\newcommand{\frakU}{{\mathfrak U}}
+\newcommand{\frakV}{{\mathfrak V}}
+\newcommand{\frakW}{{\mathfrak W}}
+\newcommand{\frakX}{{\mathfrak X}}
+\newcommand{\frakY}{{\mathfrak Y}}
+\newcommand{\frakZ}{{\mathfrak Z}}
+\newcommand{\fraka}{{\mathfrak a}}
+\newcommand{\frakb}{{\mathfrak b}}
+\newcommand{\frakc}{{\mathfrak c}}
+\newcommand{\frakd}{{\mathfrak d}}
+\newcommand{\frake}{{\mathfrak e}}
+\newcommand{\frakf}{{\mathfrak f}}
+\newcommand{\frakg}{{\mathfrak g}}
+\newcommand{\frakh}{{\mathfrak h}}
+\newcommand{\fraki}{{\mathfrak i}}
+\newcommand{\frakj}{{\mathfrak j}}
+\newcommand{\frakk}{{\mathfrak k}}
+\newcommand{\frakl}{{\mathfrak l}}
+\newcommand{\frakm}{{\mathfrak m}}
+\newcommand{\frakn}{{\mathfrak n}}
+\newcommand{\frako}{{\mathfrak o}}
+\newcommand{\frakp}{{\mathfrak p}}
+\newcommand{\frakq}{{\mathfrak q}}
+\newcommand{\frakr}{{\mathfrak r}}
+\newcommand{\fraks}{{\mathfrak s}}
+\newcommand{\frakt}{{\mathfrak t}}
+\newcommand{\fraku}{{\mathfrak u}}
+\newcommand{\frakv}{{\mathfrak v}}
+\newcommand{\frakw}{{\mathfrak w}}
+\newcommand{\frakx}{{\mathfrak x}}
+\newcommand{\fraky}{{\mathfrak y}}
+\newcommand{\frakz}{{\mathfrak z}}
+\newcommand{\Tetra}{{\mathfrak Tetra}}
+\newcommand{\Cube}{{\mathfrak Cube}}
+\newcommand{\Octa}{{\mathfrak Octa}}
+\newcommand{\Dode}{{\mathfrak Dode}}
+\newcommand{\Ico}{{\mathfrak Ico}}
+\newcommand{\bbF}{{\mathbb F}}
+\newcommand{\bbQ}{{\mathbb Q}}
+\newcommand{\bbC}{{\mathbb C}}
+\newcommand{\bbR}{{\mathbb R}}
+
+
+
+%\makeindex
+
+\begin{document} 
+\setTBstruts
+
+\bibliographystyle{plain}
+%\large
+
+{\allowdisplaybreaks%
+
+
+
+
+%\makeindex
+
+%\renewcommand{\labelenumi}{(\roman{enumi})}
+
+\title{Rank-65546 over GF(8)}
+\author{}%end author
+%\date{}
+\maketitle%
+\pagenumbering{roman}
+%\thispagestyle{empty}
+%\input et.tex%
+%\thispagestyle{empty}%\phantom{page2}%\clearpage%
+%\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}%
+%\tableofcontents
+%\listofsymbols
+\pagenumbering{arabic}
+%\pagenumbering{roman}
+
+
+
+\subsection*{General information}
+Points on lines:
+$$
+9^{74}$$
+Lines on points:
+$$
+10,\,9^{72},\,1^8$$
+\subsubsection*{Singular Points}
+The surface has 9 singular points:\\
+\begin{align*}
+S_{0} &= P_{3}=\bP(0, 0, 0, 1) = \bP(0, 0, 0, 1)\\
+S_{1} &= P_{4}=\bP(1, 1, 1, 1) = \bP(1, 1, 1, 1)\\
+S_{2} &= P_{20}=\bP(1, 1, 1, 0) = \bP(1, 1, 1, 0)\\
+S_{3} &= P_{219}=\bP(\gamma , \gamma , \gamma , 1) = \bP(2, 2, 2, 1)\\
+S_{4} &= P_{292}=\bP(\gamma^{5}, \gamma^{5}, \gamma^{5}, 1) = \bP(3, 3, 3, 1)\\
+S_{5} &= P_{365}=\bP(\gamma^{2}, \gamma^{2}, \gamma^{2}, 1) = \bP(4, 4, 4, 1)\\
+S_{6} &= P_{438}=\bP(\gamma^{3}, \gamma^{3}, \gamma^{3}, 1) = \bP(5, 5, 5, 1)\\
+S_{7} &= P_{511}=\bP(\gamma^{6}, \gamma^{6}, \gamma^{6}, 1) = \bP(6, 6, 6, 1)\\
+S_{8} &= P_{584}=\bP(\gamma^{4}, \gamma^{4}, \gamma^{4}, 1) = \bP(7, 7, 7, 1)\\
+\end{align*}
+\subsection*{The 74 Lines}
+$$
+\ell_{0} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & 0\\
+0 & 1 & 1 & 0\\
+\end{array}
+\right]
+_{74}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 0\\
+0  & 1  & 1  & 0\\
+\end{array}
+\right]_{74}
+={\rm\bf Pl}(1,0,1,0,0,1 )_{665}$$
+$$
+\ell_{1} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 1 & 0 & 0\\
+0 & 0 & 0 & 1\\
+\end{array}
+\right]
+_{145}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 1  & 0  & 0\\
+0  & 0  & 0  & 1\\
+\end{array}
+\right]_{145}
+={\rm\bf Pl}(0,0,0,1,1,0 )_{201}$$
+$$
+\ell_{2} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & 1\\
+0 & 1 & 1 & 1\\
+\end{array}
+\right]
+_{666}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 1\\
+0  & 1  & 1  & 1\\
+\end{array}
+\right]_{666}
+={\rm\bf Pl}(1,0,1,1,1,1 )_{1323}$$
+$$
+\ell_{3} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{6}\\
+0 & 1 & 1 & \gamma^{6}\\
+\end{array}
+\right]
+_{3626}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 6\\
+0  & 1  & 1  & 6\\
+\end{array}
+\right]_{3626}
+={\rm\bf Pl}(2,0,2,6,6,1 )_{3859}$$
+$$
+\ell_{4} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{2}\\
+0 & 1 & 1 & \gamma^{2}\\
+\end{array}
+\right]
+_{2442}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 4\\
+0  & 1  & 1  & 4\\
+\end{array}
+\right]_{2442}
+={\rm\bf Pl}(3,0,3,4,4,1 )_{2867}$$
+$$
+\ell_{5} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{5}\\
+0 & 1 & 1 & \gamma^{5}\\
+\end{array}
+\right]
+_{1850}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 3\\
+0  & 1  & 1  & 3\\
+\end{array}
+\right]_{1850}
+={\rm\bf Pl}(4,0,4,3,3,1 )_{2379}$$
+$$
+\ell_{6} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{4}\\
+0 & 1 & 1 & \gamma^{4}\\
+\end{array}
+\right]
+_{4218}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 7\\
+0  & 1  & 1  & 7\\
+\end{array}
+\right]_{4218}
+={\rm\bf Pl}(5,0,5,7,7,1 )_{4411}$$
+$$
+\ell_{7} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma \\
+0 & 1 & 1 & \gamma \\
+\end{array}
+\right]
+_{1258}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 2\\
+0  & 1  & 1  & 2\\
+\end{array}
+\right]_{1258}
+={\rm\bf Pl}(6,0,6,2,2,1 )_{1907}$$
+$$
+\ell_{8} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{3}\\
+0 & 1 & 1 & \gamma^{3}\\
+\end{array}
+\right]
+_{3034}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 5\\
+0  & 1  & 1  & 5\\
+\end{array}
+\right]_{3034}
+={\rm\bf Pl}(7,0,7,5,5,1 )_{3435}$$
+$$
+\ell_{9} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & 0\\
+0 & 0 & 0 & 1\\
+\end{array}
+\right]
+_{656}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 0\\
+0  & 0  & 0  & 1\\
+\end{array}
+\right]_{656}
+={\rm\bf Pl}(0,1,0,0,1,0 )_{89}$$
+$$
+\ell_{10} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & 0\\
+0 & 1 & 1 & 1\\
+\end{array}
+\right]
+_{82}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 0\\
+0  & 1  & 1  & 1\\
+\end{array}
+\right]_{82}
+={\rm\bf Pl}(1,1,1,0,1,1 )_{1224}$$
+$$
+\ell_{11} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & 0\\
+0 & 1 & 1 & \gamma^{6}\\
+\end{array}
+\right]
+_{122}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 0\\
+0  & 1  & 1  & 6\\
+\end{array}
+\right]_{122}
+={\rm\bf Pl}(2,6,2,0,6,1 )_{3752}$$
+$$
+\ell_{12} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & 0\\
+0 & 1 & 1 & \gamma^{2}\\
+\end{array}
+\right]
+_{106}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 0\\
+0  & 1  & 1  & 4\\
+\end{array}
+\right]_{106}
+={\rm\bf Pl}(3,4,3,0,4,1 )_{2752}$$
+$$
+\ell_{13} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & 0\\
+0 & 1 & 1 & \gamma^{5}\\
+\end{array}
+\right]
+_{98}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 0\\
+0  & 1  & 1  & 3\\
+\end{array}
+\right]_{98}
+={\rm\bf Pl}(4,3,4,0,3,1 )_{2256}$$
+$$
+\ell_{14} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & 0\\
+0 & 1 & 1 & \gamma^{4}\\
+\end{array}
+\right]
+_{130}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 0\\
+0  & 1  & 1  & 7\\
+\end{array}
+\right]_{130}
+={\rm\bf Pl}(5,7,5,0,7,1 )_{4280}$$
+$$
+\ell_{15} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & 0\\
+0 & 1 & 1 & \gamma \\
+\end{array}
+\right]
+_{90}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 0\\
+0  & 1  & 1  & 2\\
+\end{array}
+\right]_{90}
+={\rm\bf Pl}(6,2,6,0,2,1 )_{1768}$$
+$$
+\ell_{16} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & 0\\
+0 & 1 & 1 & \gamma^{3}\\
+\end{array}
+\right]
+_{114}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 0\\
+0  & 1  & 1  & 5\\
+\end{array}
+\right]_{114}
+={\rm\bf Pl}(7,5,7,0,5,1 )_{3288}$$
+$$
+\ell_{17} = 
+\left[
+\begin{array}{*{4}{r}}
+0 & 1 & 1 & 0\\
+0 & 0 & 0 & 1\\
+\end{array}
+\right]
+_{4689}
+=
+\left[
+\begin{array}{*{4}c}
+0  & 1  & 1  & 0\\
+0  & 0  & 0  & 1\\
+\end{array}
+\right]_{4689}
+={\rm\bf Pl}(0,1,0,1,0,0 )_{25}$$
+$$
+\ell_{18} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & 1\\
+0 & 1 & 1 & 0\\
+\end{array}
+\right]
+_{658}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 1\\
+0  & 1  & 1  & 0\\
+\end{array}
+\right]_{658}
+={\rm\bf Pl}(1,1,1,1,0,1 )_{874}$$
+$$
+\ell_{19} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{6}\\
+0 & 1 & 1 & 0\\
+\end{array}
+\right]
+_{3578}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 6\\
+0  & 1  & 1  & 0\\
+\end{array}
+\right]_{3578}
+={\rm\bf Pl}(2,6,1,6,0,1 )_{1120}$$
+$$
+\ell_{20} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{2}\\
+0 & 1 & 1 & 0\\
+\end{array}
+\right]
+_{2410}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 4\\
+0  & 1  & 1  & 0\\
+\end{array}
+\right]_{2410}
+={\rm\bf Pl}(3,4,1,4,0,1 )_{1023}$$
+$$
+\ell_{21} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{5}\\
+0 & 1 & 1 & 0\\
+\end{array}
+\right]
+_{1826}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 3\\
+0  & 1  & 1  & 0\\
+\end{array}
+\right]_{1826}
+={\rm\bf Pl}(4,3,1,3,0,1 )_{975}$$
+$$
+\ell_{22} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{4}\\
+0 & 1 & 1 & 0\\
+\end{array}
+\right]
+_{4162}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 7\\
+0  & 1  & 1  & 0\\
+\end{array}
+\right]_{4162}
+={\rm\bf Pl}(5,7,1,7,0,1 )_{1172}$$
+$$
+\ell_{23} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma \\
+0 & 1 & 1 & 0\\
+\end{array}
+\right]
+_{1242}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 2\\
+0  & 1  & 1  & 0\\
+\end{array}
+\right]_{1242}
+={\rm\bf Pl}(6,2,1,2,0,1 )_{928}$$
+$$
+\ell_{24} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{3}\\
+0 & 1 & 1 & 0\\
+\end{array}
+\right]
+_{2994}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 5\\
+0  & 1  & 1  & 0\\
+\end{array}
+\right]_{2994}
+={\rm\bf Pl}(7,5,1,5,0,1 )_{1076}$$
+$$
+\ell_{25} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 1 & 1 & 0\\
+0 & 0 & 0 & 1\\
+\end{array}
+\right]
+_{729}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 1  & 1  & 0\\
+0  & 0  & 0  & 1\\
+\end{array}
+\right]_{729}
+={\rm\bf Pl}(0,1,0,1,1,0 )_{209}$$
+$$
+\ell_{26} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & \gamma^{3} & \gamma^{2} & 0\\
+0 & 0 & 0 & 1\\
+\end{array}
+\right]
+_{2773}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 5  & 4  & 0\\
+0  & 0  & 0  & 1\\
+\end{array}
+\right]_{2773}
+={\rm\bf Pl}(0,4,0,5,1,0 )_{272}$$
+$$
+\ell_{27} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma \\
+0 & 1 & 1 & \gamma^{5}\\
+\end{array}
+\right]
+_{1266}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 2\\
+0  & 1  & 1  & 3\\
+\end{array}
+\right]_{1266}
+={\rm\bf Pl}(1,1,6,2,3,1 )_{2666}$$
+$$
+\ell_{28} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & 1\\
+0 & 1 & 1 & \gamma^{4}\\
+\end{array}
+\right]
+_{714}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 1\\
+0  & 1  & 1  & 7\\
+\end{array}
+\right]_{714}
+={\rm\bf Pl}(2,6,1,1,7,1 )_{4473}$$
+$$
+\ell_{29} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{3}\\
+0 & 1 & 1 & 1\\
+\end{array}
+\right]
+_{3002}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 5\\
+0  & 1  & 1  & 1\\
+\end{array}
+\right]_{3002}
+={\rm\bf Pl}(3,4,7,5,1,1 )_{1702}$$
+$$
+\ell_{30} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{6}\\
+0 & 1 & 1 & \gamma^{3}\\
+\end{array}
+\right]
+_{3618}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 6\\
+0  & 1  & 1  & 5\\
+\end{array}
+\right]_{3618}
+={\rm\bf Pl}(4,3,2,6,5,1 )_{3509}$$
+$$
+\ell_{31} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{5}\\
+0 & 1 & 1 & \gamma^{2}\\
+\end{array}
+\right]
+_{1858}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 3\\
+0  & 1  & 1  & 4\\
+\end{array}
+\right]_{1858}
+={\rm\bf Pl}(5,7,4,3,4,1 )_{3090}$$
+$$
+\ell_{32} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{2}\\
+0 & 1 & 1 & \gamma^{6}\\
+\end{array}
+\right]
+_{2458}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 4\\
+0  & 1  & 1  & 6\\
+\end{array}
+\right]_{2458}
+={\rm\bf Pl}(6,2,3,4,6,1 )_{4057}$$
+$$
+\ell_{33} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{4}\\
+0 & 1 & 1 & \gamma \\
+\end{array}
+\right]
+_{4178}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 7\\
+0  & 1  & 1  & 2\\
+\end{array}
+\right]_{4178}
+={\rm\bf Pl}(7,5,5,7,2,1 )_{2126}$$
+$$
+\ell_{34} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & \gamma^{4} & \gamma^{6} & 0\\
+0 & 0 & 0 & 1\\
+\end{array}
+\right]
+_{4087}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 7  & 6  & 0\\
+0  & 0  & 0  & 1\\
+\end{array}
+\right]_{4087}
+={\rm\bf Pl}(0,6,0,7,1,0 )_{304}$$
+$$
+\ell_{35} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{5}\\
+0 & 1 & 1 & \gamma \\
+\end{array}
+\right]
+_{1842}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 3\\
+0  & 1  & 1  & 2\\
+\end{array}
+\right]_{1842}
+={\rm\bf Pl}(1,1,4,3,2,1 )_{2092}$$
+$$
+\ell_{36} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{4}\\
+0 & 1 & 1 & 1\\
+\end{array}
+\right]
+_{4170}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 7\\
+0  & 1  & 1  & 1\\
+\end{array}
+\right]_{4170}
+={\rm\bf Pl}(2,6,5,7,1,1 )_{1631}$$
+$$
+\ell_{37} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & 1\\
+0 & 1 & 1 & \gamma^{3}\\
+\end{array}
+\right]
+_{698}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 1\\
+0  & 1  & 1  & 5\\
+\end{array}
+\right]_{698}
+={\rm\bf Pl}(3,4,1,1,5,1 )_{3480}$$
+$$
+\ell_{38} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{3}\\
+0 & 1 & 1 & \gamma^{6}\\
+\end{array}
+\right]
+_{3042}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 5\\
+0  & 1  & 1  & 6\\
+\end{array}
+\right]_{3042}
+={\rm\bf Pl}(4,3,7,5,6,1 )_{4237}$$
+$$
+\ell_{39} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{2}\\
+0 & 1 & 1 & \gamma^{5}\\
+\end{array}
+\right]
+_{2434}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 4\\
+0  & 1  & 1  & 3\\
+\end{array}
+\right]_{2434}
+={\rm\bf Pl}(5,7,3,4,3,1 )_{2558}$$
+$$
+\ell_{40} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{6}\\
+0 & 1 & 1 & \gamma^{2}\\
+\end{array}
+\right]
+_{3610}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 6\\
+0  & 1  & 1  & 4\\
+\end{array}
+\right]_{3610}
+={\rm\bf Pl}(6,2,2,6,4,1 )_{3021}$$
+$$
+\ell_{41} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma \\
+0 & 1 & 1 & \gamma^{4}\\
+\end{array}
+\right]
+_{1298}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 2\\
+0  & 1  & 1  & 7\\
+\end{array}
+\right]_{1298}
+={\rm\bf Pl}(7,5,6,2,7,1 )_{4702}$$
+$$
+\ell_{42} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & \gamma^{6} & \gamma^{4} & 0\\
+0 & 0 & 0 & 1\\
+\end{array}
+\right]
+_{4598}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 6  & 7  & 0\\
+0  & 0  & 0  & 1\\
+\end{array}
+\right]_{4598}
+={\rm\bf Pl}(0,7,0,6,1,0 )_{290}$$
+$$
+\ell_{43} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{2}\\
+0 & 1 & 1 & \gamma^{3}\\
+\end{array}
+\right]
+_{2450}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 4\\
+0  & 1  & 1  & 5\\
+\end{array}
+\right]_{2450}
+={\rm\bf Pl}(1,1,3,4,5,1 )_{3555}$$
+$$
+\ell_{44} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma \\
+0 & 1 & 1 & \gamma^{2}\\
+\end{array}
+\right]
+_{1274}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 2\\
+0  & 1  & 1  & 4\\
+\end{array}
+\right]_{1274}
+={\rm\bf Pl}(2,6,6,2,4,1 )_{3178}$$
+$$
+\ell_{45} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{4}\\
+0 & 1 & 1 & \gamma^{5}\\
+\end{array}
+\right]
+_{4186}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 7\\
+0  & 1  & 1  & 3\\
+\end{array}
+\right]_{4186}
+={\rm\bf Pl}(3,4,5,7,3,1 )_{2633}$$
+$$
+\ell_{46} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & 1\\
+0 & 1 & 1 & \gamma \\
+\end{array}
+\right]
+_{674}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 1\\
+0  & 1  & 1  & 2\\
+\end{array}
+\right]_{674}
+={\rm\bf Pl}(4,3,1,1,2,1 )_{1962}$$
+$$
+\ell_{47} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{6}\\
+0 & 1 & 1 & 1\\
+\end{array}
+\right]
+_{3586}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 6\\
+0  & 1  & 1  & 1\\
+\end{array}
+\right]_{3586}
+={\rm\bf Pl}(5,7,2,6,1,1 )_{1501}$$
+$$
+\ell_{48} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{3}\\
+0 & 1 & 1 & \gamma^{4}\\
+\end{array}
+\right]
+_{3050}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 5\\
+0  & 1  & 1  & 7\\
+\end{array}
+\right]_{3050}
+={\rm\bf Pl}(6,2,7,5,7,1 )_{4736}$$
+$$
+\ell_{49} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{5}\\
+0 & 1 & 1 & \gamma^{6}\\
+\end{array}
+\right]
+_{1874}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 3\\
+0  & 1  & 1  & 6\\
+\end{array}
+\right]_{1874}
+={\rm\bf Pl}(7,5,4,3,6,1 )_{4107}$$
+$$
+\ell_{50} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & \gamma  & \gamma^{5} & 0\\
+0 & 0 & 0 & 1\\
+\end{array}
+\right]
+_{1970}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 2  & 3  & 0\\
+0  & 0  & 0  & 1\\
+\end{array}
+\right]_{1970}
+={\rm\bf Pl}(0,3,0,2,1,0 )_{226}$$
+$$
+\ell_{51} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{3}\\
+0 & 1 & 1 & \gamma^{2}\\
+\end{array}
+\right]
+_{3026}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 5\\
+0  & 1  & 1  & 4\\
+\end{array}
+\right]_{3026}
+={\rm\bf Pl}(1,1,7,5,4,1 )_{3191}$$
+$$
+\ell_{52} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{2}\\
+0 & 1 & 1 & \gamma \\
+\end{array}
+\right]
+_{2426}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 4\\
+0  & 1  & 1  & 2\\
+\end{array}
+\right]_{2426}
+={\rm\bf Pl}(2,6,3,4,2,1 )_{2016}$$
+$$
+\ell_{53} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{5}\\
+0 & 1 & 1 & \gamma^{4}\\
+\end{array}
+\right]
+_{1882}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 3\\
+0  & 1  & 1  & 7\\
+\end{array}
+\right]_{1882}
+={\rm\bf Pl}(3,4,4,3,7,1 )_{4579}$$
+$$
+\ell_{54} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma \\
+0 & 1 & 1 & 1\\
+\end{array}
+\right]
+_{1250}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 2\\
+0  & 1  & 1  & 1\\
+\end{array}
+\right]_{1250}
+={\rm\bf Pl}(4,3,6,2,1,1 )_{1640}$$
+$$
+\ell_{55} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & 1\\
+0 & 1 & 1 & \gamma^{6}\\
+\end{array}
+\right]
+_{706}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 1\\
+0  & 1  & 1  & 6\\
+\end{array}
+\right]_{706}
+={\rm\bf Pl}(5,7,1,1,6,1 )_{3951}$$
+$$
+\ell_{56} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{4}\\
+0 & 1 & 1 & \gamma^{3}\\
+\end{array}
+\right]
+_{4202}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 7\\
+0  & 1  & 1  & 5\\
+\end{array}
+\right]_{4202}
+={\rm\bf Pl}(6,2,5,7,5,1 )_{3616}$$
+$$
+\ell_{57} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{6}\\
+0 & 1 & 1 & \gamma^{5}\\
+\end{array}
+\right]
+_{3602}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 6\\
+0  & 1  & 1  & 3\\
+\end{array}
+\right]_{3602}
+={\rm\bf Pl}(7,5,2,6,3,1 )_{2483}$$
+$$
+\ell_{58} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & \gamma^{2} & \gamma^{3} & 0\\
+0 & 0 & 0 & 1\\
+\end{array}
+\right]
+_{3284}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 4  & 5  & 0\\
+0  & 0  & 0  & 1\\
+\end{array}
+\right]_{3284}
+={\rm\bf Pl}(0,5,0,4,1,0 )_{258}$$
+$$
+\ell_{59} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{6}\\
+0 & 1 & 1 & \gamma^{4}\\
+\end{array}
+\right]
+_{3634}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 6\\
+0  & 1  & 1  & 7\\
+\end{array}
+\right]_{3634}
+={\rm\bf Pl}(1,1,2,6,7,1 )_{4507}$$
+$$
+\ell_{60} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{5}\\
+0 & 1 & 1 & \gamma^{3}\\
+\end{array}
+\right]
+_{1866}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 3\\
+0  & 1  & 1  & 5\\
+\end{array}
+\right]_{1866}
+={\rm\bf Pl}(2,6,4,3,5,1 )_{3584}$$
+$$
+\ell_{61} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma \\
+0 & 1 & 1 & \gamma^{6}\\
+\end{array}
+\right]
+_{1290}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 2\\
+0  & 1  & 1  & 6\\
+\end{array}
+\right]_{1290}
+={\rm\bf Pl}(3,4,6,2,6,1 )_{4173}$$
+$$
+\ell_{62} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{4}\\
+0 & 1 & 1 & \gamma^{2}\\
+\end{array}
+\right]
+_{4194}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 7\\
+0  & 1  & 1  & 4\\
+\end{array}
+\right]_{4194}
+={\rm\bf Pl}(4,3,5,7,4,1 )_{3124}$$
+$$
+\ell_{63} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{3}\\
+0 & 1 & 1 & \gamma \\
+\end{array}
+\right]
+_{3010}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 5\\
+0  & 1  & 1  & 2\\
+\end{array}
+\right]_{3010}
+={\rm\bf Pl}(5,7,7,5,2,1 )_{2201}$$
+$$
+\ell_{64} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & 1\\
+0 & 1 & 1 & \gamma^{5}\\
+\end{array}
+\right]
+_{682}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 1\\
+0  & 1  & 1  & 3\\
+\end{array}
+\right]_{682}
+={\rm\bf Pl}(6,2,1,1,3,1 )_{2454}$$
+$$
+\ell_{65} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{2}\\
+0 & 1 & 1 & 1\\
+\end{array}
+\right]
+_{2418}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 4\\
+0  & 1  & 1  & 1\\
+\end{array}
+\right]_{2418}
+={\rm\bf Pl}(7,5,3,4,1,1 )_{1531}$$
+$$
+\ell_{66} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & \gamma^{5} & \gamma  & 0\\
+0 & 0 & 0 & 1\\
+\end{array}
+\right]
+_{1459}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 3  & 2  & 0\\
+0  & 0  & 0  & 1\\
+\end{array}
+\right]_{1459}
+={\rm\bf Pl}(0,2,0,3,1,0 )_{240}$$
+$$
+\ell_{67} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{4}\\
+0 & 1 & 1 & \gamma^{6}\\
+\end{array}
+\right]
+_{4210}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 7\\
+0  & 1  & 1  & 6\\
+\end{array}
+\right]_{4210}
+={\rm\bf Pl}(1,1,5,7,6,1 )_{4122}$$
+$$
+\ell_{68} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{3}\\
+0 & 1 & 1 & \gamma^{5}\\
+\end{array}
+\right]
+_{3018}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 5\\
+0  & 1  & 1  & 3\\
+\end{array}
+\right]_{3018}
+={\rm\bf Pl}(2,6,7,5,3,1 )_{2695}$$
+$$
+\ell_{69} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{6}\\
+0 & 1 & 1 & \gamma \\
+\end{array}
+\right]
+_{3594}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 6\\
+0  & 1  & 1  & 2\\
+\end{array}
+\right]_{3594}
+={\rm\bf Pl}(3,4,2,6,2,1 )_{1982}$$
+$$
+\ell_{70} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{2}\\
+0 & 1 & 1 & \gamma^{4}\\
+\end{array}
+\right]
+_{2466}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 4\\
+0  & 1  & 1  & 7\\
+\end{array}
+\right]_{2466}
+={\rm\bf Pl}(4,3,3,4,7,1 )_{4545}$$
+$$
+\ell_{71} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma \\
+0 & 1 & 1 & \gamma^{3}\\
+\end{array}
+\right]
+_{1282}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 2\\
+0  & 1  & 1  & 5\\
+\end{array}
+\right]_{1282}
+={\rm\bf Pl}(5,7,6,2,5,1 )_{3664}$$
+$$
+\ell_{72} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & \gamma^{5}\\
+0 & 1 & 1 & 1\\
+\end{array}
+\right]
+_{1834}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 3\\
+0  & 1  & 1  & 1\\
+\end{array}
+\right]_{1834}
+={\rm\bf Pl}(6,2,4,3,1,1 )_{1565}$$
+$$
+\ell_{73} = 
+\left[
+\begin{array}{*{4}{r}}
+1 & 0 & 1 & 1\\
+0 & 1 & 1 & \gamma^{2}\\
+\end{array}
+\right]
+_{690}
+=
+\left[
+\begin{array}{*{4}c}
+1  & 0  & 1  & 1\\
+0  & 1  & 1  & 4\\
+\end{array}
+\right]_{690}
+={\rm\bf Pl}(7,5,1,1,4,1 )_{2952}$$
+Rank of lines: ( 74, 145, 666, 3626, 2442, 1850, 4218, 1258, 3034, 656, 82, 122, 106, 98, 130, 90, 114, 4689, 658, 3578, 2410, 1826, 4162, 1242, 2994, 729, 2773, 1266, 714, 3002, 3618, 1858, 2458, 4178, 4087, 1842, 4170, 698, 3042, 2434, 3610, 1298, 4598, 2450, 1274, 4186, 674, 3586, 3050, 1874, ...1282, 1834, 690 )\\
+Rank of points on Klein quadric: ( 665, 201, 1323, 3859, 2867, 2379, 4411, 1907, 3435, 89, 1224, 3752, 2752, 2256, 4280, 1768, 3288, 25, 874, 1120, 1023, 975, 1172, 928, 1076, 209, 272, 2666, 4473, 1702, 3509, 3090, 4057, 2126, 304, 2092, 1631, 3480, 4237, 2558, 3021, 4702, 290, 3555, 3178, 2633, 1962, 1501, 4736, 4107, ...3664, 1565, 2952 )\\
+\subsubsection*{Eckardt Points}
+The surface has 0 Eckardt points:\\
+\subsubsection*{Double Points}
+The surface has 0 Double points:\\
+The double points on the surface are:\\
+\begin{multicols}{2}
+\noindent
+\end{multicols}
+\subsubsection*{Single Points}
+The surface has 8 single points:\\
+The single points on the surface are:\\
+\begin{multicols}{2}
+\noindent
+0 : $P_{4}=( 1, 1, 1, 1 )$ lies on line $\ell_{25}$\\
+1 : $P_{20}=( 1, 1, 1, 0 )$ lies on line $\ell_{25}$\\
+2 : $P_{219}=( 2, 2, 2, 1 )$ lies on line $\ell_{25}$\\
+3 : $P_{292}=( 3, 3, 3, 1 )$ lies on line $\ell_{25}$\\
+4 : $P_{365}=( 4, 4, 4, 1 )$ lies on line $\ell_{25}$\\
+5 : $P_{438}=( 5, 5, 5, 1 )$ lies on line $\ell_{25}$\\
+6 : $P_{511}=( 6, 6, 6, 1 )$ lies on line $\ell_{25}$\\
+7 : $P_{584}=( 7, 7, 7, 1 )$ lies on line $\ell_{25}$\\
+\end{multicols}
+The single points on the surface are:\\
+\subsubsection*{Points on surface but on no line}
+The surface has 0 points not on any line:\\
+$$
+\begin{array}{r|*{10}{r}}
+ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9\\
+\hline
+\end{array}
+$$
+The points on the surface but not on lines are:\\
+\begin{multicols}{2}
+\noindent
+\end{multicols}
+\subsection*{Line Intersection Graph}
+{\arraycolsep=1pt
+$$
+\begin{array}{rr|*{74}r}
+ &  & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 & 21 & 22 & 23 & 24 & 25 & 26 & 27 & 28 & 29 & 30 & 31 & 32 & 33 & 34 & 35 & 36 & 37 & 38 & 39 & 40 & 41 & 42 & 43 & 44 & 45 & 46 & 47 & 48 & 49 & 50 & 51 & 52 & 53 & 54 & 55 & 56 & 57 & 58 & 59 & 60 & 61 & 62 & 63 & 64 & 65 & 66 & 67 & 68 & 69 & 70 & 71 & 72 & 73\\
+\hline
+0 &  & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+1 &  & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+2 &  & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+3 &  & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+4 &  & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+5 &  & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+6 &  & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+7 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+8 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+9 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+10 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+11 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+12 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+13 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+14 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+15 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+16 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+17 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+18 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+19 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+20 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+21 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+22 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+23 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+24 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+25 &  & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+26 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+27 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+28 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+29 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+30 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+31 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+32 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+33 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+34 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+35 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+36 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+37 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+38 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+39 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+40 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+41 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+42 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+43 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+44 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+45 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+46 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+47 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+48 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+49 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+50 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+51 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+52 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+53 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+54 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+55 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+56 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+57 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+58 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+59 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+60 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+61 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+62 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+63 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+64 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+65 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+66 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+67 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1\\
+68 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1\\
+69 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1\\
+70 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1\\
+71 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1\\
+72 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1\\
+73 &  & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0\\
+\end{array}
+$$
+}%%
+Neighbor sets in the line intersection graph:\\
+Line 0 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73}\\
+\hline
+\end{array}
+$$
+Line 1 intersects 
+$$
+\begin{array}{|r*{73}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{25} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{3} & P_{83} & P_{92} & P_{101} & P_{110} & P_{119} & P_{128} & P_{137} & P_{3} & P_{83} & P_{92} & P_{101} & P_{110} & P_{119} & P_{128} & P_{137} & P_{3} & P_{3} & P_{83} & P_{92} & P_{101} & P_{110} & P_{119} & P_{128} & P_{137} & P_{3} & P_{83} & P_{92} & P_{101} & P_{110} & P_{119} & P_{128} & P_{137} & P_{3} & P_{83} & P_{92} & P_{101} & P_{110} & P_{119} & P_{128} & P_{137} & P_{3} & P_{83} & P_{92} & P_{101} & P_{110} & P_{119} & P_{128} & P_{137} & P_{3} & P_{83} & P_{92} & P_{101} & P_{110} & P_{119} & P_{128} & P_{137} & P_{3} & P_{83} & P_{92} & P_{101} & P_{110} & P_{119} & P_{128} & P_{137}\\
+\hline
+\end{array}
+$$
+Line 2 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{139} & P_{146} & P_{156} & P_{163} & P_{174} & P_{181} & P_{192} & P_{199} & P_{146} & P_{139} & P_{163} & P_{156} & P_{181} & P_{174} & P_{199} & P_{192} & P_{156} & P_{163} & P_{139} & P_{146} & P_{192} & P_{199} & P_{174} & P_{181} & P_{163} & P_{156} & P_{146} & P_{139} & P_{199} & P_{192} & P_{181} & P_{174} & P_{174} & P_{181} & P_{192} & P_{199} & P_{139} & P_{146} & P_{156} & P_{163} & P_{181} & P_{174} & P_{199} & P_{192} & P_{146} & P_{139} & P_{163} & P_{156} & P_{192} & P_{199} & P_{174} & P_{181} & P_{156} & P_{163} & P_{139} & P_{146} & P_{199} & P_{192} & P_{181} & P_{174} & P_{163} & P_{156} & P_{146} & P_{139}\\
+\hline
+\end{array}
+$$
+Line 3 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{203} & P_{212} & P_{217} & P_{226} & P_{239} & P_{248} & P_{253} & P_{262} & P_{217} & P_{226} & P_{203} & P_{212} & P_{253} & P_{262} & P_{239} & P_{248} & P_{239} & P_{248} & P_{253} & P_{262} & P_{203} & P_{212} & P_{217} & P_{226} & P_{253} & P_{262} & P_{239} & P_{248} & P_{217} & P_{226} & P_{203} & P_{212} & P_{248} & P_{239} & P_{262} & P_{253} & P_{212} & P_{203} & P_{226} & P_{217} & P_{262} & P_{253} & P_{248} & P_{239} & P_{226} & P_{217} & P_{212} & P_{203} & P_{212} & P_{203} & P_{226} & P_{217} & P_{248} & P_{239} & P_{262} & P_{253} & P_{226} & P_{217} & P_{212} & P_{203} & P_{262} & P_{253} & P_{248} & P_{239}\\
+\hline
+\end{array}
+$$
+Line 4 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{268} & P_{275} & P_{282} & P_{289} & P_{304} & P_{311} & P_{318} & P_{325} & P_{289} & P_{282} & P_{275} & P_{268} & P_{325} & P_{318} & P_{311} & P_{304} & P_{318} & P_{325} & P_{304} & P_{311} & P_{282} & P_{289} & P_{268} & P_{275} & P_{311} & P_{304} & P_{325} & P_{318} & P_{275} & P_{268} & P_{289} & P_{282} & P_{275} & P_{268} & P_{289} & P_{282} & P_{311} & P_{304} & P_{325} & P_{318} & P_{282} & P_{289} & P_{268} & P_{275} & P_{318} & P_{325} & P_{304} & P_{311} & P_{325} & P_{318} & P_{311} & P_{304} & P_{289} & P_{282} & P_{275} & P_{268} & P_{304} & P_{311} & P_{318} & P_{325} & P_{268} & P_{275} & P_{282} & P_{289}\\
+\hline
+\end{array}
+$$
+Line 5 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{333} & P_{342} & P_{351} & P_{360} & P_{361} & P_{370} & P_{379} & P_{388} & P_{361} & P_{370} & P_{379} & P_{388} & P_{333} & P_{342} & P_{351} & P_{360} & P_{370} & P_{361} & P_{388} & P_{379} & P_{342} & P_{333} & P_{360} & P_{351} & P_{342} & P_{333} & P_{360} & P_{351} & P_{370} & P_{361} & P_{388} & P_{379} & P_{388} & P_{379} & P_{370} & P_{361} & P_{360} & P_{351} & P_{342} & P_{333} & P_{360} & P_{351} & P_{342} & P_{333} & P_{388} & P_{379} & P_{370} & P_{361} & P_{351} & P_{360} & P_{333} & P_{342} & P_{379} & P_{388} & P_{361} & P_{370} & P_{379} & P_{388} & P_{361} & P_{370} & P_{351} & P_{360} & P_{333} & P_{342}\\
+\hline
+\end{array}
+$$
+Line 6 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{398} & P_{405} & P_{416} & P_{423} & P_{426} & P_{433} & P_{444} & P_{451} & P_{433} & P_{426} & P_{451} & P_{444} & P_{405} & P_{398} & P_{423} & P_{416} & P_{451} & P_{444} & P_{433} & P_{426} & P_{423} & P_{416} & P_{405} & P_{398} & P_{416} & P_{423} & P_{398} & P_{405} & P_{444} & P_{451} & P_{426} & P_{433} & P_{423} & P_{416} & P_{405} & P_{398} & P_{451} & P_{444} & P_{433} & P_{426} & P_{444} & P_{451} & P_{426} & P_{433} & P_{416} & P_{423} & P_{398} & P_{405} & P_{426} & P_{433} & P_{444} & P_{451} & P_{398} & P_{405} & P_{416} & P_{423} & P_{405} & P_{398} & P_{423} & P_{416} & P_{433} & P_{426} & P_{451} & P_{444}\\
+\hline
+\end{array}
+$$
+Line 7 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{463} & P_{472} & P_{477} & P_{486} & P_{491} & P_{500} & P_{505} & P_{514} & P_{505} & P_{514} & P_{491} & P_{500} & P_{477} & P_{486} & P_{463} & P_{472} & P_{472} & P_{463} & P_{486} & P_{477} & P_{500} & P_{491} & P_{514} & P_{505} & P_{514} & P_{505} & P_{500} & P_{491} & P_{486} & P_{477} & P_{472} & P_{463} & P_{477} & P_{486} & P_{463} & P_{472} & P_{505} & P_{514} & P_{491} & P_{500} & P_{491} & P_{500} & P_{505} & P_{514} & P_{463} & P_{472} & P_{477} & P_{486} & P_{486} & P_{477} & P_{472} & P_{463} & P_{514} & P_{505} & P_{500} & P_{491} & P_{500} & P_{491} & P_{514} & P_{505} & P_{472} & P_{463} & P_{486} & P_{477}\\
+\hline
+\end{array}
+$$
+Line 8 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{5} & P_{528} & P_{535} & P_{542} & P_{549} & P_{556} & P_{563} & P_{570} & P_{577} & P_{577} & P_{570} & P_{563} & P_{556} & P_{549} & P_{542} & P_{535} & P_{528} & P_{549} & P_{542} & P_{535} & P_{528} & P_{577} & P_{570} & P_{563} & P_{556} & P_{556} & P_{563} & P_{570} & P_{577} & P_{528} & P_{535} & P_{542} & P_{549} & P_{570} & P_{577} & P_{556} & P_{563} & P_{542} & P_{549} & P_{528} & P_{535} & P_{535} & P_{528} & P_{549} & P_{542} & P_{563} & P_{556} & P_{577} & P_{570} & P_{563} & P_{556} & P_{577} & P_{570} & P_{535} & P_{528} & P_{549} & P_{542} & P_{542} & P_{549} & P_{528} & P_{535} & P_{570} & P_{577} & P_{556} & P_{563}\\
+\hline
+\end{array}
+$$
+Line 9 intersects 
+$$
+\begin{array}{|r*{73}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{25} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{12} & P_{3} & P_{139} & P_{203} & P_{268} & P_{333} & P_{398} & P_{463} & P_{528} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{3} & P_{139} & P_{203} & P_{268} & P_{333} & P_{398} & P_{463} & P_{528} & P_{3} & P_{3} & P_{463} & P_{139} & P_{528} & P_{203} & P_{333} & P_{268} & P_{398} & P_{3} & P_{333} & P_{398} & P_{139} & P_{528} & P_{268} & P_{203} & P_{463} & P_{3} & P_{268} & P_{463} & P_{398} & P_{139} & P_{203} & P_{528} & P_{333} & P_{3} & P_{528} & P_{268} & P_{333} & P_{463} & P_{139} & P_{398} & P_{203} & P_{3} & P_{203} & P_{333} & P_{463} & P_{398} & P_{528} & P_{139} & P_{268} & P_{3} & P_{398} & P_{528} & P_{203} & P_{268} & P_{463} & P_{333} & P_{139}\\
+\hline
+\end{array}
+$$
+Line 10 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{12} & P_{83} & P_{146} & P_{212} & P_{275} & P_{342} & P_{405} & P_{472} & P_{535} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{146} & P_{83} & P_{275} & P_{212} & P_{405} & P_{342} & P_{535} & P_{472} & P_{472} & P_{83} & P_{535} & P_{146} & P_{342} & P_{212} & P_{405} & P_{275} & P_{342} & P_{83} & P_{146} & P_{405} & P_{275} & P_{535} & P_{472} & P_{212} & P_{275} & P_{83} & P_{405} & P_{472} & P_{212} & P_{146} & P_{342} & P_{535} & P_{535} & P_{83} & P_{342} & P_{275} & P_{146} & P_{472} & P_{212} & P_{405} & P_{212} & P_{83} & P_{472} & P_{342} & P_{535} & P_{405} & P_{275} & P_{146} & P_{405} & P_{83} & P_{212} & P_{535} & P_{472} & P_{275} & P_{146} & P_{342}\\
+\hline
+\end{array}
+$$
+Line 11 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{12} & P_{92} & P_{156} & P_{217} & P_{282} & P_{351} & P_{416} & P_{477} & P_{542} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{217} & P_{282} & P_{92} & P_{156} & P_{477} & P_{542} & P_{351} & P_{416} & P_{156} & P_{542} & P_{92} & P_{477} & P_{282} & P_{416} & P_{217} & P_{351} & P_{416} & P_{156} & P_{92} & P_{351} & P_{217} & P_{477} & P_{542} & P_{282} & P_{477} & P_{416} & P_{92} & P_{282} & P_{542} & P_{351} & P_{156} & P_{217} & P_{282} & P_{351} & P_{92} & P_{542} & P_{416} & P_{217} & P_{477} & P_{156} & P_{351} & P_{477} & P_{92} & P_{217} & P_{156} & P_{282} & P_{416} & P_{542} & P_{542} & P_{217} & P_{92} & P_{416} & P_{351} & P_{156} & P_{282} & P_{477}\\
+\hline
+\end{array}
+$$
+Line 12 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{12} & P_{101} & P_{163} & P_{226} & P_{289} & P_{360} & P_{423} & P_{486} & P_{549} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{289} & P_{226} & P_{163} & P_{101} & P_{549} & P_{486} & P_{423} & P_{360} & P_{549} & P_{163} & P_{486} & P_{101} & P_{423} & P_{289} & P_{360} & P_{226} & P_{163} & P_{423} & P_{360} & P_{101} & P_{486} & P_{226} & P_{289} & P_{549} & P_{423} & P_{486} & P_{289} & P_{101} & P_{360} & P_{549} & P_{226} & P_{163} & P_{360} & P_{289} & P_{549} & P_{101} & P_{226} & P_{423} & P_{163} & P_{486} & P_{486} & P_{360} & P_{226} & P_{101} & P_{289} & P_{163} & P_{549} & P_{423} & P_{226} & P_{549} & P_{423} & P_{101} & P_{163} & P_{360} & P_{486} & P_{289}\\
+\hline
+\end{array}
+$$
+Line 13 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{12} & P_{110} & P_{174} & P_{239} & P_{304} & P_{361} & P_{426} & P_{491} & P_{556} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{361} & P_{426} & P_{491} & P_{556} & P_{110} & P_{174} & P_{239} & P_{304} & P_{239} & P_{361} & P_{304} & P_{426} & P_{110} & P_{491} & P_{174} & P_{556} & P_{556} & P_{304} & P_{239} & P_{491} & P_{110} & P_{361} & P_{426} & P_{174} & P_{174} & P_{239} & P_{556} & P_{361} & P_{110} & P_{304} & P_{491} & P_{426} & P_{491} & P_{174} & P_{426} & P_{239} & P_{110} & P_{556} & P_{304} & P_{361} & P_{426} & P_{556} & P_{174} & P_{304} & P_{110} & P_{239} & P_{361} & P_{491} & P_{304} & P_{491} & P_{361} & P_{174} & P_{110} & P_{426} & P_{556} & P_{239}\\
+\hline
+\end{array}
+$$
+Line 14 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{12} & P_{119} & P_{181} & P_{248} & P_{311} & P_{370} & P_{433} & P_{500} & P_{563} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{433} & P_{370} & P_{563} & P_{500} & P_{181} & P_{119} & P_{311} & P_{248} & P_{370} & P_{248} & P_{433} & P_{311} & P_{500} & P_{119} & P_{563} & P_{181} & P_{311} & P_{563} & P_{500} & P_{248} & P_{370} & P_{119} & P_{181} & P_{433} & P_{248} & P_{181} & P_{370} & P_{563} & P_{311} & P_{119} & P_{433} & P_{500} & P_{181} & P_{500} & P_{248} & P_{433} & P_{563} & P_{119} & P_{370} & P_{311} & P_{563} & P_{433} & P_{311} & P_{181} & P_{248} & P_{119} & P_{500} & P_{370} & P_{500} & P_{311} & P_{181} & P_{370} & P_{433} & P_{119} & P_{248} & P_{563}\\
+\hline
+\end{array}
+$$
+Line 15 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{12} & P_{128} & P_{192} & P_{253} & P_{318} & P_{379} & P_{444} & P_{505} & P_{570} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{505} & P_{570} & P_{379} & P_{444} & P_{253} & P_{318} & P_{128} & P_{192} & P_{318} & P_{444} & P_{253} & P_{379} & P_{192} & P_{570} & P_{128} & P_{505} & P_{253} & P_{505} & P_{570} & P_{318} & P_{444} & P_{192} & P_{128} & P_{379} & P_{570} & P_{379} & P_{192} & P_{253} & P_{505} & P_{444} & P_{128} & P_{318} & P_{444} & P_{253} & P_{505} & P_{192} & P_{318} & P_{379} & P_{128} & P_{570} & P_{192} & P_{318} & P_{444} & P_{570} & P_{379} & P_{505} & P_{128} & P_{253} & P_{379} & P_{192} & P_{318} & P_{505} & P_{570} & P_{253} & P_{128} & P_{444}\\
+\hline
+\end{array}
+$$
+Line 16 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{12} & P_{137} & P_{199} & P_{262} & P_{325} & P_{388} & P_{451} & P_{514} & P_{577} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{12} & P_{577} & P_{514} & P_{451} & P_{388} & P_{325} & P_{262} & P_{199} & P_{137} & P_{451} & P_{325} & P_{388} & P_{262} & P_{577} & P_{199} & P_{514} & P_{137} & P_{514} & P_{262} & P_{325} & P_{577} & P_{199} & P_{451} & P_{388} & P_{137} & P_{388} & P_{577} & P_{262} & P_{199} & P_{451} & P_{514} & P_{325} & P_{137} & P_{262} & P_{451} & P_{199} & P_{514} & P_{388} & P_{325} & P_{577} & P_{137} & P_{325} & P_{199} & P_{577} & P_{451} & P_{514} & P_{388} & P_{262} & P_{137} & P_{199} & P_{388} & P_{514} & P_{325} & P_{262} & P_{577} & P_{451} & P_{137}\\
+\hline
+\end{array}
+$$
+Line 17 intersects 
+$$
+\begin{array}{|r*{73}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{25} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{19} & P_{3} & P_{146} & P_{217} & P_{289} & P_{361} & P_{433} & P_{505} & P_{577} & P_{3} & P_{146} & P_{217} & P_{289} & P_{361} & P_{433} & P_{505} & P_{577} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{3} & P_{3} & P_{361} & P_{433} & P_{146} & P_{577} & P_{289} & P_{217} & P_{505} & P_{3} & P_{505} & P_{146} & P_{577} & P_{217} & P_{361} & P_{289} & P_{433} & P_{3} & P_{577} & P_{289} & P_{361} & P_{505} & P_{146} & P_{433} & P_{217} & P_{3} & P_{289} & P_{505} & P_{433} & P_{146} & P_{217} & P_{577} & P_{361} & P_{3} & P_{433} & P_{577} & P_{217} & P_{289} & P_{505} & P_{361} & P_{146} & P_{3} & P_{217} & P_{361} & P_{505} & P_{433} & P_{577} & P_{146} & P_{289}\\
+\hline
+\end{array}
+$$
+Line 18 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{19} & P_{83} & P_{139} & P_{226} & P_{282} & P_{370} & P_{426} & P_{514} & P_{570} & P_{139} & P_{83} & P_{282} & P_{226} & P_{426} & P_{370} & P_{570} & P_{514} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{370} & P_{83} & P_{139} & P_{426} & P_{282} & P_{570} & P_{514} & P_{226} & P_{514} & P_{83} & P_{570} & P_{139} & P_{370} & P_{226} & P_{426} & P_{282} & P_{570} & P_{83} & P_{370} & P_{282} & P_{139} & P_{514} & P_{226} & P_{426} & P_{282} & P_{83} & P_{426} & P_{514} & P_{226} & P_{139} & P_{370} & P_{570} & P_{426} & P_{83} & P_{226} & P_{570} & P_{514} & P_{282} & P_{139} & P_{370} & P_{226} & P_{83} & P_{514} & P_{370} & P_{570} & P_{426} & P_{282} & P_{139}\\
+\hline
+\end{array}
+$$
+Line 19 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{19} & P_{92} & P_{163} & P_{203} & P_{275} & P_{379} & P_{451} & P_{491} & P_{563} & P_{203} & P_{275} & P_{92} & P_{163} & P_{491} & P_{563} & P_{379} & P_{451} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{451} & P_{163} & P_{92} & P_{379} & P_{203} & P_{491} & P_{563} & P_{275} & P_{163} & P_{563} & P_{92} & P_{491} & P_{275} & P_{451} & P_{203} & P_{379} & P_{275} & P_{379} & P_{92} & P_{563} & P_{451} & P_{203} & P_{491} & P_{163} & P_{491} & P_{451} & P_{92} & P_{275} & P_{563} & P_{379} & P_{163} & P_{203} & P_{563} & P_{203} & P_{92} & P_{451} & P_{379} & P_{163} & P_{275} & P_{491} & P_{379} & P_{491} & P_{92} & P_{203} & P_{163} & P_{275} & P_{451} & P_{563}\\
+\hline
+\end{array}
+$$
+Line 20 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{19} & P_{101} & P_{156} & P_{212} & P_{268} & P_{388} & P_{444} & P_{500} & P_{556} & P_{268} & P_{212} & P_{156} & P_{101} & P_{556} & P_{500} & P_{444} & P_{388} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{156} & P_{444} & P_{388} & P_{101} & P_{500} & P_{212} & P_{268} & P_{556} & P_{556} & P_{156} & P_{500} & P_{101} & P_{444} & P_{268} & P_{388} & P_{212} & P_{388} & P_{268} & P_{556} & P_{101} & P_{212} & P_{444} & P_{156} & P_{500} & P_{444} & P_{500} & P_{268} & P_{101} & P_{388} & P_{556} & P_{212} & P_{156} & P_{212} & P_{556} & P_{444} & P_{101} & P_{156} & P_{388} & P_{500} & P_{268} & P_{500} & P_{388} & P_{212} & P_{101} & P_{268} & P_{156} & P_{556} & P_{444}\\
+\hline
+\end{array}
+$$
+Line 21 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{19} & P_{110} & P_{181} & P_{253} & P_{325} & P_{333} & P_{405} & P_{477} & P_{549} & P_{333} & P_{405} & P_{477} & P_{549} & P_{110} & P_{181} & P_{253} & P_{325} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{549} & P_{325} & P_{253} & P_{477} & P_{110} & P_{333} & P_{405} & P_{181} & P_{253} & P_{333} & P_{325} & P_{405} & P_{110} & P_{477} & P_{181} & P_{549} & P_{477} & P_{181} & P_{405} & P_{253} & P_{110} & P_{549} & P_{325} & P_{333} & P_{181} & P_{253} & P_{549} & P_{333} & P_{110} & P_{325} & P_{477} & P_{405} & P_{325} & P_{477} & P_{333} & P_{181} & P_{110} & P_{405} & P_{549} & P_{253} & P_{405} & P_{549} & P_{181} & P_{325} & P_{110} & P_{253} & P_{333} & P_{477}\\
+\hline
+\end{array}
+$$
+Line 22 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{19} & P_{119} & P_{174} & P_{262} & P_{318} & P_{342} & P_{398} & P_{486} & P_{542} & P_{398} & P_{342} & P_{542} & P_{486} & P_{174} & P_{119} & P_{318} & P_{262} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{318} & P_{542} & P_{486} & P_{262} & P_{342} & P_{119} & P_{174} & P_{398} & P_{342} & P_{262} & P_{398} & P_{318} & P_{486} & P_{119} & P_{542} & P_{174} & P_{174} & P_{486} & P_{262} & P_{398} & P_{542} & P_{119} & P_{342} & P_{318} & P_{262} & P_{174} & P_{342} & P_{542} & P_{318} & P_{119} & P_{398} & P_{486} & P_{486} & P_{318} & P_{174} & P_{342} & P_{398} & P_{119} & P_{262} & P_{542} & P_{542} & P_{398} & P_{318} & P_{174} & P_{262} & P_{119} & P_{486} & P_{342}\\
+\hline
+\end{array}
+$$
+Line 23 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{19} & P_{128} & P_{199} & P_{239} & P_{311} & P_{351} & P_{423} & P_{463} & P_{535} & P_{463} & P_{535} & P_{351} & P_{423} & P_{239} & P_{311} & P_{128} & P_{199} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{239} & P_{463} & P_{535} & P_{311} & P_{423} & P_{199} & P_{128} & P_{351} & P_{311} & P_{423} & P_{239} & P_{351} & P_{199} & P_{535} & P_{128} & P_{463} & P_{423} & P_{239} & P_{463} & P_{199} & P_{311} & P_{351} & P_{128} & P_{535} & P_{535} & P_{351} & P_{199} & P_{239} & P_{463} & P_{423} & P_{128} & P_{311} & P_{351} & P_{199} & P_{311} & P_{463} & P_{535} & P_{239} & P_{128} & P_{423} & P_{199} & P_{311} & P_{423} & P_{535} & P_{351} & P_{463} & P_{128} & P_{239}\\
+\hline
+\end{array}
+$$
+Line 24 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{19} & P_{137} & P_{192} & P_{248} & P_{304} & P_{360} & P_{416} & P_{472} & P_{528} & P_{528} & P_{472} & P_{416} & P_{360} & P_{304} & P_{248} & P_{192} & P_{137} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{19} & P_{472} & P_{248} & P_{304} & P_{528} & P_{192} & P_{416} & P_{360} & P_{137} & P_{416} & P_{304} & P_{360} & P_{248} & P_{528} & P_{192} & P_{472} & P_{137} & P_{248} & P_{416} & P_{192} & P_{472} & P_{360} & P_{304} & P_{528} & P_{137} & P_{360} & P_{528} & P_{248} & P_{192} & P_{416} & P_{472} & P_{304} & P_{137} & P_{192} & P_{360} & P_{472} & P_{304} & P_{248} & P_{528} & P_{416} & P_{137} & P_{304} & P_{192} & P_{528} & P_{416} & P_{472} & P_{360} & P_{248} & P_{137}\\
+\hline
+\end{array}
+$$
+Line 25 intersects 
+$$
+\begin{array}{|r*{9}{|c}|}
+\hline
+\mbox{Line}  & \ell_{1} & \ell_{9} & \ell_{17} & \ell_{26} & \ell_{34} & \ell_{42} & \ell_{50} & \ell_{58} & \ell_{66}\\
+\hline
+\mbox{in point}  & P_{3} & P_{3} & P_{3} & P_{3} & P_{3} & P_{3} & P_{3} & P_{3} & P_{3}\\
+\hline
+\end{array}
+$$
+Line 26 intersects 
+$$
+\begin{array}{|r*{73}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{25} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{30} & P_{3} & P_{156} & P_{239} & P_{318} & P_{370} & P_{451} & P_{472} & P_{549} & P_{3} & P_{472} & P_{156} & P_{549} & P_{239} & P_{370} & P_{318} & P_{451} & P_{3} & P_{370} & P_{451} & P_{156} & P_{549} & P_{318} & P_{239} & P_{472} & P_{3} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{3} & P_{156} & P_{239} & P_{318} & P_{370} & P_{451} & P_{472} & P_{549} & P_{3} & P_{239} & P_{370} & P_{472} & P_{451} & P_{549} & P_{156} & P_{318} & P_{3} & P_{451} & P_{549} & P_{239} & P_{318} & P_{472} & P_{370} & P_{156} & P_{3} & P_{318} & P_{472} & P_{451} & P_{156} & P_{239} & P_{549} & P_{370} & P_{3} & P_{549} & P_{318} & P_{370} & P_{472} & P_{156} & P_{451} & P_{239}\\
+\hline
+\end{array}
+$$
+Line 27 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{30} & P_{83} & P_{163} & P_{248} & P_{325} & P_{361} & P_{444} & P_{463} & P_{542} & P_{463} & P_{83} & P_{542} & P_{163} & P_{361} & P_{248} & P_{444} & P_{325} & P_{361} & P_{83} & P_{163} & P_{444} & P_{325} & P_{542} & P_{463} & P_{248} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{163} & P_{83} & P_{325} & P_{248} & P_{444} & P_{361} & P_{542} & P_{463} & P_{248} & P_{83} & P_{463} & P_{361} & P_{542} & P_{444} & P_{325} & P_{163} & P_{444} & P_{83} & P_{248} & P_{542} & P_{463} & P_{325} & P_{163} & P_{361} & P_{325} & P_{83} & P_{444} & P_{463} & P_{248} & P_{163} & P_{361} & P_{542} & P_{542} & P_{83} & P_{361} & P_{325} & P_{163} & P_{463} & P_{248} & P_{444}\\
+\hline
+\end{array}
+$$
+Line 28 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{30} & P_{92} & P_{139} & P_{253} & P_{304} & P_{388} & P_{433} & P_{486} & P_{535} & P_{139} & P_{535} & P_{92} & P_{486} & P_{304} & P_{433} & P_{253} & P_{388} & P_{433} & P_{139} & P_{92} & P_{388} & P_{253} & P_{486} & P_{535} & P_{304} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{253} & P_{304} & P_{92} & P_{139} & P_{486} & P_{535} & P_{388} & P_{433} & P_{388} & P_{486} & P_{92} & P_{253} & P_{139} & P_{304} & P_{433} & P_{535} & P_{535} & P_{253} & P_{92} & P_{433} & P_{388} & P_{139} & P_{304} & P_{486} & P_{486} & P_{433} & P_{92} & P_{304} & P_{535} & P_{388} & P_{139} & P_{253} & P_{304} & P_{388} & P_{92} & P_{535} & P_{433} & P_{253} & P_{486} & P_{139}\\
+\hline
+\end{array}
+$$
+Line 29 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{30} & P_{101} & P_{146} & P_{262} & P_{311} & P_{379} & P_{426} & P_{477} & P_{528} & P_{528} & P_{146} & P_{477} & P_{101} & P_{426} & P_{311} & P_{379} & P_{262} & P_{146} & P_{426} & P_{379} & P_{101} & P_{477} & P_{262} & P_{311} & P_{528} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{311} & P_{262} & P_{146} & P_{101} & P_{528} & P_{477} & P_{426} & P_{379} & P_{477} & P_{379} & P_{262} & P_{101} & P_{311} & P_{146} & P_{528} & P_{426} & P_{262} & P_{528} & P_{426} & P_{101} & P_{146} & P_{379} & P_{477} & P_{311} & P_{426} & P_{477} & P_{311} & P_{101} & P_{379} & P_{528} & P_{262} & P_{146} & P_{379} & P_{311} & P_{528} & P_{101} & P_{262} & P_{426} & P_{146} & P_{477}\\
+\hline
+\end{array}
+$$
+Line 30 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{30} & P_{110} & P_{192} & P_{203} & P_{282} & P_{342} & P_{423} & P_{500} & P_{577} & P_{203} & P_{342} & P_{282} & P_{423} & P_{110} & P_{500} & P_{192} & P_{577} & P_{577} & P_{282} & P_{203} & P_{500} & P_{110} & P_{342} & P_{423} & P_{192} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{342} & P_{423} & P_{500} & P_{577} & P_{110} & P_{192} & P_{203} & P_{282} & P_{423} & P_{577} & P_{192} & P_{282} & P_{110} & P_{203} & P_{342} & P_{500} & P_{282} & P_{500} & P_{342} & P_{192} & P_{110} & P_{423} & P_{577} & P_{203} & P_{192} & P_{203} & P_{577} & P_{342} & P_{110} & P_{282} & P_{500} & P_{423} & P_{500} & P_{192} & P_{423} & P_{203} & P_{110} & P_{577} & P_{282} & P_{342}\\
+\hline
+\end{array}
+$$
+Line 31 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{30} & P_{119} & P_{199} & P_{212} & P_{289} & P_{333} & P_{416} & P_{491} & P_{570} & P_{333} & P_{212} & P_{416} & P_{289} & P_{491} & P_{119} & P_{570} & P_{199} & P_{289} & P_{570} & P_{491} & P_{212} & P_{333} & P_{119} & P_{199} & P_{416} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{416} & P_{333} & P_{570} & P_{491} & P_{199} & P_{119} & P_{289} & P_{212} & P_{570} & P_{416} & P_{289} & P_{199} & P_{212} & P_{119} & P_{491} & P_{333} & P_{491} & P_{289} & P_{199} & P_{333} & P_{416} & P_{119} & P_{212} & P_{570} & P_{212} & P_{199} & P_{333} & P_{570} & P_{289} & P_{119} & P_{416} & P_{491} & P_{199} & P_{491} & P_{212} & P_{416} & P_{570} & P_{119} & P_{333} & P_{289}\\
+\hline
+\end{array}
+$$
+Line 32 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{30} & P_{128} & P_{174} & P_{217} & P_{268} & P_{360} & P_{405} & P_{514} & P_{563} & P_{268} & P_{405} & P_{217} & P_{360} & P_{174} & P_{563} & P_{128} & P_{514} & P_{217} & P_{514} & P_{563} & P_{268} & P_{405} & P_{174} & P_{128} & P_{360} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{514} & P_{563} & P_{360} & P_{405} & P_{217} & P_{268} & P_{128} & P_{174} & P_{174} & P_{268} & P_{405} & P_{563} & P_{360} & P_{514} & P_{128} & P_{217} & P_{360} & P_{174} & P_{268} & P_{514} & P_{563} & P_{217} & P_{128} & P_{405} & P_{563} & P_{360} & P_{174} & P_{217} & P_{514} & P_{405} & P_{128} & P_{268} & P_{405} & P_{217} & P_{514} & P_{174} & P_{268} & P_{360} & P_{128} & P_{563}\\
+\hline
+\end{array}
+$$
+Line 33 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{30} & P_{137} & P_{181} & P_{226} & P_{275} & P_{351} & P_{398} & P_{505} & P_{556} & P_{398} & P_{275} & P_{351} & P_{226} & P_{556} & P_{181} & P_{505} & P_{137} & P_{505} & P_{226} & P_{275} & P_{556} & P_{181} & P_{398} & P_{351} & P_{137} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{30} & P_{556} & P_{505} & P_{398} & P_{351} & P_{275} & P_{226} & P_{181} & P_{137} & P_{275} & P_{181} & P_{556} & P_{398} & P_{505} & P_{351} & P_{226} & P_{137} & P_{181} & P_{351} & P_{505} & P_{275} & P_{226} & P_{556} & P_{398} & P_{137} & P_{351} & P_{556} & P_{226} & P_{181} & P_{398} & P_{505} & P_{275} & P_{137} & P_{226} & P_{398} & P_{181} & P_{505} & P_{351} & P_{275} & P_{556} & P_{137}\\
+\hline
+\end{array}
+$$
+Line 34 intersects 
+$$
+\begin{array}{|r*{73}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{25} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{37} & P_{3} & P_{163} & P_{253} & P_{311} & P_{342} & P_{416} & P_{514} & P_{556} & P_{3} & P_{342} & P_{416} & P_{163} & P_{556} & P_{311} & P_{253} & P_{514} & P_{3} & P_{514} & P_{163} & P_{556} & P_{253} & P_{342} & P_{311} & P_{416} & P_{3} & P_{3} & P_{163} & P_{253} & P_{311} & P_{342} & P_{416} & P_{514} & P_{556} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{3} & P_{416} & P_{556} & P_{253} & P_{311} & P_{514} & P_{342} & P_{163} & P_{3} & P_{253} & P_{342} & P_{514} & P_{416} & P_{556} & P_{163} & P_{311} & P_{3} & P_{556} & P_{311} & P_{342} & P_{514} & P_{163} & P_{416} & P_{253} & P_{3} & P_{311} & P_{514} & P_{416} & P_{163} & P_{253} & P_{556} & P_{342}\\
+\hline
+\end{array}
+$$
+Line 35 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{37} & P_{83} & P_{156} & P_{262} & P_{304} & P_{333} & P_{423} & P_{505} & P_{563} & P_{333} & P_{83} & P_{156} & P_{423} & P_{304} & P_{563} & P_{505} & P_{262} & P_{505} & P_{83} & P_{563} & P_{156} & P_{333} & P_{262} & P_{423} & P_{304} & P_{156} & P_{83} & P_{304} & P_{262} & P_{423} & P_{333} & P_{563} & P_{505} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{423} & P_{83} & P_{262} & P_{563} & P_{505} & P_{304} & P_{156} & P_{333} & P_{262} & P_{83} & P_{505} & P_{333} & P_{563} & P_{423} & P_{304} & P_{156} & P_{563} & P_{83} & P_{333} & P_{304} & P_{156} & P_{505} & P_{262} & P_{423} & P_{304} & P_{83} & P_{423} & P_{505} & P_{262} & P_{156} & P_{333} & P_{563}\\
+\hline
+\end{array}
+$$
+Line 36 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{37} & P_{92} & P_{146} & P_{239} & P_{325} & P_{360} & P_{398} & P_{500} & P_{570} & P_{398} & P_{146} & P_{92} & P_{360} & P_{239} & P_{500} & P_{570} & P_{325} & P_{146} & P_{570} & P_{92} & P_{500} & P_{325} & P_{398} & P_{239} & P_{360} & P_{239} & P_{325} & P_{92} & P_{146} & P_{500} & P_{570} & P_{360} & P_{398} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{570} & P_{239} & P_{92} & P_{398} & P_{360} & P_{146} & P_{325} & P_{500} & P_{360} & P_{500} & P_{92} & P_{239} & P_{146} & P_{325} & P_{398} & P_{570} & P_{325} & P_{360} & P_{92} & P_{570} & P_{398} & P_{239} & P_{500} & P_{146} & P_{500} & P_{398} & P_{92} & P_{325} & P_{570} & P_{360} & P_{146} & P_{239}\\
+\hline
+\end{array}
+$$
+Line 37 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{37} & P_{101} & P_{139} & P_{248} & P_{318} & P_{351} & P_{405} & P_{491} & P_{577} & P_{139} & P_{405} & P_{351} & P_{101} & P_{491} & P_{248} & P_{318} & P_{577} & P_{577} & P_{139} & P_{491} & P_{101} & P_{405} & P_{318} & P_{351} & P_{248} & P_{318} & P_{248} & P_{139} & P_{101} & P_{577} & P_{491} & P_{405} & P_{351} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{248} & P_{577} & P_{405} & P_{101} & P_{139} & P_{351} & P_{491} & P_{318} & P_{491} & P_{351} & P_{248} & P_{101} & P_{318} & P_{139} & P_{577} & P_{405} & P_{351} & P_{318} & P_{577} & P_{101} & P_{248} & P_{405} & P_{139} & P_{491} & P_{405} & P_{491} & P_{318} & P_{101} & P_{351} & P_{577} & P_{248} & P_{139}\\
+\hline
+\end{array}
+$$
+Line 38 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{37} & P_{110} & P_{199} & P_{217} & P_{275} & P_{370} & P_{444} & P_{486} & P_{528} & P_{528} & P_{275} & P_{217} & P_{486} & P_{110} & P_{370} & P_{444} & P_{199} & P_{217} & P_{370} & P_{275} & P_{444} & P_{110} & P_{486} & P_{199} & P_{528} & P_{370} & P_{444} & P_{486} & P_{528} & P_{110} & P_{199} & P_{217} & P_{275} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{275} & P_{486} & P_{370} & P_{199} & P_{110} & P_{444} & P_{528} & P_{217} & P_{444} & P_{528} & P_{199} & P_{275} & P_{110} & P_{217} & P_{370} & P_{486} & P_{486} & P_{199} & P_{444} & P_{217} & P_{110} & P_{528} & P_{275} & P_{370} & P_{199} & P_{217} & P_{528} & P_{370} & P_{110} & P_{275} & P_{486} & P_{444}\\
+\hline
+\end{array}
+$$
+Line 39 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{37} & P_{119} & P_{192} & P_{226} & P_{268} & P_{361} & P_{451} & P_{477} & P_{535} & P_{268} & P_{535} & P_{477} & P_{226} & P_{361} & P_{119} & P_{192} & P_{451} & P_{361} & P_{226} & P_{451} & P_{268} & P_{477} & P_{119} & P_{535} & P_{192} & P_{451} & P_{361} & P_{535} & P_{477} & P_{192} & P_{119} & P_{268} & P_{226} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{477} & P_{268} & P_{192} & P_{361} & P_{451} & P_{119} & P_{226} & P_{535} & P_{535} & P_{451} & P_{268} & P_{192} & P_{226} & P_{119} & P_{477} & P_{361} & P_{192} & P_{477} & P_{226} & P_{451} & P_{535} & P_{119} & P_{361} & P_{268} & P_{226} & P_{192} & P_{361} & P_{535} & P_{268} & P_{119} & P_{451} & P_{477}\\
+\hline
+\end{array}
+$$
+Line 40 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{37} & P_{128} & P_{181} & P_{203} & P_{289} & P_{388} & P_{426} & P_{472} & P_{542} & P_{203} & P_{472} & P_{542} & P_{289} & P_{426} & P_{181} & P_{128} & P_{388} & P_{289} & P_{426} & P_{203} & P_{388} & P_{181} & P_{542} & P_{128} & P_{472} & P_{472} & P_{542} & P_{388} & P_{426} & P_{203} & P_{289} & P_{128} & P_{181} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{388} & P_{181} & P_{289} & P_{472} & P_{542} & P_{203} & P_{128} & P_{426} & P_{181} & P_{289} & P_{426} & P_{542} & P_{388} & P_{472} & P_{128} & P_{203} & P_{426} & P_{203} & P_{472} & P_{181} & P_{289} & P_{388} & P_{128} & P_{542} & P_{542} & P_{388} & P_{181} & P_{203} & P_{472} & P_{426} & P_{128} & P_{289}\\
+\hline
+\end{array}
+$$
+Line 41 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{37} & P_{137} & P_{174} & P_{212} & P_{282} & P_{379} & P_{433} & P_{463} & P_{549} & P_{463} & P_{212} & P_{282} & P_{549} & P_{174} & P_{433} & P_{379} & P_{137} & P_{433} & P_{282} & P_{379} & P_{212} & P_{549} & P_{174} & P_{463} & P_{137} & P_{549} & P_{463} & P_{433} & P_{379} & P_{282} & P_{212} & P_{174} & P_{137} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{37} & P_{174} & P_{379} & P_{463} & P_{282} & P_{212} & P_{549} & P_{433} & P_{137} & P_{282} & P_{174} & P_{549} & P_{433} & P_{463} & P_{379} & P_{212} & P_{137} & P_{212} & P_{433} & P_{174} & P_{463} & P_{379} & P_{282} & P_{549} & P_{137} & P_{379} & P_{549} & P_{212} & P_{174} & P_{433} & P_{463} & P_{282} & P_{137}\\
+\hline
+\end{array}
+$$
+Line 42 intersects 
+$$
+\begin{array}{|r*{73}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{25} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{48} & P_{3} & P_{174} & P_{248} & P_{275} & P_{388} & P_{423} & P_{477} & P_{570} & P_{3} & P_{275} & P_{477} & P_{423} & P_{174} & P_{248} & P_{570} & P_{388} & P_{3} & P_{570} & P_{275} & P_{388} & P_{477} & P_{174} & P_{423} & P_{248} & P_{3} & P_{3} & P_{248} & P_{388} & P_{477} & P_{423} & P_{570} & P_{174} & P_{275} & P_{3} & P_{423} & P_{570} & P_{248} & P_{275} & P_{477} & P_{388} & P_{174} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{3} & P_{174} & P_{248} & P_{275} & P_{388} & P_{423} & P_{477} & P_{570} & P_{3} & P_{477} & P_{174} & P_{570} & P_{248} & P_{388} & P_{275} & P_{423} & P_{3} & P_{388} & P_{423} & P_{174} & P_{570} & P_{275} & P_{248} & P_{477}\\
+\hline
+\end{array}
+$$
+Line 43 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{48} & P_{83} & P_{181} & P_{239} & P_{268} & P_{379} & P_{416} & P_{486} & P_{577} & P_{268} & P_{83} & P_{416} & P_{486} & P_{239} & P_{181} & P_{379} & P_{577} & P_{577} & P_{83} & P_{379} & P_{268} & P_{181} & P_{486} & P_{239} & P_{416} & P_{239} & P_{83} & P_{486} & P_{379} & P_{577} & P_{416} & P_{268} & P_{181} & P_{416} & P_{83} & P_{239} & P_{577} & P_{486} & P_{268} & P_{181} & P_{379} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{181} & P_{83} & P_{268} & P_{239} & P_{416} & P_{379} & P_{577} & P_{486} & P_{486} & P_{83} & P_{577} & P_{181} & P_{379} & P_{239} & P_{416} & P_{268} & P_{379} & P_{83} & P_{181} & P_{416} & P_{268} & P_{577} & P_{486} & P_{239}\\
+\hline
+\end{array}
+$$
+Line 44 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{48} & P_{92} & P_{192} & P_{262} & P_{289} & P_{370} & P_{405} & P_{463} & P_{556} & P_{463} & P_{405} & P_{92} & P_{289} & P_{556} & P_{370} & P_{192} & P_{262} & P_{289} & P_{370} & P_{92} & P_{556} & P_{405} & P_{262} & P_{463} & P_{192} & P_{370} & P_{463} & P_{92} & P_{262} & P_{192} & P_{289} & P_{405} & P_{556} & P_{556} & P_{262} & P_{92} & P_{405} & P_{370} & P_{192} & P_{289} & P_{463} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{262} & P_{289} & P_{92} & P_{192} & P_{463} & P_{556} & P_{370} & P_{405} & P_{192} & P_{556} & P_{92} & P_{463} & P_{289} & P_{405} & P_{262} & P_{370} & P_{405} & P_{192} & P_{92} & P_{370} & P_{262} & P_{463} & P_{556} & P_{289}\\
+\hline
+\end{array}
+$$
+Line 45 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{48} & P_{101} & P_{199} & P_{253} & P_{282} & P_{361} & P_{398} & P_{472} & P_{563} & P_{398} & P_{472} & P_{282} & P_{101} & P_{361} & P_{563} & P_{253} & P_{199} & P_{361} & P_{282} & P_{563} & P_{101} & P_{253} & P_{398} & P_{199} & P_{472} & P_{472} & P_{361} & P_{253} & P_{101} & P_{282} & P_{199} & P_{563} & P_{398} & P_{253} & P_{563} & P_{398} & P_{101} & P_{199} & P_{361} & P_{472} & P_{282} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{282} & P_{253} & P_{199} & P_{101} & P_{563} & P_{472} & P_{398} & P_{361} & P_{563} & P_{199} & P_{472} & P_{101} & P_{398} & P_{282} & P_{361} & P_{253} & P_{199} & P_{398} & P_{361} & P_{101} & P_{472} & P_{253} & P_{282} & P_{563}\\
+\hline
+\end{array}
+$$
+Line 46 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{48} & P_{110} & P_{139} & P_{212} & P_{311} & P_{360} & P_{451} & P_{505} & P_{542} & P_{139} & P_{212} & P_{542} & P_{360} & P_{110} & P_{311} & P_{505} & P_{451} & P_{505} & P_{139} & P_{451} & P_{212} & P_{110} & P_{542} & P_{311} & P_{360} & P_{451} & P_{542} & P_{139} & P_{311} & P_{110} & P_{212} & P_{360} & P_{505} & P_{311} & P_{505} & P_{360} & P_{139} & P_{110} & P_{451} & P_{542} & P_{212} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{360} & P_{451} & P_{505} & P_{542} & P_{110} & P_{139} & P_{212} & P_{311} & P_{212} & P_{360} & P_{311} & P_{451} & P_{110} & P_{505} & P_{139} & P_{542} & P_{542} & P_{311} & P_{212} & P_{505} & P_{110} & P_{360} & P_{451} & P_{139}\\
+\hline
+\end{array}
+$$
+Line 47 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{48} & P_{119} & P_{146} & P_{203} & P_{304} & P_{351} & P_{444} & P_{514} & P_{549} & P_{203} & P_{146} & P_{351} & P_{549} & P_{304} & P_{119} & P_{444} & P_{514} & P_{146} & P_{514} & P_{203} & P_{444} & P_{549} & P_{119} & P_{351} & P_{304} & P_{549} & P_{444} & P_{304} & P_{146} & P_{203} & P_{119} & P_{514} & P_{351} & P_{514} & P_{304} & P_{146} & P_{351} & P_{444} & P_{119} & P_{203} & P_{549} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{444} & P_{351} & P_{549} & P_{514} & P_{146} & P_{119} & P_{304} & P_{203} & P_{351} & P_{203} & P_{444} & P_{304} & P_{514} & P_{119} & P_{549} & P_{146} & P_{304} & P_{549} & P_{514} & P_{203} & P_{351} & P_{119} & P_{146} & P_{444}\\
+\hline
+\end{array}
+$$
+Line 48 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{48} & P_{128} & P_{156} & P_{226} & P_{325} & P_{342} & P_{433} & P_{491} & P_{528} & P_{528} & P_{342} & P_{156} & P_{226} & P_{491} & P_{433} & P_{128} & P_{325} & P_{433} & P_{226} & P_{491} & P_{156} & P_{325} & P_{342} & P_{128} & P_{528} & P_{156} & P_{325} & P_{433} & P_{528} & P_{342} & P_{491} & P_{128} & P_{226} & P_{342} & P_{156} & P_{325} & P_{491} & P_{528} & P_{226} & P_{128} & P_{433} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{491} & P_{528} & P_{342} & P_{433} & P_{226} & P_{325} & P_{128} & P_{156} & P_{325} & P_{433} & P_{226} & P_{342} & P_{156} & P_{528} & P_{128} & P_{491} & P_{226} & P_{491} & P_{528} & P_{325} & P_{433} & P_{156} & P_{128} & P_{342}\\
+\hline
+\end{array}
+$$
+Line 49 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{48} & P_{137} & P_{163} & P_{217} & P_{318} & P_{333} & P_{426} & P_{500} & P_{535} & P_{333} & P_{535} & P_{217} & P_{163} & P_{426} & P_{500} & P_{318} & P_{137} & P_{217} & P_{426} & P_{163} & P_{500} & P_{333} & P_{318} & P_{535} & P_{137} & P_{318} & P_{163} & P_{535} & P_{426} & P_{500} & P_{333} & P_{217} & P_{137} & P_{163} & P_{333} & P_{500} & P_{318} & P_{217} & P_{535} & P_{426} & P_{137} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{48} & P_{535} & P_{500} & P_{426} & P_{333} & P_{318} & P_{217} & P_{163} & P_{137} & P_{426} & P_{318} & P_{333} & P_{217} & P_{535} & P_{163} & P_{500} & P_{137} & P_{500} & P_{217} & P_{318} & P_{535} & P_{163} & P_{426} & P_{333} & P_{137}\\
+\hline
+\end{array}
+$$
+Line 50 intersects 
+$$
+\begin{array}{|r*{73}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{25} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{55} & P_{3} & P_{181} & P_{262} & P_{282} & P_{360} & P_{444} & P_{491} & P_{535} & P_{3} & P_{535} & P_{282} & P_{360} & P_{491} & P_{181} & P_{444} & P_{262} & P_{3} & P_{282} & P_{491} & P_{444} & P_{181} & P_{262} & P_{535} & P_{360} & P_{3} & P_{3} & P_{444} & P_{535} & P_{262} & P_{282} & P_{491} & P_{360} & P_{181} & P_{3} & P_{262} & P_{360} & P_{491} & P_{444} & P_{535} & P_{181} & P_{282} & P_{3} & P_{181} & P_{262} & P_{282} & P_{360} & P_{444} & P_{491} & P_{535} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{3} & P_{360} & P_{444} & P_{181} & P_{535} & P_{282} & P_{262} & P_{491} & P_{3} & P_{491} & P_{181} & P_{535} & P_{262} & P_{360} & P_{282} & P_{444}\\
+\hline
+\end{array}
+$$
+Line 51 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{55} & P_{83} & P_{174} & P_{253} & P_{289} & P_{351} & P_{451} & P_{500} & P_{528} & P_{528} & P_{83} & P_{351} & P_{289} & P_{174} & P_{500} & P_{253} & P_{451} & P_{289} & P_{83} & P_{451} & P_{500} & P_{253} & P_{174} & P_{351} & P_{528} & P_{451} & P_{83} & P_{253} & P_{528} & P_{500} & P_{289} & P_{174} & P_{351} & P_{253} & P_{83} & P_{500} & P_{351} & P_{528} & P_{451} & P_{289} & P_{174} & P_{174} & P_{83} & P_{289} & P_{253} & P_{451} & P_{351} & P_{528} & P_{500} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{351} & P_{83} & P_{174} & P_{451} & P_{289} & P_{528} & P_{500} & P_{253} & P_{500} & P_{83} & P_{528} & P_{174} & P_{351} & P_{253} & P_{451} & P_{289}\\
+\hline
+\end{array}
+$$
+Line 52 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{55} & P_{92} & P_{199} & P_{248} & P_{268} & P_{342} & P_{426} & P_{505} & P_{549} & P_{268} & P_{342} & P_{92} & P_{549} & P_{426} & P_{248} & P_{505} & P_{199} & P_{505} & P_{426} & P_{92} & P_{268} & P_{549} & P_{342} & P_{199} & P_{248} & P_{549} & P_{248} & P_{92} & P_{426} & P_{342} & P_{199} & P_{268} & P_{505} & P_{342} & P_{505} & P_{92} & P_{248} & P_{199} & P_{268} & P_{426} & P_{549} & P_{248} & P_{268} & P_{92} & P_{199} & P_{505} & P_{549} & P_{342} & P_{426} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{426} & P_{199} & P_{92} & P_{342} & P_{248} & P_{505} & P_{549} & P_{268} & P_{199} & P_{549} & P_{92} & P_{505} & P_{268} & P_{426} & P_{248} & P_{342}\\
+\hline
+\end{array}
+$$
+Line 53 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{55} & P_{101} & P_{192} & P_{239} & P_{275} & P_{333} & P_{433} & P_{514} & P_{542} & P_{333} & P_{275} & P_{542} & P_{101} & P_{239} & P_{433} & P_{192} & P_{514} & P_{433} & P_{514} & P_{275} & P_{101} & P_{333} & P_{542} & P_{239} & P_{192} & P_{239} & P_{542} & P_{433} & P_{101} & P_{192} & P_{333} & P_{514} & P_{275} & P_{514} & P_{333} & P_{239} & P_{101} & P_{275} & P_{192} & P_{542} & P_{433} & P_{275} & P_{239} & P_{192} & P_{101} & P_{542} & P_{514} & P_{433} & P_{333} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{192} & P_{433} & P_{333} & P_{101} & P_{514} & P_{239} & P_{275} & P_{542} & P_{542} & P_{192} & P_{514} & P_{101} & P_{433} & P_{275} & P_{333} & P_{239}\\
+\hline
+\end{array}
+$$
+Line 54 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{55} & P_{110} & P_{146} & P_{226} & P_{318} & P_{388} & P_{416} & P_{463} & P_{563} & P_{463} & P_{146} & P_{416} & P_{226} & P_{110} & P_{563} & P_{318} & P_{388} & P_{146} & P_{226} & P_{563} & P_{388} & P_{110} & P_{318} & P_{463} & P_{416} & P_{318} & P_{463} & P_{388} & P_{146} & P_{110} & P_{416} & P_{563} & P_{226} & P_{416} & P_{563} & P_{146} & P_{318} & P_{110} & P_{226} & P_{388} & P_{463} & P_{388} & P_{416} & P_{463} & P_{563} & P_{110} & P_{146} & P_{226} & P_{318} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{563} & P_{318} & P_{226} & P_{463} & P_{110} & P_{388} & P_{416} & P_{146} & P_{226} & P_{388} & P_{318} & P_{416} & P_{110} & P_{463} & P_{146} & P_{563}\\
+\hline
+\end{array}
+$$
+Line 55 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{55} & P_{119} & P_{139} & P_{217} & P_{325} & P_{379} & P_{423} & P_{472} & P_{556} & P_{139} & P_{472} & P_{217} & P_{423} & P_{556} & P_{119} & P_{379} & P_{325} & P_{217} & P_{139} & P_{379} & P_{556} & P_{325} & P_{119} & P_{423} & P_{472} & P_{472} & P_{325} & P_{139} & P_{379} & P_{423} & P_{119} & P_{217} & P_{556} & P_{556} & P_{423} & P_{325} & P_{139} & P_{217} & P_{119} & P_{472} & P_{379} & P_{423} & P_{379} & P_{556} & P_{472} & P_{139} & P_{119} & P_{325} & P_{217} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{325} & P_{556} & P_{472} & P_{217} & P_{379} & P_{119} & P_{139} & P_{423} & P_{379} & P_{217} & P_{423} & P_{325} & P_{472} & P_{119} & P_{556} & P_{139}\\
+\hline
+\end{array}
+$$
+Line 56 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{55} & P_{128} & P_{163} & P_{212} & P_{304} & P_{370} & P_{398} & P_{477} & P_{577} & P_{398} & P_{212} & P_{477} & P_{163} & P_{304} & P_{370} & P_{128} & P_{577} & P_{577} & P_{370} & P_{163} & P_{212} & P_{477} & P_{398} & P_{128} & P_{304} & P_{370} & P_{163} & P_{304} & P_{477} & P_{577} & P_{212} & P_{128} & P_{398} & P_{163} & P_{304} & P_{398} & P_{577} & P_{370} & P_{477} & P_{128} & P_{212} & P_{477} & P_{577} & P_{370} & P_{398} & P_{212} & P_{304} & P_{128} & P_{163} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{212} & P_{477} & P_{577} & P_{304} & P_{398} & P_{163} & P_{128} & P_{370} & P_{304} & P_{398} & P_{212} & P_{370} & P_{163} & P_{577} & P_{128} & P_{477}\\
+\hline
+\end{array}
+$$
+Line 57 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{55} & P_{137} & P_{156} & P_{203} & P_{311} & P_{361} & P_{405} & P_{486} & P_{570} & P_{203} & P_{405} & P_{156} & P_{486} & P_{361} & P_{311} & P_{570} & P_{137} & P_{361} & P_{570} & P_{203} & P_{156} & P_{405} & P_{486} & P_{311} & P_{137} & P_{156} & P_{361} & P_{486} & P_{311} & P_{203} & P_{570} & P_{405} & P_{137} & P_{311} & P_{156} & P_{570} & P_{405} & P_{486} & P_{361} & P_{203} & P_{137} & P_{570} & P_{486} & P_{405} & P_{361} & P_{311} & P_{203} & P_{156} & P_{137} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{55} & P_{486} & P_{203} & P_{311} & P_{570} & P_{156} & P_{405} & P_{361} & P_{137} & P_{405} & P_{311} & P_{361} & P_{203} & P_{570} & P_{156} & P_{486} & P_{137}\\
+\hline
+\end{array}
+$$
+Line 58 intersects 
+$$
+\begin{array}{|r*{73}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{25} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{66} & P_{3} & P_{192} & P_{212} & P_{325} & P_{351} & P_{426} & P_{486} & P_{563} & P_{3} & P_{212} & P_{351} & P_{486} & P_{426} & P_{563} & P_{192} & P_{325} & P_{3} & P_{426} & P_{563} & P_{212} & P_{325} & P_{486} & P_{351} & P_{192} & P_{3} & P_{3} & P_{325} & P_{486} & P_{426} & P_{192} & P_{212} & P_{563} & P_{351} & P_{3} & P_{563} & P_{325} & P_{351} & P_{486} & P_{192} & P_{426} & P_{212} & P_{3} & P_{486} & P_{192} & P_{563} & P_{212} & P_{351} & P_{325} & P_{426} & P_{3} & P_{351} & P_{426} & P_{192} & P_{563} & P_{325} & P_{212} & P_{486} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{3} & P_{192} & P_{212} & P_{325} & P_{351} & P_{426} & P_{486} & P_{563}\\
+\hline
+\end{array}
+$$
+Line 59 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{66} & P_{83} & P_{199} & P_{203} & P_{318} & P_{360} & P_{433} & P_{477} & P_{556} & P_{203} & P_{83} & P_{477} & P_{360} & P_{556} & P_{433} & P_{318} & P_{199} & P_{433} & P_{83} & P_{203} & P_{556} & P_{477} & P_{318} & P_{199} & P_{360} & P_{318} & P_{83} & P_{433} & P_{477} & P_{203} & P_{199} & P_{360} & P_{556} & P_{556} & P_{83} & P_{360} & P_{318} & P_{199} & P_{477} & P_{203} & P_{433} & P_{477} & P_{83} & P_{556} & P_{199} & P_{360} & P_{203} & P_{433} & P_{318} & P_{360} & P_{83} & P_{199} & P_{433} & P_{318} & P_{556} & P_{477} & P_{203} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{199} & P_{83} & P_{318} & P_{203} & P_{433} & P_{360} & P_{556} & P_{477}\\
+\hline
+\end{array}
+$$
+Line 60 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{66} & P_{92} & P_{174} & P_{226} & P_{311} & P_{333} & P_{444} & P_{472} & P_{577} & P_{333} & P_{472} & P_{92} & P_{226} & P_{174} & P_{311} & P_{444} & P_{577} & P_{577} & P_{226} & P_{92} & P_{444} & P_{333} & P_{174} & P_{311} & P_{472} & P_{472} & P_{444} & P_{92} & P_{311} & P_{577} & P_{333} & P_{174} & P_{226} & P_{311} & P_{333} & P_{92} & P_{577} & P_{444} & P_{226} & P_{472} & P_{174} & P_{174} & P_{577} & P_{92} & P_{472} & P_{311} & P_{444} & P_{226} & P_{333} & P_{444} & P_{174} & P_{92} & P_{333} & P_{226} & P_{472} & P_{577} & P_{311} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{226} & P_{311} & P_{92} & P_{174} & P_{472} & P_{577} & P_{333} & P_{444}\\
+\hline
+\end{array}
+$$
+Line 61 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{66} & P_{101} & P_{181} & P_{217} & P_{304} & P_{342} & P_{451} & P_{463} & P_{570} & P_{463} & P_{342} & P_{217} & P_{101} & P_{304} & P_{181} & P_{570} & P_{451} & P_{217} & P_{570} & P_{451} & P_{101} & P_{181} & P_{342} & P_{463} & P_{304} & P_{451} & P_{463} & P_{304} & P_{101} & P_{342} & P_{570} & P_{217} & P_{181} & P_{342} & P_{304} & P_{570} & P_{101} & P_{217} & P_{451} & P_{181} & P_{463} & P_{570} & P_{181} & P_{463} & P_{101} & P_{451} & P_{304} & P_{342} & P_{217} & P_{181} & P_{451} & P_{342} & P_{101} & P_{463} & P_{217} & P_{304} & P_{570} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{304} & P_{217} & P_{181} & P_{101} & P_{570} & P_{463} & P_{451} & P_{342}\\
+\hline
+\end{array}
+$$
+Line 62 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{66} & P_{110} & P_{156} & P_{248} & P_{289} & P_{379} & P_{398} & P_{514} & P_{535} & P_{398} & P_{535} & P_{156} & P_{289} & P_{110} & P_{248} & P_{379} & P_{514} & P_{289} & P_{514} & P_{379} & P_{156} & P_{110} & P_{398} & P_{535} & P_{248} & P_{156} & P_{248} & P_{535} & P_{379} & P_{110} & P_{289} & P_{514} & P_{398} & P_{514} & P_{156} & P_{398} & P_{248} & P_{110} & P_{535} & P_{289} & P_{379} & P_{248} & P_{379} & P_{289} & P_{398} & P_{110} & P_{514} & P_{156} & P_{535} & P_{535} & P_{289} & P_{248} & P_{514} & P_{110} & P_{379} & P_{398} & P_{156} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{379} & P_{398} & P_{514} & P_{535} & P_{110} & P_{156} & P_{248} & P_{289}\\
+\hline
+\end{array}
+$$
+Line 63 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{66} & P_{119} & P_{163} & P_{239} & P_{282} & P_{388} & P_{405} & P_{505} & P_{528} & P_{528} & P_{405} & P_{282} & P_{163} & P_{239} & P_{119} & P_{505} & P_{388} & P_{505} & P_{282} & P_{163} & P_{388} & P_{405} & P_{119} & P_{239} & P_{528} & P_{239} & P_{163} & P_{388} & P_{528} & P_{282} & P_{119} & P_{405} & P_{505} & P_{163} & P_{505} & P_{239} & P_{405} & P_{528} & P_{119} & P_{388} & P_{282} & P_{388} & P_{239} & P_{405} & P_{282} & P_{505} & P_{119} & P_{528} & P_{163} & P_{282} & P_{528} & P_{505} & P_{239} & P_{388} & P_{119} & P_{163} & P_{405} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{405} & P_{388} & P_{528} & P_{505} & P_{163} & P_{119} & P_{282} & P_{239}\\
+\hline
+\end{array}
+$$
+Line 64 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{66} & P_{128} & P_{139} & P_{262} & P_{275} & P_{361} & P_{416} & P_{500} & P_{549} & P_{139} & P_{275} & P_{416} & P_{549} & P_{361} & P_{500} & P_{128} & P_{262} & P_{361} & P_{139} & P_{275} & P_{500} & P_{549} & P_{262} & P_{128} & P_{416} & P_{549} & P_{361} & P_{139} & P_{262} & P_{500} & P_{416} & P_{128} & P_{275} & P_{416} & P_{262} & P_{500} & P_{139} & P_{275} & P_{361} & P_{128} & P_{549} & P_{275} & P_{416} & P_{262} & P_{361} & P_{139} & P_{549} & P_{128} & P_{500} & P_{262} & P_{500} & P_{549} & P_{275} & P_{416} & P_{139} & P_{128} & P_{361} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{500} & P_{549} & P_{361} & P_{416} & P_{262} & P_{275} & P_{128} & P_{139}\\
+\hline
+\end{array}
+$$
+Line 65 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{66} & P_{137} & P_{146} & P_{253} & P_{268} & P_{370} & P_{423} & P_{491} & P_{542} & P_{268} & P_{146} & P_{542} & P_{423} & P_{491} & P_{370} & P_{253} & P_{137} & P_{146} & P_{370} & P_{491} & P_{268} & P_{253} & P_{542} & P_{423} & P_{137} & P_{370} & P_{542} & P_{253} & P_{146} & P_{423} & P_{491} & P_{268} & P_{137} & P_{253} & P_{423} & P_{146} & P_{491} & P_{370} & P_{268} & P_{542} & P_{137} & P_{423} & P_{268} & P_{370} & P_{253} & P_{542} & P_{146} & P_{491} & P_{137} & P_{491} & P_{253} & P_{268} & P_{542} & P_{146} & P_{423} & P_{370} & P_{137} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{66} & P_{542} & P_{491} & P_{423} & P_{370} & P_{268} & P_{253} & P_{146} & P_{137}\\
+\hline
+\end{array}
+$$
+Line 66 intersects 
+$$
+\begin{array}{|r*{73}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{25} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{73} & P_{3} & P_{199} & P_{226} & P_{304} & P_{379} & P_{405} & P_{500} & P_{542} & P_{3} & P_{405} & P_{542} & P_{226} & P_{304} & P_{500} & P_{379} & P_{199} & P_{3} & P_{226} & P_{379} & P_{500} & P_{405} & P_{542} & P_{199} & P_{304} & P_{3} & P_{3} & P_{542} & P_{304} & P_{379} & P_{500} & P_{199} & P_{405} & P_{226} & P_{3} & P_{304} & P_{500} & P_{405} & P_{199} & P_{226} & P_{542} & P_{379} & P_{3} & P_{379} & P_{405} & P_{199} & P_{542} & P_{304} & P_{226} & P_{500} & P_{3} & P_{500} & P_{199} & P_{542} & P_{226} & P_{379} & P_{304} & P_{405} & P_{3} & P_{199} & P_{226} & P_{304} & P_{379} & P_{405} & P_{500} & P_{542} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73}\\
+\hline
+\end{array}
+$$
+Line 67 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{73} & P_{83} & P_{192} & P_{217} & P_{311} & P_{388} & P_{398} & P_{491} & P_{549} & P_{398} & P_{83} & P_{217} & P_{549} & P_{491} & P_{311} & P_{192} & P_{388} & P_{217} & P_{83} & P_{491} & P_{388} & P_{549} & P_{398} & P_{311} & P_{192} & P_{549} & P_{83} & P_{388} & P_{311} & P_{192} & P_{491} & P_{217} & P_{398} & P_{311} & P_{83} & P_{398} & P_{491} & P_{217} & P_{192} & P_{388} & P_{549} & P_{388} & P_{83} & P_{192} & P_{398} & P_{311} & P_{549} & P_{491} & P_{217} & P_{491} & P_{83} & P_{549} & P_{192} & P_{388} & P_{217} & P_{398} & P_{311} & P_{192} & P_{83} & P_{311} & P_{217} & P_{398} & P_{388} & P_{549} & P_{491} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73}\\
+\hline
+\end{array}
+$$
+Line 68 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{73} & P_{92} & P_{181} & P_{212} & P_{318} & P_{361} & P_{423} & P_{514} & P_{528} & P_{528} & P_{212} & P_{92} & P_{423} & P_{361} & P_{181} & P_{318} & P_{514} & P_{361} & P_{514} & P_{92} & P_{212} & P_{181} & P_{318} & P_{423} & P_{528} & P_{318} & P_{361} & P_{92} & P_{528} & P_{423} & P_{212} & P_{514} & P_{181} & P_{514} & P_{423} & P_{92} & P_{318} & P_{528} & P_{361} & P_{181} & P_{212} & P_{423} & P_{181} & P_{92} & P_{361} & P_{212} & P_{514} & P_{528} & P_{318} & P_{181} & P_{528} & P_{92} & P_{514} & P_{318} & P_{423} & P_{212} & P_{361} & P_{212} & P_{318} & P_{92} & P_{181} & P_{514} & P_{528} & P_{361} & P_{423} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73}\\
+\hline
+\end{array}
+$$
+Line 69 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{70} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{73} & P_{101} & P_{174} & P_{203} & P_{325} & P_{370} & P_{416} & P_{505} & P_{535} & P_{203} & P_{535} & P_{416} & P_{101} & P_{174} & P_{370} & P_{505} & P_{325} & P_{505} & P_{370} & P_{203} & P_{101} & P_{325} & P_{174} & P_{535} & P_{416} & P_{370} & P_{325} & P_{535} & P_{101} & P_{203} & P_{416} & P_{174} & P_{505} & P_{416} & P_{505} & P_{325} & P_{101} & P_{370} & P_{535} & P_{203} & P_{174} & P_{174} & P_{416} & P_{370} & P_{101} & P_{505} & P_{203} & P_{325} & P_{535} & P_{535} & P_{174} & P_{505} & P_{101} & P_{416} & P_{325} & P_{370} & P_{203} & P_{325} & P_{203} & P_{174} & P_{101} & P_{535} & P_{505} & P_{416} & P_{370} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73}\\
+\hline
+\end{array}
+$$
+Line 70 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{71} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{73} & P_{110} & P_{163} & P_{262} & P_{268} & P_{351} & P_{433} & P_{472} & P_{570} & P_{268} & P_{472} & P_{351} & P_{163} & P_{110} & P_{433} & P_{570} & P_{262} & P_{433} & P_{570} & P_{163} & P_{268} & P_{110} & P_{262} & P_{351} & P_{472} & P_{472} & P_{163} & P_{433} & P_{262} & P_{110} & P_{570} & P_{268} & P_{351} & P_{163} & P_{262} & P_{570} & P_{351} & P_{110} & P_{268} & P_{472} & P_{433} & P_{570} & P_{268} & P_{262} & P_{472} & P_{110} & P_{351} & P_{433} & P_{163} & P_{262} & P_{351} & P_{268} & P_{433} & P_{110} & P_{472} & P_{163} & P_{570} & P_{351} & P_{433} & P_{472} & P_{570} & P_{110} & P_{163} & P_{262} & P_{268} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73}\\
+\hline
+\end{array}
+$$
+Line 71 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{72} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{73} & P_{119} & P_{156} & P_{253} & P_{275} & P_{360} & P_{426} & P_{463} & P_{577} & P_{463} & P_{275} & P_{156} & P_{360} & P_{426} & P_{119} & P_{253} & P_{577} & P_{577} & P_{426} & P_{275} & P_{156} & P_{253} & P_{119} & P_{463} & P_{360} & P_{156} & P_{463} & P_{253} & P_{426} & P_{577} & P_{119} & P_{360} & P_{275} & P_{253} & P_{156} & P_{360} & P_{577} & P_{275} & P_{119} & P_{426} & P_{463} & P_{275} & P_{577} & P_{463} & P_{253} & P_{360} & P_{119} & P_{156} & P_{426} & P_{360} & P_{253} & P_{426} & P_{275} & P_{463} & P_{119} & P_{577} & P_{156} & P_{426} & P_{360} & P_{577} & P_{463} & P_{156} & P_{119} & P_{275} & P_{253} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73}\\
+\hline
+\end{array}
+$$
+Line 72 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{73}\\
+\hline
+\mbox{in point}  & P_{73} & P_{128} & P_{146} & P_{248} & P_{282} & P_{333} & P_{451} & P_{486} & P_{556} & P_{333} & P_{146} & P_{282} & P_{486} & P_{556} & P_{248} & P_{128} & P_{451} & P_{146} & P_{282} & P_{451} & P_{556} & P_{333} & P_{486} & P_{128} & P_{248} & P_{451} & P_{248} & P_{486} & P_{146} & P_{282} & P_{333} & P_{128} & P_{556} & P_{556} & P_{333} & P_{146} & P_{248} & P_{486} & P_{451} & P_{128} & P_{282} & P_{248} & P_{486} & P_{556} & P_{282} & P_{451} & P_{146} & P_{128} & P_{333} & P_{282} & P_{451} & P_{248} & P_{333} & P_{146} & P_{556} & P_{128} & P_{486} & P_{486} & P_{556} & P_{333} & P_{451} & P_{248} & P_{282} & P_{128} & P_{146} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73}\\
+\hline
+\end{array}
+$$
+Line 73 intersects 
+$$
+\begin{array}{|r*{72}{|c}|}
+\hline
+\mbox{Line}  & \ell_{0} & \ell_{1} & \ell_{2} & \ell_{3} & \ell_{4} & \ell_{5} & \ell_{6} & \ell_{7} & \ell_{8} & \ell_{9} & \ell_{10} & \ell_{11} & \ell_{12} & \ell_{13} & \ell_{14} & \ell_{15} & \ell_{16} & \ell_{17} & \ell_{18} & \ell_{19} & \ell_{20} & \ell_{21} & \ell_{22} & \ell_{23} & \ell_{24} & \ell_{26} & \ell_{27} & \ell_{28} & \ell_{29} & \ell_{30} & \ell_{31} & \ell_{32} & \ell_{33} & \ell_{34} & \ell_{35} & \ell_{36} & \ell_{37} & \ell_{38} & \ell_{39} & \ell_{40} & \ell_{41} & \ell_{42} & \ell_{43} & \ell_{44} & \ell_{45} & \ell_{46} & \ell_{47} & \ell_{48} & \ell_{49} & \ell_{50} & \ell_{51} & \ell_{52} & \ell_{53} & \ell_{54} & \ell_{55} & \ell_{56} & \ell_{57} & \ell_{58} & \ell_{59} & \ell_{60} & \ell_{61} & \ell_{62} & \ell_{63} & \ell_{64} & \ell_{65} & \ell_{66} & \ell_{67} & \ell_{68} & \ell_{69} & \ell_{70} & \ell_{71} & \ell_{72}\\
+\hline
+\mbox{in point}  & P_{73} & P_{137} & P_{139} & P_{239} & P_{289} & P_{342} & P_{444} & P_{477} & P_{563} & P_{139} & P_{342} & P_{477} & P_{289} & P_{239} & P_{563} & P_{444} & P_{137} & P_{289} & P_{139} & P_{563} & P_{444} & P_{477} & P_{342} & P_{239} & P_{137} & P_{239} & P_{444} & P_{139} & P_{477} & P_{342} & P_{289} & P_{563} & P_{137} & P_{342} & P_{563} & P_{239} & P_{139} & P_{444} & P_{477} & P_{289} & P_{137} & P_{477} & P_{239} & P_{289} & P_{563} & P_{139} & P_{444} & P_{342} & P_{137} & P_{444} & P_{289} & P_{342} & P_{239} & P_{563} & P_{139} & P_{477} & P_{137} & P_{563} & P_{477} & P_{444} & P_{342} & P_{289} & P_{239} & P_{139} & P_{137} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73} & P_{73}\\
+\hline
+\end{array}
+$$
+The surface has 81 points:\\
+The points on the surface are:\\
+\begin{multicols}{3}
+\noindent
+0 : $P_{3}=( 0, 0, 0, 1 )$\\
+1 : $P_{4}=( 1, 1, 1, 1 )$\\
+2 : $P_{5}=( 1, 1, 0, 0 )$\\
+3 : $P_{12}=( 1, 0, 1, 0 )$\\
+4 : $P_{19}=( 0, 1, 1, 0 )$\\
+5 : $P_{20}=( 1, 1, 1, 0 )$\\
+6 : $P_{30}=( 3, 2, 1, 0 )$\\
+7 : $P_{37}=( 2, 3, 1, 0 )$\\
+8 : $P_{48}=( 5, 4, 1, 0 )$\\
+9 : $P_{55}=( 4, 5, 1, 0 )$\\
+10 : $P_{66}=( 7, 6, 1, 0 )$\\
+11 : $P_{73}=( 6, 7, 1, 0 )$\\
+12 : $P_{83}=( 1, 1, 0, 1 )$\\
+13 : $P_{92}=( 2, 2, 0, 1 )$\\
+14 : $P_{101}=( 3, 3, 0, 1 )$\\
+15 : $P_{110}=( 4, 4, 0, 1 )$\\
+16 : $P_{119}=( 5, 5, 0, 1 )$\\
+17 : $P_{128}=( 6, 6, 0, 1 )$\\
+18 : $P_{137}=( 7, 7, 0, 1 )$\\
+19 : $P_{139}=( 1, 0, 1, 1 )$\\
+20 : $P_{146}=( 0, 1, 1, 1 )$\\
+21 : $P_{156}=( 3, 2, 1, 1 )$\\
+22 : $P_{163}=( 2, 3, 1, 1 )$\\
+23 : $P_{174}=( 5, 4, 1, 1 )$\\
+24 : $P_{181}=( 4, 5, 1, 1 )$\\
+25 : $P_{192}=( 7, 6, 1, 1 )$\\
+26 : $P_{199}=( 6, 7, 1, 1 )$\\
+27 : $P_{203}=( 2, 0, 2, 1 )$\\
+28 : $P_{212}=( 3, 1, 2, 1 )$\\
+29 : $P_{217}=( 0, 2, 2, 1 )$\\
+30 : $P_{219}=( 2, 2, 2, 1 )$\\
+31 : $P_{226}=( 1, 3, 2, 1 )$\\
+32 : $P_{239}=( 6, 4, 2, 1 )$\\
+33 : $P_{248}=( 7, 5, 2, 1 )$\\
+34 : $P_{253}=( 4, 6, 2, 1 )$\\
+35 : $P_{262}=( 5, 7, 2, 1 )$\\
+36 : $P_{268}=( 3, 0, 3, 1 )$\\
+37 : $P_{275}=( 2, 1, 3, 1 )$\\
+38 : $P_{282}=( 1, 2, 3, 1 )$\\
+39 : $P_{289}=( 0, 3, 3, 1 )$\\
+40 : $P_{292}=( 3, 3, 3, 1 )$\\
+41 : $P_{304}=( 7, 4, 3, 1 )$\\
+42 : $P_{311}=( 6, 5, 3, 1 )$\\
+43 : $P_{318}=( 5, 6, 3, 1 )$\\
+44 : $P_{325}=( 4, 7, 3, 1 )$\\
+45 : $P_{333}=( 4, 0, 4, 1 )$\\
+46 : $P_{342}=( 5, 1, 4, 1 )$\\
+47 : $P_{351}=( 6, 2, 4, 1 )$\\
+48 : $P_{360}=( 7, 3, 4, 1 )$\\
+49 : $P_{361}=( 0, 4, 4, 1 )$\\
+50 : $P_{365}=( 4, 4, 4, 1 )$\\
+51 : $P_{370}=( 1, 5, 4, 1 )$\\
+52 : $P_{379}=( 2, 6, 4, 1 )$\\
+53 : $P_{388}=( 3, 7, 4, 1 )$\\
+54 : $P_{398}=( 5, 0, 5, 1 )$\\
+55 : $P_{405}=( 4, 1, 5, 1 )$\\
+56 : $P_{416}=( 7, 2, 5, 1 )$\\
+57 : $P_{423}=( 6, 3, 5, 1 )$\\
+58 : $P_{426}=( 1, 4, 5, 1 )$\\
+59 : $P_{433}=( 0, 5, 5, 1 )$\\
+60 : $P_{438}=( 5, 5, 5, 1 )$\\
+61 : $P_{444}=( 3, 6, 5, 1 )$\\
+62 : $P_{451}=( 2, 7, 5, 1 )$\\
+63 : $P_{463}=( 6, 0, 6, 1 )$\\
+64 : $P_{472}=( 7, 1, 6, 1 )$\\
+65 : $P_{477}=( 4, 2, 6, 1 )$\\
+66 : $P_{486}=( 5, 3, 6, 1 )$\\
+67 : $P_{491}=( 2, 4, 6, 1 )$\\
+68 : $P_{500}=( 3, 5, 6, 1 )$\\
+69 : $P_{505}=( 0, 6, 6, 1 )$\\
+70 : $P_{511}=( 6, 6, 6, 1 )$\\
+71 : $P_{514}=( 1, 7, 6, 1 )$\\
+72 : $P_{528}=( 7, 0, 7, 1 )$\\
+73 : $P_{535}=( 6, 1, 7, 1 )$\\
+74 : $P_{542}=( 5, 2, 7, 1 )$\\
+75 : $P_{549}=( 4, 3, 7, 1 )$\\
+76 : $P_{556}=( 3, 4, 7, 1 )$\\
+77 : $P_{563}=( 2, 5, 7, 1 )$\\
+78 : $P_{570}=( 1, 6, 7, 1 )$\\
+79 : $P_{577}=( 0, 7, 7, 1 )$\\
+80 : $P_{584}=( 7, 7, 7, 1 )$\\
+\end{multicols}
+
+
+%\bibliographystyle{gerplain}% wird oben eingestellt
+%\addcontentsline{toc}{section}{References}
+%\bibliography{../MY_BIBLIOGRAPHY/anton}
+% ACHTUNG: nicht vergessen:
+% die Zeile
+%\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+% muss per Hand in d.bbl eingefuegt werden !
+% nach \begin{thebibliography}{100}
+
+%\begin{theindex}
+
+%\clearpage
+%\addcontentsline{toc}{chapter}{Index}
+%\input{apd.ind}
+
+%\printindex
+%\end{theindex}
+
+}% allowdisplaybreaks
+
+\end{document}
+
+
