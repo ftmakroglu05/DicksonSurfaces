@@ -1,0 +1,2484 @@
+\documentclass{article}
+% a4paper
+
+%\usepackage[dvips]{epsfig}
+%\usepackage{cours11, cours}
+%\usepackage{fancyheadings}
+%\usepackage{calc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epsfig}
+\usepackage{enumerate}
+%\usepackage{supertabular}
+%\usepackage{wrapfig}
+%\usepackage{blackbrd}
+%\usepackage{epic,eepic}
+\usepackage{rotating}
+\usepackage{multicol}
+%\usepackage{multirow}
+\usepackage{makeidx} % additional command see
+\usepackage{rotating}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{longtable}
+\usepackage{anyfontsize}
+\usepackage{t1enc}
+%\usepackage{amsmath,amsfonts}
+
+
+%\usepackage[mtbold,mtplusscr]{mathtime}
+% lucidacal,lucidascr,
+
+%\usepackage{mathtimy}
+%\usepackage{bm}
+%\usepackage{avant}
+%\usepackage{basker}
+%\usepackage{bembo}
+%\usepackage{bookman}
+%\usepackage{chancery}
+%\usepackage{garamond}
+%\usepackage{helvet}
+%\usepackage{newcent}
+%\usepackage{palatino}
+%\usepackage{times}
+%\usepackage{pifont}
+\usepackage{fullpage}
+\usepackage[top=1in,bottom=1in,right=1in,left=1in]{geometry}
+
+
+
+%\parindent=0pt
+
+
+%\topmargin=0pt
+%\headsep=18pt
+%\footskip=45pt
+%\mathsurround=1pt
+%\evensidemargin=0pt
+%\oddsidemargin=15pt
+
+%\setlength{\textheight}{\baselineskip*41+\topskip}
+
+\newcommand{\sectionline}{
+   \nointerlineskip \vspace{\baselineskip}
+   \hspace{\fill}\rule{0.9\linewidth}{1.7pt}\hspace{\fill}
+   \par\nointerlineskip \vspace{\baselineskip}
+   }
+\newcommand\setTBstruts{\def\T{\rule{0pt}{2.6ex}}%
+\def\B{\rule[-1.2ex]{0pt}{0pt}}}
+\newcommand{\ans}[1]{\\{\bf ANSWER}: {#1}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\sFix}{{\cal Fix}}
+\newcommand{\sOrbits}{{\cal Orbits}}
+\newcommand{\Stab}{{\rm Stab}}
+\newcommand{\Fix}{{\rm Fix}}
+\newcommand{\fix}{{\rm fix}}
+\newcommand{\Orbits}{{\rm Orbits}}
+\newcommand{\PG}{{\rm PG}}
+\newcommand{\AG}{{\rm AG}}
+\newcommand{\SQS}{{\rm SQS}}
+\newcommand{\STS}{{\rm STS}}
+\newcommand{\PSL}{{\rm PSL}}
+\newcommand{\PGL}{{\rm PGL}}
+\newcommand{\PSSL}{{\rm P\Sigma L}}
+\newcommand{\PGGL}{{\rm P\Gamma L}}
+\newcommand{\SL}{{\rm SL}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\SSL}{{\rm \Sigma L}}
+\newcommand{\GGL}{{\rm \Gamma L}}
+\newcommand{\ASL}{{\rm ASL}}
+\newcommand{\AGL}{{\rm AGL}}
+\newcommand{\ASSL}{{\rm A\Sigma L}}
+\newcommand{\AGGL}{{\rm A\Gamma L}}
+\newcommand{\PSU}{{\rm PSU}}
+\newcommand{\HS}{{\rm HS}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\SO}{{\rm SO}}
+\newcommand{\ASO}{{\rm ASO}}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\cA}{{\cal A}}
+\newcommand{\cB}{{\cal B}}
+\newcommand{\cC}{{\cal C}}
+\newcommand{\cD}{{\cal D}}
+\newcommand{\cE}{{\cal E}}
+\newcommand{\cF}{{\cal F}}
+\newcommand{\cG}{{\cal G}}
+\newcommand{\cH}{{\cal H}}
+\newcommand{\cI}{{\cal I}}
+\newcommand{\cJ}{{\cal J}}
+\newcommand{\cK}{{\cal K}}
+\newcommand{\cL}{{\cal L}}
+\newcommand{\cM}{{\cal M}}
+\newcommand{\cN}{{\cal N}}
+\newcommand{\cO}{{\cal O}}
+\newcommand{\cP}{{\cal P}}
+\newcommand{\cQ}{{\cal Q}}
+\newcommand{\cR}{{\cal R}}
+\newcommand{\cS}{{\cal S}}
+\newcommand{\cT}{{\cal T}}
+\newcommand{\cU}{{\cal U}}
+\newcommand{\cV}{{\cal V}}
+\newcommand{\cW}{{\cal W}}
+\newcommand{\cX}{{\cal X}}
+\newcommand{\cY}{{\cal Y}}
+\newcommand{\cZ}{{\cal Z}}
+\newcommand{\rmA}{{\rm A}}
+\newcommand{\rmB}{{\rm B}}
+\newcommand{\rmC}{{\rm C}}
+\newcommand{\rmD}{{\rm D}}
+\newcommand{\rmE}{{\rm E}}
+\newcommand{\rmF}{{\rm F}}
+\newcommand{\rmG}{{\rm G}}
+\newcommand{\rmH}{{\rm H}}
+\newcommand{\rmI}{{\rm I}}
+\newcommand{\rmJ}{{\rm J}}
+\newcommand{\rmK}{{\rm K}}
+\newcommand{\rmL}{{\rm L}}
+\newcommand{\rmM}{{\rm M}}
+\newcommand{\rmN}{{\rm N}}
+\newcommand{\rmO}{{\rm O}}
+\newcommand{\rmP}{{\rm P}}
+\newcommand{\rmQ}{{\rm Q}}
+\newcommand{\rmR}{{\rm R}}
+\newcommand{\rmS}{{\rm S}}
+\newcommand{\rmT}{{\rm T}}
+\newcommand{\rmU}{{\rm U}}
+\newcommand{\rmV}{{\rm V}}
+\newcommand{\rmW}{{\rm W}}
+\newcommand{\rmX}{{\rm X}}
+\newcommand{\rmY}{{\rm Y}}
+\newcommand{\rmZ}{{\rm Z}}
+\newcommand{\bA}{{\bf A}}
+\newcommand{\bB}{{\bf B}}
+\newcommand{\bC}{{\bf C}}
+\newcommand{\bD}{{\bf D}}
+\newcommand{\bE}{{\bf E}}
+\newcommand{\bF}{{\bf F}}
+\newcommand{\bG}{{\bf G}}
+\newcommand{\bH}{{\bf H}}
+\newcommand{\bI}{{\bf I}}
+\newcommand{\bJ}{{\bf J}}
+\newcommand{\bK}{{\bf K}}
+\newcommand{\bL}{{\bf L}}
+\newcommand{\bM}{{\bf M}}
+\newcommand{\bN}{{\bf N}}
+\newcommand{\bO}{{\bf O}}
+\newcommand{\bP}{{\bf P}}
+\newcommand{\bQ}{{\bf Q}}
+\newcommand{\bR}{{\bf R}}
+\newcommand{\bS}{{\bf S}}
+\newcommand{\bT}{{\bf T}}
+\newcommand{\bU}{{\bf U}}
+\newcommand{\bV}{{\bf V}}
+\newcommand{\bW}{{\bf W}}
+\newcommand{\bX}{{\bf X}}
+\newcommand{\bY}{{\bf Y}}
+\newcommand{\bZ}{{\bf Z}}
+\newcommand{\sA}{{\cal A}}
+\newcommand{\sB}{{\cal B}}
+\newcommand{\sC}{{\cal C}}
+\newcommand{\sD}{{\cal D}}
+\newcommand{\sE}{{\cal E}}
+\newcommand{\sF}{{\cal F}}
+\newcommand{\sG}{{\cal G}}
+\newcommand{\sH}{{\cal H}}
+\newcommand{\sI}{{\cal I}}
+\newcommand{\sJ}{{\cal J}}
+\newcommand{\sK}{{\cal K}}
+\newcommand{\sL}{{\cal L}}
+\newcommand{\sM}{{\cal M}}
+\newcommand{\sN}{{\cal N}}
+\newcommand{\sO}{{\cal O}}
+\newcommand{\sP}{{\cal P}}
+\newcommand{\sQ}{{\cal Q}}
+\newcommand{\sR}{{\cal R}}
+\newcommand{\sS}{{\cal S}}
+\newcommand{\sT}{{\cal T}}
+\newcommand{\sU}{{\cal U}}
+\newcommand{\sV}{{\cal V}}
+\newcommand{\sW}{{\cal W}}
+\newcommand{\sX}{{\cal X}}
+\newcommand{\sY}{{\cal Y}}
+\newcommand{\sZ}{{\cal Z}}
+\newcommand{\frakA}{{\mathfrak A}}
+\newcommand{\frakB}{{\mathfrak B}}
+\newcommand{\frakC}{{\mathfrak C}}
+\newcommand{\frakD}{{\mathfrak D}}
+\newcommand{\frakE}{{\mathfrak E}}
+\newcommand{\frakF}{{\mathfrak F}}
+\newcommand{\frakG}{{\mathfrak G}}
+\newcommand{\frakH}{{\mathfrak H}}
+\newcommand{\frakI}{{\mathfrak I}}
+\newcommand{\frakJ}{{\mathfrak J}}
+\newcommand{\frakK}{{\mathfrak K}}
+\newcommand{\frakL}{{\mathfrak L}}
+\newcommand{\frakM}{{\mathfrak M}}
+\newcommand{\frakN}{{\mathfrak N}}
+\newcommand{\frakO}{{\mathfrak O}}
+\newcommand{\frakP}{{\mathfrak P}}
+\newcommand{\frakQ}{{\mathfrak Q}}
+\newcommand{\frakR}{{\mathfrak R}}
+\newcommand{\frakS}{{\mathfrak S}}
+\newcommand{\frakT}{{\mathfrak T}}
+\newcommand{\frakU}{{\mathfrak U}}
+\newcommand{\frakV}{{\mathfrak V}}
+\newcommand{\frakW}{{\mathfrak W}}
+\newcommand{\frakX}{{\mathfrak X}}
+\newcommand{\frakY}{{\mathfrak Y}}
+\newcommand{\frakZ}{{\mathfrak Z}}
+\newcommand{\fraka}{{\mathfrak a}}
+\newcommand{\frakb}{{\mathfrak b}}
+\newcommand{\frakc}{{\mathfrak c}}
+\newcommand{\frakd}{{\mathfrak d}}
+\newcommand{\frake}{{\mathfrak e}}
+\newcommand{\frakf}{{\mathfrak f}}
+\newcommand{\frakg}{{\mathfrak g}}
+\newcommand{\frakh}{{\mathfrak h}}
+\newcommand{\fraki}{{\mathfrak i}}
+\newcommand{\frakj}{{\mathfrak j}}
+\newcommand{\frakk}{{\mathfrak k}}
+\newcommand{\frakl}{{\mathfrak l}}
+\newcommand{\frakm}{{\mathfrak m}}
+\newcommand{\frakn}{{\mathfrak n}}
+\newcommand{\frako}{{\mathfrak o}}
+\newcommand{\frakp}{{\mathfrak p}}
+\newcommand{\frakq}{{\mathfrak q}}
+\newcommand{\frakr}{{\mathfrak r}}
+\newcommand{\fraks}{{\mathfrak s}}
+\newcommand{\frakt}{{\mathfrak t}}
+\newcommand{\fraku}{{\mathfrak u}}
+\newcommand{\frakv}{{\mathfrak v}}
+\newcommand{\frakw}{{\mathfrak w}}
+\newcommand{\frakx}{{\mathfrak x}}
+\newcommand{\fraky}{{\mathfrak y}}
+\newcommand{\frakz}{{\mathfrak z}}
+\newcommand{\Tetra}{{\mathfrak Tetra}}
+\newcommand{\Cube}{{\mathfrak Cube}}
+\newcommand{\Octa}{{\mathfrak Octa}}
+\newcommand{\Dode}{{\mathfrak Dode}}
+\newcommand{\Ico}{{\mathfrak Ico}}
+\newcommand{\bbF}{{\mathbb F}}
+\newcommand{\bbQ}{{\mathbb Q}}
+\newcommand{\bbC}{{\mathbb C}}
+\newcommand{\bbR}{{\mathbb R}}
+
+
+
+%\makeindex
+
+\begin{document} 
+\setTBstruts
+
+\bibliographystyle{plain}
+%\large
+
+{\allowdisplaybreaks%
+
+
+
+
+%\makeindex
+
+%\renewcommand{\labelenumi}{(\roman{enumi})}
+
+\title{ATLAS of Dickson Surfaces}
+\author{Fatma Karaoglu}%end author
+%\date{}
+\maketitle%
+%\pagenumbering{roman}
+%\thispagestyle{empty}
+%\input et.tex%
+%\thispagestyle{empty}%\phantom{page2}%\clearpage%
+%\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}%
+%\tableofcontents
+%\listofsymbols
+%\pagenumbering{arabic}
+%\pagenumbering{roman}
+
+
+
+$$
+\begin{array}{|r|*{6}{r|}}
+\hline
+\ \ D-i \ \ &\ \ 2\ \ &\ \ 4\ \ &\ \ 8\ \ &\ \ 16\ \ &\ \ 32\ \ &\ \ 64\ \ \\
+\hline
+0 
+ & 
+%%tth: \begin{html} <a href="Orb0_q2.pdf"> Orb0_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb0_q4.pdf"> Orb0_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb0_q8.pdf"> Orb0_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb0_q16.pdf"> Orb0_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb0_q32.pdf"> Orb0_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb0_q64.pdf"> Orb0_q64.pdf </a> \end{html}
+\\
+\hline
+1 
+ & 
+%%tth: \begin{html} <a href="Orb1_q2.pdf"> Orb1_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb1_q4.pdf"> Orb1_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb1_q8.pdf"> Orb1_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb1_q16.pdf"> Orb1_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb1_q32.pdf"> Orb1_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb1_q64.pdf"> Orb1_q64.pdf </a> \end{html}
+\\
+\hline
+2 
+ & 
+%%tth: \begin{html} <a href="Orb2_q2.pdf"> Orb2_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb2_q4.pdf"> Orb2_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb2_q8.pdf"> Orb2_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb2_q16.pdf"> Orb2_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb2_q32.pdf"> Orb2_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb2_q64.pdf"> Orb2_q64.pdf </a> \end{html}
+\\
+\hline
+3 
+ & 
+%%tth: \begin{html} <a href="Orb3_q2.pdf"> Orb3_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb3_q4.pdf"> Orb3_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb3_q8.pdf"> Orb3_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb3_q16.pdf"> Orb3_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb3_q32.pdf"> Orb3_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb3_q64.pdf"> Orb3_q64.pdf </a> \end{html}
+\\
+\hline
+4 
+ & 
+%%tth: \begin{html} <a href="Orb4_q2.pdf"> Orb4_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb4_q4.pdf"> Orb4_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb4_q8.pdf"> Orb4_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb4_q16.pdf"> Orb4_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb4_q32.pdf"> Orb4_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb4_q64.pdf"> Orb4_q64.pdf </a> \end{html}
+\\
+\hline
+5 
+ & 
+%%tth: \begin{html} <a href="Orb5_q2.pdf"> Orb5_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb5_q4.pdf"> Orb5_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb5_q8.pdf"> Orb5_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb5_q16.pdf"> Orb5_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb5_q32.pdf"> Orb5_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb5_q64.pdf"> Orb5_q64.pdf </a> \end{html}
+\\
+\hline
+6 
+ & 
+%%tth: \begin{html} <a href="Orb6_q2.pdf"> Orb6_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb6_q4.pdf"> Orb6_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb6_q8.pdf"> Orb6_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb6_q16.pdf"> Orb6_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb6_q32.pdf"> Orb6_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb6_q64.pdf"> Orb6_q64.pdf </a> \end{html}
+\\
+\hline
+7 
+ & 
+%%tth: \begin{html} <a href="Orb7_q2.pdf"> Orb7_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb7_q4.pdf"> Orb7_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb7_q8.pdf"> Orb7_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb7_q16.pdf"> Orb7_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb7_q32.pdf"> Orb7_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb7_q64.pdf"> Orb7_q64.pdf </a> \end{html}
+\\
+\hline
+8 
+ & 
+%%tth: \begin{html} <a href="Orb8_q2.pdf"> Orb8_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb8_q4.pdf"> Orb8_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb8_q8.pdf"> Orb8_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb8_q16.pdf"> Orb8_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb8_q32.pdf"> Orb8_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb8_q64.pdf"> Orb8_q64.pdf </a> \end{html}
+\\
+\hline
+9 
+ & 
+%%tth: \begin{html} <a href="Orb9_q2.pdf"> Orb9_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb9_q4.pdf"> Orb9_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb9_q8.pdf"> Orb9_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb9_q16.pdf"> Orb9_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb9_q32.pdf"> Orb9_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb9_q64.pdf"> Orb9_q64.pdf </a> \end{html}
+\\
+\hline
+10 
+ & 
+%%tth: \begin{html} <a href="Orb10_q2.pdf"> Orb10_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb10_q4.pdf"> Orb10_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb10_q8.pdf"> Orb10_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb10_q16.pdf"> Orb10_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb10_q32.pdf"> Orb10_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb10_q64.pdf"> Orb10_q64.pdf </a> \end{html}
+\\
+\hline
+11 
+ & 
+%%tth: \begin{html} <a href="Orb11_q2.pdf"> Orb11_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb11_q4.pdf"> Orb11_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb11_q8.pdf"> Orb11_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb11_q16.pdf"> Orb11_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb11_q32.pdf"> Orb11_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb11_q64.pdf"> Orb11_q64.pdf </a> \end{html}
+\\
+\hline
+12 
+ & 
+%%tth: \begin{html} <a href="Orb12_q2.pdf"> Orb12_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb12_q4.pdf"> Orb12_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb12_q8.pdf"> Orb12_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb12_q16.pdf"> Orb12_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb12_q32.pdf"> Orb12_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb12_q64.pdf"> Orb12_q64.pdf </a> \end{html}
+\\
+\hline
+13 
+ & 
+%%tth: \begin{html} <a href="Orb13_q2.pdf"> Orb13_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb13_q4.pdf"> Orb13_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb13_q8.pdf"> Orb13_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb13_q16.pdf"> Orb13_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb13_q32.pdf"> Orb13_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb13_q64.pdf"> Orb13_q64.pdf </a> \end{html}
+\\
+\hline
+14 
+ & 
+%%tth: \begin{html} <a href="Orb14_q2.pdf"> Orb14_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb14_q4.pdf"> Orb14_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb14_q8.pdf"> Orb14_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb14_q16.pdf"> Orb14_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb14_q32.pdf"> Orb14_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb14_q64.pdf"> Orb14_q64.pdf </a> \end{html}
+\\
+\hline
+15 
+ & 
+%%tth: \begin{html} <a href="Orb15_q2.pdf"> Orb15_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb15_q4.pdf"> Orb15_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb15_q8.pdf"> Orb15_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb15_q16.pdf"> Orb15_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb15_q32.pdf"> Orb15_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb15_q64.pdf"> Orb15_q64.pdf </a> \end{html}
+\\
+\hline
+16 
+ & 
+%%tth: \begin{html} <a href="Orb16_q2.pdf"> Orb16_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb16_q4.pdf"> Orb16_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb16_q8.pdf"> Orb16_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb16_q16.pdf"> Orb16_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb16_q32.pdf"> Orb16_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb16_q64.pdf"> Orb16_q64.pdf </a> \end{html}
+\\
+\hline
+17 
+ & 
+%%tth: \begin{html} <a href="Orb17_q2.pdf"> Orb17_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb17_q4.pdf"> Orb17_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb17_q8.pdf"> Orb17_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb17_q16.pdf"> Orb17_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb17_q32.pdf"> Orb17_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb17_q64.pdf"> Orb17_q64.pdf </a> \end{html}
+\\
+\hline
+18 
+ & 
+%%tth: \begin{html} <a href="Orb18_q2.pdf"> Orb18_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb18_q4.pdf"> Orb18_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb18_q8.pdf"> Orb18_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb18_q16.pdf"> Orb18_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb18_q32.pdf"> Orb18_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb18_q64.pdf"> Orb18_q64.pdf </a> \end{html}
+\\
+\hline
+19 
+ & 
+%%tth: \begin{html} <a href="Orb19_q2.pdf"> Orb19_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb19_q4.pdf"> Orb19_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb19_q8.pdf"> Orb19_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb19_q16.pdf"> Orb19_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb19_q32.pdf"> Orb19_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb19_q64.pdf"> Orb19_q64.pdf </a> \end{html}
+\\
+\hline
+20 
+ & 
+%%tth: \begin{html} <a href="Orb20_q2.pdf"> Orb20_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb20_q4.pdf"> Orb20_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb20_q8.pdf"> Orb20_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb20_q16.pdf"> Orb20_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb20_q32.pdf"> Orb20_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb20_q64.pdf"> Orb20_q64.pdf </a> \end{html}
+\\
+\hline
+21 
+ & 
+%%tth: \begin{html} <a href="Orb21_q2.pdf"> Orb21_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb21_q4.pdf"> Orb21_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb21_q8.pdf"> Orb21_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb21_q16.pdf"> Orb21_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb21_q32.pdf"> Orb21_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb21_q64.pdf"> Orb21_q64.pdf </a> \end{html}
+\\
+\hline
+22 
+ & 
+%%tth: \begin{html} <a href="Orb22_q2.pdf"> Orb22_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb22_q4.pdf"> Orb22_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb22_q8.pdf"> Orb22_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb22_q16.pdf"> Orb22_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb22_q32.pdf"> Orb22_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb22_q64.pdf"> Orb22_q64.pdf </a> \end{html}
+\\
+\hline
+23 
+ & 
+%%tth: \begin{html} <a href="Orb23_q2.pdf"> Orb23_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb23_q4.pdf"> Orb23_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb23_q8.pdf"> Orb23_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb23_q16.pdf"> Orb23_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb23_q32.pdf"> Orb23_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb23_q64.pdf"> Orb23_q64.pdf </a> \end{html}
+\\
+\hline
+24 
+ & 
+%%tth: \begin{html} <a href="Orb24_q2.pdf"> Orb24_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb24_q4.pdf"> Orb24_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb24_q8.pdf"> Orb24_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb24_q16.pdf"> Orb24_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb24_q32.pdf"> Orb24_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb24_q64.pdf"> Orb24_q64.pdf </a> \end{html}
+\\
+\hline
+\end{array}
+$$
+$$
+\begin{array}{|r|*{6}{r|}}
+\hline
+\ \ D-i \ \ &\ \ 2\ \ &\ \ 4\ \ &\ \ 8\ \ &\ \ 16\ \ &\ \ 32\ \ &\ \ 64\ \ \\
+\hline
+25 
+ & 
+%%tth: \begin{html} <a href="Orb25_q2.pdf"> Orb25_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb25_q4.pdf"> Orb25_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb25_q8.pdf"> Orb25_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb25_q16.pdf"> Orb25_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb25_q32.pdf"> Orb25_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb25_q64.pdf"> Orb25_q64.pdf </a> \end{html}
+\\
+\hline
+26 
+ & 
+%%tth: \begin{html} <a href="Orb26_q2.pdf"> Orb26_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb26_q4.pdf"> Orb26_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb26_q8.pdf"> Orb26_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb26_q16.pdf"> Orb26_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb26_q32.pdf"> Orb26_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb26_q64.pdf"> Orb26_q64.pdf </a> \end{html}
+\\
+\hline
+27 
+ & 
+%%tth: \begin{html} <a href="Orb27_q2.pdf"> Orb27_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb27_q4.pdf"> Orb27_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb27_q8.pdf"> Orb27_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb27_q16.pdf"> Orb27_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb27_q32.pdf"> Orb27_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb27_q64.pdf"> Orb27_q64.pdf </a> \end{html}
+\\
+\hline
+28 
+ & 
+%%tth: \begin{html} <a href="Orb28_q2.pdf"> Orb28_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb28_q4.pdf"> Orb28_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb28_q8.pdf"> Orb28_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb28_q16.pdf"> Orb28_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb28_q32.pdf"> Orb28_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb28_q64.pdf"> Orb28_q64.pdf </a> \end{html}
+\\
+\hline
+29 
+ & 
+%%tth: \begin{html} <a href="Orb29_q2.pdf"> Orb29_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb29_q4.pdf"> Orb29_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb29_q8.pdf"> Orb29_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb29_q16.pdf"> Orb29_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb29_q32.pdf"> Orb29_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb29_q64.pdf"> Orb29_q64.pdf </a> \end{html}
+\\
+\hline
+30 
+ & 
+%%tth: \begin{html} <a href="Orb30_q2.pdf"> Orb30_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb30_q4.pdf"> Orb30_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb30_q8.pdf"> Orb30_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb30_q16.pdf"> Orb30_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb30_q32.pdf"> Orb30_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb30_q64.pdf"> Orb30_q64.pdf </a> \end{html}
+\\
+\hline
+31 
+ & 
+%%tth: \begin{html} <a href="Orb31_q2.pdf"> Orb31_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb31_q4.pdf"> Orb31_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb31_q8.pdf"> Orb31_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb31_q16.pdf"> Orb31_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb31_q32.pdf"> Orb31_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb31_q64.pdf"> Orb31_q64.pdf </a> \end{html}
+\\
+\hline
+32 
+ & 
+%%tth: \begin{html} <a href="Orb32_q2.pdf"> Orb32_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb32_q4.pdf"> Orb32_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb32_q8.pdf"> Orb32_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb32_q16.pdf"> Orb32_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb32_q32.pdf"> Orb32_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb32_q64.pdf"> Orb32_q64.pdf </a> \end{html}
+\\
+\hline
+33 
+ & 
+%%tth: \begin{html} <a href="Orb33_q2.pdf"> Orb33_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb33_q4.pdf"> Orb33_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb33_q8.pdf"> Orb33_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb33_q16.pdf"> Orb33_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb33_q32.pdf"> Orb33_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb33_q64.pdf"> Orb33_q64.pdf </a> \end{html}
+\\
+\hline
+34 
+ & 
+%%tth: \begin{html} <a href="Orb34_q2.pdf"> Orb34_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb34_q4.pdf"> Orb34_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb34_q8.pdf"> Orb34_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb34_q16.pdf"> Orb34_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb34_q32.pdf"> Orb34_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb34_q64.pdf"> Orb34_q64.pdf </a> \end{html}
+\\
+\hline
+35 
+ & 
+%%tth: \begin{html} <a href="Orb35_q2.pdf"> Orb35_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb35_q4.pdf"> Orb35_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb35_q8.pdf"> Orb35_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb35_q16.pdf"> Orb35_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb35_q32.pdf"> Orb35_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb35_q64.pdf"> Orb35_q64.pdf </a> \end{html}
+\\
+\hline
+36 
+ & 
+%%tth: \begin{html} <a href="Orb36_q2.pdf"> Orb36_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb36_q4.pdf"> Orb36_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb36_q8.pdf"> Orb36_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb36_q16.pdf"> Orb36_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb36_q32.pdf"> Orb36_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb36_q64.pdf"> Orb36_q64.pdf </a> \end{html}
+\\
+\hline
+37 
+ & 
+%%tth: \begin{html} <a href="Orb37_q2.pdf"> Orb37_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb37_q4.pdf"> Orb37_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb37_q8.pdf"> Orb37_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb37_q16.pdf"> Orb37_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb37_q32.pdf"> Orb37_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb37_q64.pdf"> Orb37_q64.pdf </a> \end{html}
+\\
+\hline
+38 
+ & 
+%%tth: \begin{html} <a href="Orb38_q2.pdf"> Orb38_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb38_q4.pdf"> Orb38_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb38_q8.pdf"> Orb38_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb38_q16.pdf"> Orb38_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb38_q32.pdf"> Orb38_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb38_q64.pdf"> Orb38_q64.pdf </a> \end{html}
+\\
+\hline
+39 
+ & 
+%%tth: \begin{html} <a href="Orb39_q2.pdf"> Orb39_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb39_q4.pdf"> Orb39_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb39_q8.pdf"> Orb39_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb39_q16.pdf"> Orb39_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb39_q32.pdf"> Orb39_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb39_q64.pdf"> Orb39_q64.pdf </a> \end{html}
+\\
+\hline
+40 
+ & 
+%%tth: \begin{html} <a href="Orb40_q2.pdf"> Orb40_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb40_q4.pdf"> Orb40_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb40_q8.pdf"> Orb40_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb40_q16.pdf"> Orb40_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb40_q32.pdf"> Orb40_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb40_q64.pdf"> Orb40_q64.pdf </a> \end{html}
+\\
+\hline
+41 
+ & 
+%%tth: \begin{html} <a href="Orb41_q2.pdf"> Orb41_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb41_q4.pdf"> Orb41_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb41_q8.pdf"> Orb41_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb41_q16.pdf"> Orb41_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb41_q32.pdf"> Orb41_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb41_q64.pdf"> Orb41_q64.pdf </a> \end{html}
+\\
+\hline
+42 
+ & 
+%%tth: \begin{html} <a href="Orb42_q2.pdf"> Orb42_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb42_q4.pdf"> Orb42_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb42_q8.pdf"> Orb42_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb42_q16.pdf"> Orb42_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb42_q32.pdf"> Orb42_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb42_q64.pdf"> Orb42_q64.pdf </a> \end{html}
+\\
+\hline
+43 
+ & 
+%%tth: \begin{html} <a href="Orb43_q2.pdf"> Orb43_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb43_q4.pdf"> Orb43_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb43_q8.pdf"> Orb43_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb43_q16.pdf"> Orb43_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb43_q32.pdf"> Orb43_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb43_q64.pdf"> Orb43_q64.pdf </a> \end{html}
+\\
+\hline
+44 
+ & 
+%%tth: \begin{html} <a href="Orb44_q2.pdf"> Orb44_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb44_q4.pdf"> Orb44_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb44_q8.pdf"> Orb44_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb44_q16.pdf"> Orb44_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb44_q32.pdf"> Orb44_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb44_q64.pdf"> Orb44_q64.pdf </a> \end{html}
+\\
+\hline
+45 
+ & 
+%%tth: \begin{html} <a href="Orb45_q2.pdf"> Orb45_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb45_q4.pdf"> Orb45_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb45_q8.pdf"> Orb45_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb45_q16.pdf"> Orb45_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb45_q32.pdf"> Orb45_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb45_q64.pdf"> Orb45_q64.pdf </a> \end{html}
+\\
+\hline
+46 
+ & 
+%%tth: \begin{html} <a href="Orb46_q2.pdf"> Orb46_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb46_q4.pdf"> Orb46_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb46_q8.pdf"> Orb46_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb46_q16.pdf"> Orb46_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb46_q32.pdf"> Orb46_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb46_q64.pdf"> Orb46_q64.pdf </a> \end{html}
+\\
+\hline
+47 
+ & 
+%%tth: \begin{html} <a href="Orb47_q2.pdf"> Orb47_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb47_q4.pdf"> Orb47_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb47_q8.pdf"> Orb47_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb47_q16.pdf"> Orb47_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb47_q32.pdf"> Orb47_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb47_q64.pdf"> Orb47_q64.pdf </a> \end{html}
+\\
+\hline
+48 
+ & 
+%%tth: \begin{html} <a href="Orb48_q2.pdf"> Orb48_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb48_q4.pdf"> Orb48_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb48_q8.pdf"> Orb48_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb48_q16.pdf"> Orb48_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb48_q32.pdf"> Orb48_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb48_q64.pdf"> Orb48_q64.pdf </a> \end{html}
+\\
+\hline
+49 
+ & 
+%%tth: \begin{html} <a href="Orb49_q2.pdf"> Orb49_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb49_q4.pdf"> Orb49_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb49_q8.pdf"> Orb49_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb49_q16.pdf"> Orb49_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb49_q32.pdf"> Orb49_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb49_q64.pdf"> Orb49_q64.pdf </a> \end{html}
+\\
+\hline
+\end{array}
+$$
+$$
+\begin{array}{|r|*{6}{r|}}
+\hline
+\ \ D-i \ \ &\ \ 2\ \ &\ \ 4\ \ &\ \ 8\ \ &\ \ 16\ \ &\ \ 32\ \ &\ \ 64\ \ \\
+\hline
+50 
+ & 
+%%tth: \begin{html} <a href="Orb50_q2.pdf"> Orb50_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb50_q4.pdf"> Orb50_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb50_q8.pdf"> Orb50_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb50_q16.pdf"> Orb50_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb50_q32.pdf"> Orb50_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb50_q64.pdf"> Orb50_q64.pdf </a> \end{html}
+\\
+\hline
+51 
+ & 
+%%tth: \begin{html} <a href="Orb51_q2.pdf"> Orb51_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb51_q4.pdf"> Orb51_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb51_q8.pdf"> Orb51_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb51_q16.pdf"> Orb51_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb51_q32.pdf"> Orb51_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb51_q64.pdf"> Orb51_q64.pdf </a> \end{html}
+\\
+\hline
+52 
+ & 
+%%tth: \begin{html} <a href="Orb52_q2.pdf"> Orb52_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb52_q4.pdf"> Orb52_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb52_q8.pdf"> Orb52_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb52_q16.pdf"> Orb52_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb52_q32.pdf"> Orb52_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb52_q64.pdf"> Orb52_q64.pdf </a> \end{html}
+\\
+\hline
+53 
+ & 
+%%tth: \begin{html} <a href="Orb53_q2.pdf"> Orb53_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb53_q4.pdf"> Orb53_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb53_q8.pdf"> Orb53_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb53_q16.pdf"> Orb53_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb53_q32.pdf"> Orb53_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb53_q64.pdf"> Orb53_q64.pdf </a> \end{html}
+\\
+\hline
+54 
+ & 
+%%tth: \begin{html} <a href="Orb54_q2.pdf"> Orb54_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb54_q4.pdf"> Orb54_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb54_q8.pdf"> Orb54_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb54_q16.pdf"> Orb54_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb54_q32.pdf"> Orb54_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb54_q64.pdf"> Orb54_q64.pdf </a> \end{html}
+\\
+\hline
+55 
+ & 
+%%tth: \begin{html} <a href="Orb55_q2.pdf"> Orb55_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb55_q4.pdf"> Orb55_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb55_q8.pdf"> Orb55_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb55_q16.pdf"> Orb55_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb55_q32.pdf"> Orb55_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb55_q64.pdf"> Orb55_q64.pdf </a> \end{html}
+\\
+\hline
+56 
+ & 
+%%tth: \begin{html} <a href="Orb56_q2.pdf"> Orb56_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb56_q4.pdf"> Orb56_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb56_q8.pdf"> Orb56_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb56_q16.pdf"> Orb56_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb56_q32.pdf"> Orb56_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb56_q64.pdf"> Orb56_q64.pdf </a> \end{html}
+\\
+\hline
+57 
+ & 
+%%tth: \begin{html} <a href="Orb57_q2.pdf"> Orb57_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb57_q4.pdf"> Orb57_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb57_q8.pdf"> Orb57_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb57_q16.pdf"> Orb57_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb57_q32.pdf"> Orb57_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb57_q64.pdf"> Orb57_q64.pdf </a> \end{html}
+\\
+\hline
+58 
+ & 
+%%tth: \begin{html} <a href="Orb58_q2.pdf"> Orb58_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb58_q4.pdf"> Orb58_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb58_q8.pdf"> Orb58_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb58_q16.pdf"> Orb58_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb58_q32.pdf"> Orb58_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb58_q64.pdf"> Orb58_q64.pdf </a> \end{html}
+\\
+\hline
+59 
+ & 
+%%tth: \begin{html} <a href="Orb59_q2.pdf"> Orb59_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb59_q4.pdf"> Orb59_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb59_q8.pdf"> Orb59_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb59_q16.pdf"> Orb59_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb59_q32.pdf"> Orb59_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb59_q64.pdf"> Orb59_q64.pdf </a> \end{html}
+\\
+\hline
+60 
+ & 
+%%tth: \begin{html} <a href="Orb60_q2.pdf"> Orb60_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb60_q4.pdf"> Orb60_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb60_q8.pdf"> Orb60_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb60_q16.pdf"> Orb60_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb60_q32.pdf"> Orb60_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb60_q64.pdf"> Orb60_q64.pdf </a> \end{html}
+\\
+\hline
+61 
+ & 
+%%tth: \begin{html} <a href="Orb61_q2.pdf"> Orb61_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb61_q4.pdf"> Orb61_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb61_q8.pdf"> Orb61_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb61_q16.pdf"> Orb61_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb61_q32.pdf"> Orb61_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb61_q64.pdf"> Orb61_q64.pdf </a> \end{html}
+\\
+\hline
+62 
+ & 
+%%tth: \begin{html} <a href="Orb62_q2.pdf"> Orb62_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb62_q4.pdf"> Orb62_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb62_q8.pdf"> Orb62_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb62_q16.pdf"> Orb62_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb62_q32.pdf"> Orb62_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb62_q64.pdf"> Orb62_q64.pdf </a> \end{html}
+\\
+\hline
+63 
+ & 
+%%tth: \begin{html} <a href="Orb63_q2.pdf"> Orb63_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb63_q4.pdf"> Orb63_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb63_q8.pdf"> Orb63_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb63_q16.pdf"> Orb63_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb63_q32.pdf"> Orb63_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb63_q64.pdf"> Orb63_q64.pdf </a> \end{html}
+\\
+\hline
+64 
+ & 
+%%tth: \begin{html} <a href="Orb64_q2.pdf"> Orb64_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb64_q4.pdf"> Orb64_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb64_q8.pdf"> Orb64_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb64_q16.pdf"> Orb64_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb64_q32.pdf"> Orb64_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb64_q64.pdf"> Orb64_q64.pdf </a> \end{html}
+\\
+\hline
+65 
+ & 
+%%tth: \begin{html} <a href="Orb65_q2.pdf"> Orb65_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb65_q4.pdf"> Orb65_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb65_q8.pdf"> Orb65_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb65_q16.pdf"> Orb65_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb65_q32.pdf"> Orb65_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb65_q64.pdf"> Orb65_q64.pdf </a> \end{html}
+\\
+\hline
+66 
+ & 
+%%tth: \begin{html} <a href="Orb66_q2.pdf"> Orb66_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb66_q4.pdf"> Orb66_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb66_q8.pdf"> Orb66_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb66_q16.pdf"> Orb66_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb66_q32.pdf"> Orb66_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb66_q64.pdf"> Orb66_q64.pdf </a> \end{html}
+\\
+\hline
+67 
+ & 
+%%tth: \begin{html} <a href="Orb67_q2.pdf"> Orb67_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb67_q4.pdf"> Orb67_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb67_q8.pdf"> Orb67_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb67_q16.pdf"> Orb67_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb67_q32.pdf"> Orb67_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb67_q64.pdf"> Orb67_q64.pdf </a> \end{html}
+\\
+\hline
+68 
+ & 
+%%tth: \begin{html} <a href="Orb68_q2.pdf"> Orb68_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb68_q4.pdf"> Orb68_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb68_q8.pdf"> Orb68_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb68_q16.pdf"> Orb68_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb68_q32.pdf"> Orb68_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb68_q64.pdf"> Orb68_q64.pdf </a> \end{html}
+\\
+\hline
+69 
+ & 
+%%tth: \begin{html} <a href="Orb69_q2.pdf"> Orb69_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb69_q4.pdf"> Orb69_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb69_q8.pdf"> Orb69_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb69_q16.pdf"> Orb69_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb69_q32.pdf"> Orb69_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb69_q64.pdf"> Orb69_q64.pdf </a> \end{html}
+\\
+\hline
+70 
+ & 
+%%tth: \begin{html} <a href="Orb70_q2.pdf"> Orb70_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb70_q4.pdf"> Orb70_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb70_q8.pdf"> Orb70_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb70_q16.pdf"> Orb70_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb70_q32.pdf"> Orb70_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb70_q64.pdf"> Orb70_q64.pdf </a> \end{html}
+\\
+\hline
+71 
+ & 
+%%tth: \begin{html} <a href="Orb71_q2.pdf"> Orb71_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb71_q4.pdf"> Orb71_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb71_q8.pdf"> Orb71_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb71_q16.pdf"> Orb71_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb71_q32.pdf"> Orb71_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb71_q64.pdf"> Orb71_q64.pdf </a> \end{html}
+\\
+\hline
+72 
+ & 
+%%tth: \begin{html} <a href="Orb72_q2.pdf"> Orb72_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb72_q4.pdf"> Orb72_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb72_q8.pdf"> Orb72_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb72_q16.pdf"> Orb72_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb72_q32.pdf"> Orb72_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb72_q64.pdf"> Orb72_q64.pdf </a> \end{html}
+\\
+\hline
+73 
+ & 
+%%tth: \begin{html} <a href="Orb73_q2.pdf"> Orb73_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb73_q4.pdf"> Orb73_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb73_q8.pdf"> Orb73_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb73_q16.pdf"> Orb73_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb73_q32.pdf"> Orb73_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb73_q64.pdf"> Orb73_q64.pdf </a> \end{html}
+\\
+\hline
+74 
+ & 
+%%tth: \begin{html} <a href="Orb74_q2.pdf"> Orb74_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb74_q4.pdf"> Orb74_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb74_q8.pdf"> Orb74_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb74_q16.pdf"> Orb74_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb74_q32.pdf"> Orb74_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb74_q64.pdf"> Orb74_q64.pdf </a> \end{html}
+\\
+\hline
+\end{array}
+$$
+$$
+\begin{array}{|r|*{6}{r|}}
+\hline
+\ \ D-i \ \ &\ \ 2\ \ &\ \ 4\ \ &\ \ 8\ \ &\ \ 16\ \ &\ \ 32\ \ &\ \ 64\ \ \\
+\hline
+75 
+ & 
+%%tth: \begin{html} <a href="Orb75_q2.pdf"> Orb75_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb75_q4.pdf"> Orb75_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb75_q8.pdf"> Orb75_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb75_q16.pdf"> Orb75_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb75_q32.pdf"> Orb75_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb75_q64.pdf"> Orb75_q64.pdf </a> \end{html}
+\\
+\hline
+76 
+ & 
+%%tth: \begin{html} <a href="Orb76_q2.pdf"> Orb76_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb76_q4.pdf"> Orb76_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb76_q8.pdf"> Orb76_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb76_q16.pdf"> Orb76_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb76_q32.pdf"> Orb76_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb76_q64.pdf"> Orb76_q64.pdf </a> \end{html}
+\\
+\hline
+77 
+ & 
+%%tth: \begin{html} <a href="Orb77_q2.pdf"> Orb77_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb77_q4.pdf"> Orb77_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb77_q8.pdf"> Orb77_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb77_q16.pdf"> Orb77_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb77_q32.pdf"> Orb77_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb77_q64.pdf"> Orb77_q64.pdf </a> \end{html}
+\\
+\hline
+78 
+ & 
+%%tth: \begin{html} <a href="Orb78_q2.pdf"> Orb78_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb78_q4.pdf"> Orb78_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb78_q8.pdf"> Orb78_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb78_q16.pdf"> Orb78_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb78_q32.pdf"> Orb78_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb78_q64.pdf"> Orb78_q64.pdf </a> \end{html}
+\\
+\hline
+79 
+ & 
+%%tth: \begin{html} <a href="Orb79_q2.pdf"> Orb79_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb79_q4.pdf"> Orb79_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb79_q8.pdf"> Orb79_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb79_q16.pdf"> Orb79_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb79_q32.pdf"> Orb79_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb79_q64.pdf"> Orb79_q64.pdf </a> \end{html}
+\\
+\hline
+80 
+ & 
+%%tth: \begin{html} <a href="Orb80_q2.pdf"> Orb80_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb80_q4.pdf"> Orb80_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb80_q8.pdf"> Orb80_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb80_q16.pdf"> Orb80_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb80_q32.pdf"> Orb80_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb80_q64.pdf"> Orb80_q64.pdf </a> \end{html}
+\\
+\hline
+81 
+ & 
+%%tth: \begin{html} <a href="Orb81_q2.pdf"> Orb81_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb81_q4.pdf"> Orb81_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb81_q8.pdf"> Orb81_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb81_q16.pdf"> Orb81_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb81_q32.pdf"> Orb81_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb81_q64.pdf"> Orb81_q64.pdf </a> \end{html}
+\\
+\hline
+82 
+ & 
+%%tth: \begin{html} <a href="Orb82_q2.pdf"> Orb82_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb82_q4.pdf"> Orb82_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb82_q8.pdf"> Orb82_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb82_q16.pdf"> Orb82_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb82_q32.pdf"> Orb82_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb82_q64.pdf"> Orb82_q64.pdf </a> \end{html}
+\\
+\hline
+83 
+ & 
+%%tth: \begin{html} <a href="Orb83_q2.pdf"> Orb83_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb83_q4.pdf"> Orb83_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb83_q8.pdf"> Orb83_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb83_q16.pdf"> Orb83_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb83_q32.pdf"> Orb83_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb83_q64.pdf"> Orb83_q64.pdf </a> \end{html}
+\\
+\hline
+84 
+ & 
+%%tth: \begin{html} <a href="Orb84_q2.pdf"> Orb84_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb84_q4.pdf"> Orb84_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb84_q8.pdf"> Orb84_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb84_q16.pdf"> Orb84_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb84_q32.pdf"> Orb84_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb84_q64.pdf"> Orb84_q64.pdf </a> \end{html}
+\\
+\hline
+85 
+ & 
+%%tth: \begin{html} <a href="Orb85_q2.pdf"> Orb85_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb85_q4.pdf"> Orb85_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb85_q8.pdf"> Orb85_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb85_q16.pdf"> Orb85_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb85_q32.pdf"> Orb85_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb85_q64.pdf"> Orb85_q64.pdf </a> \end{html}
+\\
+\hline
+86 
+ & 
+%%tth: \begin{html} <a href="Orb86_q2.pdf"> Orb86_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb86_q4.pdf"> Orb86_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb86_q8.pdf"> Orb86_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb86_q16.pdf"> Orb86_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb86_q32.pdf"> Orb86_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb86_q64.pdf"> Orb86_q64.pdf </a> \end{html}
+\\
+\hline
+87 
+ & 
+%%tth: \begin{html} <a href="Orb87_q2.pdf"> Orb87_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb87_q4.pdf"> Orb87_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb87_q8.pdf"> Orb87_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb87_q16.pdf"> Orb87_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb87_q32.pdf"> Orb87_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb87_q64.pdf"> Orb87_q64.pdf </a> \end{html}
+\\
+\hline
+88 
+ & 
+%%tth: \begin{html} <a href="Orb88_q2.pdf"> Orb88_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb88_q4.pdf"> Orb88_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb88_q8.pdf"> Orb88_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb88_q16.pdf"> Orb88_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb88_q32.pdf"> Orb88_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb88_q64.pdf"> Orb88_q64.pdf </a> \end{html}
+\\
+\hline
+89 
+ & 
+%%tth: \begin{html} <a href="Orb89_q2.pdf"> Orb89_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb89_q4.pdf"> Orb89_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb89_q8.pdf"> Orb89_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb89_q16.pdf"> Orb89_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb89_q32.pdf"> Orb89_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb89_q64.pdf"> Orb89_q64.pdf </a> \end{html}
+\\
+\hline
+90 
+ & 
+%%tth: \begin{html} <a href="Orb90_q2.pdf"> Orb90_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb90_q4.pdf"> Orb90_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb90_q8.pdf"> Orb90_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb90_q16.pdf"> Orb90_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb90_q32.pdf"> Orb90_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb90_q64.pdf"> Orb90_q64.pdf </a> \end{html}
+\\
+\hline
+91 
+ & 
+%%tth: \begin{html} <a href="Orb91_q2.pdf"> Orb91_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb91_q4.pdf"> Orb91_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb91_q8.pdf"> Orb91_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb91_q16.pdf"> Orb91_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb91_q32.pdf"> Orb91_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb91_q64.pdf"> Orb91_q64.pdf </a> \end{html}
+\\
+\hline
+92 
+ & 
+%%tth: \begin{html} <a href="Orb92_q2.pdf"> Orb92_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb92_q4.pdf"> Orb92_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb92_q8.pdf"> Orb92_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb92_q16.pdf"> Orb92_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb92_q32.pdf"> Orb92_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb92_q64.pdf"> Orb92_q64.pdf </a> \end{html}
+\\
+\hline
+93 
+ & 
+%%tth: \begin{html} <a href="Orb93_q2.pdf"> Orb93_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb93_q4.pdf"> Orb93_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb93_q8.pdf"> Orb93_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb93_q16.pdf"> Orb93_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb93_q32.pdf"> Orb93_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb93_q64.pdf"> Orb93_q64.pdf </a> \end{html}
+\\
+\hline
+94 
+ & 
+%%tth: \begin{html} <a href="Orb94_q2.pdf"> Orb94_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb94_q4.pdf"> Orb94_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb94_q8.pdf"> Orb94_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb94_q16.pdf"> Orb94_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb94_q32.pdf"> Orb94_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb94_q64.pdf"> Orb94_q64.pdf </a> \end{html}
+\\
+\hline
+95 
+ & 
+%%tth: \begin{html} <a href="Orb95_q2.pdf"> Orb95_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb95_q4.pdf"> Orb95_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb95_q8.pdf"> Orb95_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb95_q16.pdf"> Orb95_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb95_q32.pdf"> Orb95_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb95_q64.pdf"> Orb95_q64.pdf </a> \end{html}
+\\
+\hline
+96 
+ & 
+%%tth: \begin{html} <a href="Orb96_q2.pdf"> Orb96_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb96_q4.pdf"> Orb96_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb96_q8.pdf"> Orb96_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb96_q16.pdf"> Orb96_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb96_q32.pdf"> Orb96_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb96_q64.pdf"> Orb96_q64.pdf </a> \end{html}
+\\
+\hline
+97 
+ & 
+%%tth: \begin{html} <a href="Orb97_q2.pdf"> Orb97_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb97_q4.pdf"> Orb97_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb97_q8.pdf"> Orb97_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb97_q16.pdf"> Orb97_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb97_q32.pdf"> Orb97_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb97_q64.pdf"> Orb97_q64.pdf </a> \end{html}
+\\
+\hline
+98 
+ & 
+%%tth: \begin{html} <a href="Orb98_q2.pdf"> Orb98_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb98_q4.pdf"> Orb98_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb98_q8.pdf"> Orb98_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb98_q16.pdf"> Orb98_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb98_q32.pdf"> Orb98_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb98_q64.pdf"> Orb98_q64.pdf </a> \end{html}
+\\
+\hline
+99 
+ & 
+%%tth: \begin{html} <a href="Orb99_q2.pdf"> Orb99_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb99_q4.pdf"> Orb99_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb99_q8.pdf"> Orb99_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb99_q16.pdf"> Orb99_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb99_q32.pdf"> Orb99_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb99_q64.pdf"> Orb99_q64.pdf </a> \end{html}
+\\
+\hline
+\end{array}
+$$
+$$
+\begin{array}{|r|*{6}{r|}}
+\hline
+\ \ D-i \ \ &\ \ 2\ \ &\ \ 4\ \ &\ \ 8\ \ &\ \ 16\ \ &\ \ 32\ \ &\ \ 64\ \ \\
+\hline
+100 
+ & 
+%%tth: \begin{html} <a href="Orb100_q2.pdf"> Orb100_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb100_q4.pdf"> Orb100_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb100_q8.pdf"> Orb100_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb100_q16.pdf"> Orb100_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb100_q32.pdf"> Orb100_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb100_q64.pdf"> Orb100_q64.pdf </a> \end{html}
+\\
+\hline
+101 
+ & 
+%%tth: \begin{html} <a href="Orb101_q2.pdf"> Orb101_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb101_q4.pdf"> Orb101_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb101_q8.pdf"> Orb101_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb101_q16.pdf"> Orb101_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb101_q32.pdf"> Orb101_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb101_q64.pdf"> Orb101_q64.pdf </a> \end{html}
+\\
+\hline
+102 
+ & 
+%%tth: \begin{html} <a href="Orb102_q2.pdf"> Orb102_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb102_q4.pdf"> Orb102_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb102_q8.pdf"> Orb102_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb102_q16.pdf"> Orb102_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb102_q32.pdf"> Orb102_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb102_q64.pdf"> Orb102_q64.pdf </a> \end{html}
+\\
+\hline
+103 
+ & 
+%%tth: \begin{html} <a href="Orb103_q2.pdf"> Orb103_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb103_q4.pdf"> Orb103_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb103_q8.pdf"> Orb103_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb103_q16.pdf"> Orb103_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb103_q32.pdf"> Orb103_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb103_q64.pdf"> Orb103_q64.pdf </a> \end{html}
+\\
+\hline
+104 
+ & 
+%%tth: \begin{html} <a href="Orb104_q2.pdf"> Orb104_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb104_q4.pdf"> Orb104_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb104_q8.pdf"> Orb104_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb104_q16.pdf"> Orb104_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb104_q32.pdf"> Orb104_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb104_q64.pdf"> Orb104_q64.pdf </a> \end{html}
+\\
+\hline
+105 
+ & 
+%%tth: \begin{html} <a href="Orb105_q2.pdf"> Orb105_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb105_q4.pdf"> Orb105_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb105_q8.pdf"> Orb105_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb105_q16.pdf"> Orb105_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb105_q32.pdf"> Orb105_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb105_q64.pdf"> Orb105_q64.pdf </a> \end{html}
+\\
+\hline
+106 
+ & 
+%%tth: \begin{html} <a href="Orb106_q2.pdf"> Orb106_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb106_q4.pdf"> Orb106_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb106_q8.pdf"> Orb106_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb106_q16.pdf"> Orb106_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb106_q32.pdf"> Orb106_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb106_q64.pdf"> Orb106_q64.pdf </a> \end{html}
+\\
+\hline
+107 
+ & 
+%%tth: \begin{html} <a href="Orb107_q2.pdf"> Orb107_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb107_q4.pdf"> Orb107_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb107_q8.pdf"> Orb107_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb107_q16.pdf"> Orb107_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb107_q32.pdf"> Orb107_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb107_q64.pdf"> Orb107_q64.pdf </a> \end{html}
+\\
+\hline
+108 
+ & 
+%%tth: \begin{html} <a href="Orb108_q2.pdf"> Orb108_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb108_q4.pdf"> Orb108_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb108_q8.pdf"> Orb108_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb108_q16.pdf"> Orb108_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb108_q32.pdf"> Orb108_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb108_q64.pdf"> Orb108_q64.pdf </a> \end{html}
+\\
+\hline
+109 
+ & 
+%%tth: \begin{html} <a href="Orb109_q2.pdf"> Orb109_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb109_q4.pdf"> Orb109_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb109_q8.pdf"> Orb109_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb109_q16.pdf"> Orb109_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb109_q32.pdf"> Orb109_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb109_q64.pdf"> Orb109_q64.pdf </a> \end{html}
+\\
+\hline
+110 
+ & 
+%%tth: \begin{html} <a href="Orb110_q2.pdf"> Orb110_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb110_q4.pdf"> Orb110_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb110_q8.pdf"> Orb110_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb110_q16.pdf"> Orb110_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb110_q32.pdf"> Orb110_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb110_q64.pdf"> Orb110_q64.pdf </a> \end{html}
+\\
+\hline
+111 
+ & 
+%%tth: \begin{html} <a href="Orb111_q2.pdf"> Orb111_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb111_q4.pdf"> Orb111_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb111_q8.pdf"> Orb111_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb111_q16.pdf"> Orb111_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb111_q32.pdf"> Orb111_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb111_q64.pdf"> Orb111_q64.pdf </a> \end{html}
+\\
+\hline
+112 
+ & 
+%%tth: \begin{html} <a href="Orb112_q2.pdf"> Orb112_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb112_q4.pdf"> Orb112_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb112_q8.pdf"> Orb112_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb112_q16.pdf"> Orb112_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb112_q32.pdf"> Orb112_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb112_q64.pdf"> Orb112_q64.pdf </a> \end{html}
+\\
+\hline
+113 
+ & 
+%%tth: \begin{html} <a href="Orb113_q2.pdf"> Orb113_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb113_q4.pdf"> Orb113_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb113_q8.pdf"> Orb113_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb113_q16.pdf"> Orb113_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb113_q32.pdf"> Orb113_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb113_q64.pdf"> Orb113_q64.pdf </a> \end{html}
+\\
+\hline
+114 
+ & 
+%%tth: \begin{html} <a href="Orb114_q2.pdf"> Orb114_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb114_q4.pdf"> Orb114_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb114_q8.pdf"> Orb114_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb114_q16.pdf"> Orb114_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb114_q32.pdf"> Orb114_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb114_q64.pdf"> Orb114_q64.pdf </a> \end{html}
+\\
+\hline
+115 
+ & 
+%%tth: \begin{html} <a href="Orb115_q2.pdf"> Orb115_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb115_q4.pdf"> Orb115_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb115_q8.pdf"> Orb115_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb115_q16.pdf"> Orb115_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb115_q32.pdf"> Orb115_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb115_q64.pdf"> Orb115_q64.pdf </a> \end{html}
+\\
+\hline
+116 
+ & 
+%%tth: \begin{html} <a href="Orb116_q2.pdf"> Orb116_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb116_q4.pdf"> Orb116_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb116_q8.pdf"> Orb116_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb116_q16.pdf"> Orb116_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb116_q32.pdf"> Orb116_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb116_q64.pdf"> Orb116_q64.pdf </a> \end{html}
+\\
+\hline
+117 
+ & 
+%%tth: \begin{html} <a href="Orb117_q2.pdf"> Orb117_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb117_q4.pdf"> Orb117_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb117_q8.pdf"> Orb117_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb117_q16.pdf"> Orb117_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb117_q32.pdf"> Orb117_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb117_q64.pdf"> Orb117_q64.pdf </a> \end{html}
+\\
+\hline
+118 
+ & 
+%%tth: \begin{html} <a href="Orb118_q2.pdf"> Orb118_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb118_q4.pdf"> Orb118_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb118_q8.pdf"> Orb118_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb118_q16.pdf"> Orb118_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb118_q32.pdf"> Orb118_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb118_q64.pdf"> Orb118_q64.pdf </a> \end{html}
+\\
+\hline
+119 
+ & 
+%%tth: \begin{html} <a href="Orb119_q2.pdf"> Orb119_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb119_q4.pdf"> Orb119_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb119_q8.pdf"> Orb119_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb119_q16.pdf"> Orb119_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb119_q32.pdf"> Orb119_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb119_q64.pdf"> Orb119_q64.pdf </a> \end{html}
+\\
+\hline
+120 
+ & 
+%%tth: \begin{html} <a href="Orb120_q2.pdf"> Orb120_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb120_q4.pdf"> Orb120_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb120_q8.pdf"> Orb120_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb120_q16.pdf"> Orb120_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb120_q32.pdf"> Orb120_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb120_q64.pdf"> Orb120_q64.pdf </a> \end{html}
+\\
+\hline
+121 
+ & 
+%%tth: \begin{html} <a href="Orb121_q2.pdf"> Orb121_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb121_q4.pdf"> Orb121_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb121_q8.pdf"> Orb121_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb121_q16.pdf"> Orb121_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb121_q32.pdf"> Orb121_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb121_q64.pdf"> Orb121_q64.pdf </a> \end{html}
+\\
+\hline
+122 
+ & 
+%%tth: \begin{html} <a href="Orb122_q2.pdf"> Orb122_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb122_q4.pdf"> Orb122_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb122_q8.pdf"> Orb122_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb122_q16.pdf"> Orb122_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb122_q32.pdf"> Orb122_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb122_q64.pdf"> Orb122_q64.pdf </a> \end{html}
+\\
+\hline
+123 
+ & 
+%%tth: \begin{html} <a href="Orb123_q2.pdf"> Orb123_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb123_q4.pdf"> Orb123_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb123_q8.pdf"> Orb123_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb123_q16.pdf"> Orb123_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb123_q32.pdf"> Orb123_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb123_q64.pdf"> Orb123_q64.pdf </a> \end{html}
+\\
+\hline
+124 
+ & 
+%%tth: \begin{html} <a href="Orb124_q2.pdf"> Orb124_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb124_q4.pdf"> Orb124_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb124_q8.pdf"> Orb124_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb124_q16.pdf"> Orb124_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb124_q32.pdf"> Orb124_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb124_q64.pdf"> Orb124_q64.pdf </a> \end{html}
+\\
+\hline
+\end{array}
+$$
+$$
+\begin{array}{|r|*{6}{r|}}
+\hline
+\ \ D-i \ \ &\ \ 2\ \ &\ \ 4\ \ &\ \ 8\ \ &\ \ 16\ \ &\ \ 32\ \ &\ \ 64\ \ \\
+\hline
+125 
+ & 
+%%tth: \begin{html} <a href="Orb125_q2.pdf"> Orb125_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb125_q4.pdf"> Orb125_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb125_q8.pdf"> Orb125_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb125_q16.pdf"> Orb125_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb125_q32.pdf"> Orb125_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb125_q64.pdf"> Orb125_q64.pdf </a> \end{html}
+\\
+\hline
+126 
+ & 
+%%tth: \begin{html} <a href="Orb126_q2.pdf"> Orb126_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb126_q4.pdf"> Orb126_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb126_q8.pdf"> Orb126_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb126_q16.pdf"> Orb126_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb126_q32.pdf"> Orb126_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb126_q64.pdf"> Orb126_q64.pdf </a> \end{html}
+\\
+\hline
+127 
+ & 
+%%tth: \begin{html} <a href="Orb127_q2.pdf"> Orb127_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb127_q4.pdf"> Orb127_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb127_q8.pdf"> Orb127_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb127_q16.pdf"> Orb127_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb127_q32.pdf"> Orb127_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb127_q64.pdf"> Orb127_q64.pdf </a> \end{html}
+\\
+\hline
+128 
+ & 
+%%tth: \begin{html} <a href="Orb128_q2.pdf"> Orb128_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb128_q4.pdf"> Orb128_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb128_q8.pdf"> Orb128_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb128_q16.pdf"> Orb128_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb128_q32.pdf"> Orb128_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb128_q64.pdf"> Orb128_q64.pdf </a> \end{html}
+\\
+\hline
+129 
+ & 
+%%tth: \begin{html} <a href="Orb129_q2.pdf"> Orb129_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb129_q4.pdf"> Orb129_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb129_q8.pdf"> Orb129_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb129_q16.pdf"> Orb129_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb129_q32.pdf"> Orb129_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb129_q64.pdf"> Orb129_q64.pdf </a> \end{html}
+\\
+\hline
+130 
+ & 
+%%tth: \begin{html} <a href="Orb130_q2.pdf"> Orb130_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb130_q4.pdf"> Orb130_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb130_q8.pdf"> Orb130_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb130_q16.pdf"> Orb130_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb130_q32.pdf"> Orb130_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb130_q64.pdf"> Orb130_q64.pdf </a> \end{html}
+\\
+\hline
+131 
+ & 
+%%tth: \begin{html} <a href="Orb131_q2.pdf"> Orb131_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb131_q4.pdf"> Orb131_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb131_q8.pdf"> Orb131_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb131_q16.pdf"> Orb131_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb131_q32.pdf"> Orb131_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb131_q64.pdf"> Orb131_q64.pdf </a> \end{html}
+\\
+\hline
+132 
+ & 
+%%tth: \begin{html} <a href="Orb132_q2.pdf"> Orb132_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb132_q4.pdf"> Orb132_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb132_q8.pdf"> Orb132_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb132_q16.pdf"> Orb132_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb132_q32.pdf"> Orb132_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb132_q64.pdf"> Orb132_q64.pdf </a> \end{html}
+\\
+\hline
+133 
+ & 
+%%tth: \begin{html} <a href="Orb133_q2.pdf"> Orb133_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb133_q4.pdf"> Orb133_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb133_q8.pdf"> Orb133_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb133_q16.pdf"> Orb133_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb133_q32.pdf"> Orb133_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb133_q64.pdf"> Orb133_q64.pdf </a> \end{html}
+\\
+\hline
+134 
+ & 
+%%tth: \begin{html} <a href="Orb134_q2.pdf"> Orb134_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb134_q4.pdf"> Orb134_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb134_q8.pdf"> Orb134_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb134_q16.pdf"> Orb134_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb134_q32.pdf"> Orb134_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb134_q64.pdf"> Orb134_q64.pdf </a> \end{html}
+\\
+\hline
+135 
+ & 
+%%tth: \begin{html} <a href="Orb135_q2.pdf"> Orb135_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb135_q4.pdf"> Orb135_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb135_q8.pdf"> Orb135_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb135_q16.pdf"> Orb135_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb135_q32.pdf"> Orb135_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb135_q64.pdf"> Orb135_q64.pdf </a> \end{html}
+\\
+\hline
+136 
+ & 
+%%tth: \begin{html} <a href="Orb136_q2.pdf"> Orb136_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb136_q4.pdf"> Orb136_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb136_q8.pdf"> Orb136_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb136_q16.pdf"> Orb136_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb136_q32.pdf"> Orb136_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb136_q64.pdf"> Orb136_q64.pdf </a> \end{html}
+\\
+\hline
+137 
+ & 
+%%tth: \begin{html} <a href="Orb137_q2.pdf"> Orb137_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb137_q4.pdf"> Orb137_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb137_q8.pdf"> Orb137_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb137_q16.pdf"> Orb137_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb137_q32.pdf"> Orb137_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb137_q64.pdf"> Orb137_q64.pdf </a> \end{html}
+\\
+\hline
+138 
+ & 
+%%tth: \begin{html} <a href="Orb138_q2.pdf"> Orb138_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb138_q4.pdf"> Orb138_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb138_q8.pdf"> Orb138_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb138_q16.pdf"> Orb138_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb138_q32.pdf"> Orb138_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb138_q64.pdf"> Orb138_q64.pdf </a> \end{html}
+\\
+\hline
+139 
+ & 
+%%tth: \begin{html} <a href="Orb139_q2.pdf"> Orb139_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb139_q4.pdf"> Orb139_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb139_q8.pdf"> Orb139_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb139_q16.pdf"> Orb139_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb139_q32.pdf"> Orb139_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb139_q64.pdf"> Orb139_q64.pdf </a> \end{html}
+\\
+\hline
+140 
+ & 
+%%tth: \begin{html} <a href="Orb140_q2.pdf"> Orb140_q2.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb140_q4.pdf"> Orb140_q4.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb140_q8.pdf"> Orb140_q8.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb140_q16.pdf"> Orb140_q16.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb140_q32.pdf"> Orb140_q32.pdf </a> \end{html}
+ & 
+%%tth: \begin{html} <a href="Orb140_q64.pdf"> Orb140_q64.pdf </a> \end{html}
+\\
+\hline
+\end{array}
+$$
+
+
+%\bibliographystyle{gerplain}% wird oben eingestellt
+%\addcontentsline{toc}{section}{References}
+%\bibliography{../MY_BIBLIOGRAPHY/anton}
+% ACHTUNG: nicht vergessen:
+% die Zeile
+%\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+% muss per Hand in d.bbl eingefuegt werden !
+% nach \begin{thebibliography}{100}
+
+%\begin{theindex}
+
+%\clearpage
+%\addcontentsline{toc}{chapter}{Index}
+%\input{apd.ind}
+
+%\printindex
+%\end{theindex}
+
+}% allowdisplaybreaks
+
+\end{document}
+
+
